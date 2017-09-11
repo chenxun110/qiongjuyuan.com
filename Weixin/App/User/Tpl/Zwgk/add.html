@@ -1,0 +1,66 @@
+<include file="Public:header"/>
+<link rel="stylesheet" href="__PUBLIC__/kindeditor-4.1.7/themes/default/default.css" />
+<script src="__PUBLIC__/kindeditor-4.1.7/kindeditor.js"></script>
+<script src="__PUBLIC__/kindeditor-4.1.7/lang/zh_CN.js"></script>
+    <script>
+      KindEditor.ready(function(K) {
+         var editor = K.create('textarea[name="content"]', {
+          allowFileManager : true,
+          urlType:'domain',
+          afterBlur : function(){  
+                    //编辑器失去焦点时直接同步，可以取到值  
+                    this.sync();  
+                }  
+        });
+        K('#upload').click(function() {
+          editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+              showRemote : false,
+              imageUrl : K('#thumb').val(),
+              clickFn : function(url, title, width, height, border, align) {
+                var url = "{jasxun:C('SITE_URL')}"+url;
+                K('#thumb').val(url);
+                K('#pic').html("<img src="+url+" style='width:100px; height:60px;overflow:hidden;'/><br/>");
+                editor.hideDialog();
+              }
+            });
+          });
+        });
+      });
+    </script>
+<!-- main -->
+<div class="main span10">
+    <h4>添加内容<a href="{jasxun:U(GROUP_NAME.'/Zwgk/index')}" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
+<hr>
+    <form action="{jasxun:U(GROUP_NAME.'/Zwgk/insert')}" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+      <table class="table table-bordered table-wordpress postlist-table">
+        <tbody>
+          
+        <tr>
+          <td width="25%"><label for="title">标题<font color="red">*</font></label></td>
+          <td><input type="text" name="title" value="" id="title" class="span8"/></td>
+        </tr>  
+         <tr><td>
+          <label for="discription">描述</label></td>
+          <td><textarea name="discription" id="discription" class="input-autosave span8" ></textarea>                </td>
+        </tr>  
+         <tr>
+          <td><label for="title">缩略图  <font color="red">*</font></label></td>
+          <td><span id="pic"></span><input type="text" name="thumb" value="" id="thumb" class="span4"  />
+            <input type="button" value="选择图片" id="upload" class="btn btn-primary"></td>
+        </tr>  
+        <tr>
+          <td><label for="title">内容 <font color="red">*</font></label></td>
+          <td><textarea name="content" class="span8" style="height:380px;"></textarea>
+          </td>
+        </tr>  
+        <tr><td></td>
+        <td><input type="submit" value="添加" id="submit" class="btn btn-large btn-success"  /></td>
+       </tr>
+        </tbody>
+    </table>
+        
+    </form>
+</div>
+<!-- main -->
+<include file="Public:footer"/>

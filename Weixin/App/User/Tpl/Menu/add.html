@@ -1,0 +1,42 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+    <h4>添加菜单<a href="{jasxun:U(GROUP_NAME.'/Menu/index')}" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
+<hr>
+    <form action="{jasxun:U(GROUP_NAME.'/Menu/insert')}" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+      <table class="table table-bordered table-wordpress postlist-table">
+        <tbody>
+        <tr>
+          <td width="25%"><label for="title">父级<font color="red">*</font></label></td>
+          <td>
+             <select name="pid">
+                <option value="0">无</option>
+                <foreach name="cate" item="list">
+                  <option value="{jasxun:$list['id']}">{jasxun:$list['title']}</option>
+                </foreach>
+             </select>
+          </td>
+        </tr>   
+        <tr>
+          <td width="25%"><label for="title">菜单名称<font color="red">*</font></label></td>
+          <td><input type="text" name="title" value="" id="title" class="span4"/></td>
+        </tr> 
+        <tr>
+          <td><label for="keyword">关键词<font color="red">*</font></label></td>
+          <td><input type="text" name="keyword" value="" id="keyword" class="span4"/></td>
+        </tr>  
+        <tr>
+          <td><label for="url">链接url <font color="red">*</font></label></td>
+          <td><input type="text" name="url" value="" id="url" class="span8"/></td>
+        </tr> 
+        
+        <tr><td></td>
+        <td><input type="submit" value="添加" id="submit" class="btn btn-large btn-success"  /></td>
+       </tr>
+        </tbody>
+    </table>
+        
+    </form>
+</div>
+<!-- main -->
+<include file="Public:footer"/>

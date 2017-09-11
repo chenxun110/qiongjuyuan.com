@@ -1,0 +1,25 @@
+<include file="Public:header" />
+  <title>订票</title>
+</head>
+<body>
+  <div class="app-wrap container">
+    <form class="head-search mb5" method="get" action="{jasxun:U('Wap/Booking/index')}">
+      <input type="text" class="form-control" id="" value="{jasxun:$_GET['keyword']}" name="keyword" placeholder="输入搜索">
+      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i>搜索</button>
+    </form>
+    <ul class="ticket-list">
+       <foreach name="list" item="list">
+      <li>
+        <a href="{jasxun:U('Wap/Booking/details',array('id'=>$list['id']))}" <if condition="$list['num'] eq $list['pay_num']">class="js_not_ticket"</if>> <!-- 若没票，请标识class为:js_not_ticket -->
+          <div class="ticket-item">
+            <div class="schedule-tiem"><i class="fa fa-clock-o"></i>{jasxun$list['start_time']|date='m月d日',###}-{jasxun$list['end_time']|date='m月d日',###}</div>
+            <div class="schedule-tit">《{jasxun:$list['title']}》</div>
+          </div>
+          <button class="btn btn-sm btn-warning"><i class="fa fa-cart-plus"></i>订票</button>
+        </a>
+      </li>
+      </foreach>  
+     
+    </ul> 
+  </div>
+<include file="Public:footer" />

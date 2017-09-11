@@ -1,0 +1,153 @@
+@charset "utf-8";
+//common.scss
+
+@import "_variable";
+@import "_mixin";
+
+html{
+  font-size:62.5%;
+}
+
+body{
+  color:#444;
+  font-size:12px;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height:1.5;
+}
+
+img,
+video,
+object{
+  max-width:100%;
+  height:auto;
+}
+
+h3{
+  font-size:1.4rem;
+}
+
+h4{
+  font-size:1.2rem;
+}
+
+.price{
+  color:#f60;
+}
+
+.base-color{
+  color:$base-blue;
+}
+
+.fl{
+  float:left;
+  _display:inline;
+}
+.fr{
+  float:right;
+  _display:inline;
+}
+
+.clearfix{
+  zoom:1;
+  &:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+.pt5{
+  padding-top:0.5rem;
+}
+
+.pt10{
+  padding-top:1rem;
+}
+
+.pt15{
+  padding-top:1.5rem;
+}
+
+.pt20{
+  padding-top:2rem;
+}
+
+.plr5{
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+}
+
+.plr10{
+  padding-left:1rem;
+  padding-right:1rem;
+}
+
+.mb5{
+  margin-bottom:0.5rem;
+}
+
+.flex{
+  @include flex;
+}
+
+.flex-item{
+  @include flex_item;
+}
+
+.full-control{
+  display: block;
+  width: 100%;
+  height: 34px;
+  line-height: 1.42857143;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+
+/* 白色背景 0.5rem内边距 */
+.white-box{
+  padding:0.5rem;
+  background:#fff;
+}
+
+.gray-font{
+  color:#999;
+}
+
+/* 共用的评论列表组件 */
+.comment-item{
+  padding:0.5rem;
+  margin-bottom:1rem;
+  background:#fff;
+  @include flex;
+}
+
+.comment-author{
+  margin-bottom:0.5rem;
+}
+
+.comment-info{
+  padding:0 0 0 0.5rem;
+  @include flex_item;
+}
+
+.u-img{
+  width:3.2rem;
+  height:3.2rem;;
+  img{
+    width:100%;
+    height:100%;
+    @include rounded(50%);
+  }
+}
+.u-name{
+  color:$base-blue;
+}
+
+/* 评论组件结束 */
+/* 展开更多组件集合 */
+.more-down{
+  color:$base-blue;
+  text-align:center;
+}
+

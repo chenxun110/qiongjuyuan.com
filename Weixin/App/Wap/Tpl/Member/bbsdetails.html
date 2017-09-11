@@ -1,0 +1,105 @@
+<include file="Public:header" />
+  <title>{jasxun:$data['title']}-互动平台</title>
+</head>
+<body>
+  <div class="app-wrap container">
+    <div class="bbs-coment">
+      <div class="bbs-comment-item">
+        <div class="bbs-comment-header">
+          <div class="u-img"><img src="{jasxun:$data['headerpic']}" /></div>
+          <h4><a href="JavaScript:void(0);">{jasxun:$data['wxname']}</a></h4>
+          <div class="date">{jasxun$data['addtime']|date='Y-m-d H:i:s',###}</div>
+        </div>
+        <div class="bbs-comment-content">
+          <div class="bbs-comment-content-tit">{jasxun:$data['title']}</div>
+          <div class="bbs-comment-body">
+           {jasxun:$data['content']}
+           <div class="bbs-pic-show">
+               <php>$pic = explode(',',$data['pic']);</php>
+            <foreach name="pic" item="pic">
+              <img src="__CSS__images/lazy-hold.png" class="lazy" data-original="{jasxun:$pic}" alt="...">
+            </foreach>
+           </div>
+            <!-- 下面是用户上传的音频或者视频 -->
+            <div class="view-audio-wrap">
+              <php>if(!empty($data['video_url'])){</php>
+                <a href="javascript:void(0)" class="media-btn js_toggle_btn" data-show="bbs-video-play">
+                  <button class="btn btn-success" type="button">
+                    <i class="fa fa-video-camera"></i>
+                  </button>
+                  <!--{jasxun:$data['video_url']}-->
+                  <p>点击看视频</p>
+                </a>
+              <php>}</php>
+              <php>if(!empty($data['audio_url'])){</php>
+              <a href="javascript:void(0)" class="media-btn js_toggle_btn" data-show="bbs-audio-play">
+                <button class="btn btn-success" type="button">
+                  <i class="fa fa-tripadvisor"></i>
+                </button>
+                <!--{jasxun:$data['audio_url']}-->
+                <p>点击听音频</p>
+              </a>
+              <php>}</php>
+            </div>
+          </div>
+          
+          <div class="player-box bbs-video-play hide">
+            <div id="bbs-player">
+              <video src="{jasxun:$data['video_url']}" id="bbs-video" controls="controls" preload="auto"></video>
+            </div>
+          </div>
+
+        <div class="player-box bbs-audio-play hide">
+          <audio controls="true" class="full-control" id="bbs-audio" preload="auto">
+            <source src="{jasxun:$data['audio_url']}">
+            您的浏览器不支持此类音频标签
+          </audio>
+        </div>
+
+
+          <h4 class="video-bar">我要评论</h4>
+          <form method="post" class="js_comment_form" action="{jasxun:U('Wap/Member/commit')}">
+            <div class="form-group">
+              <textarea class="form-control" name="content"></textarea>
+              <input name="cid" value="{jasxun:$data['id']}" type="hidden">
+            </div>
+            <div class="flex">
+              <div class="flex-item plr10"><button type="reset" class="btn btn-default full-control">清空</button></div>
+              <div class="flex-item plr10"><button type="submit" class="btn btn-success full-control">发表</button></div>
+            </div>
+          </form>
+          <div class="comments" id="bbsComment">
+            <foreach name="list" item="list">
+            <div class="comment-item">
+              <div class="u-img">
+                <img src="{jasxun:$list['headerpic']}" />
+              </div>
+              <div class="comment-info">
+                <div class="comment-body">
+                  <div class="comment-author clearfix">
+                    <div class="u-name fl">{jasxun:$list['wxname']}</div>
+                    <div class="dates fr">{jasxun$list['addtime']|date='Y-m-d',###}</div>
+                  </div>
+                  <div class="comment-say">
+                    {jasxun:$list['content']}
+                  </div>
+                </div>
+              </div>
+            </div>
+            </foreach>
+            <div class="js_more_comments"></div>
+          </div>
+        </div>
+<!--         <div class="bbs-comment-footer">
+  关于下面，php需要做点判断，下面第一个，如果当前用户已经点过红心，请将fa-heart-o替换成fa-heart，若无，保持fa-heart-o。点过赞，替换fa-thumbs-o-up为fa-thumbs-up，否则保持
+  <div class="flex bbs-comment-handle">
+    <div class="bbs-comment-done flex-item"><a href="#"><i class="fa fa-heart-o"></i> <span class="js_like_num">2</span></a></div>
+    <div class="bbs-comment-done flex-item"><a href="#"><i class="fa fa-commenting"></i> <span class="js_say_num">381</span></a></div>
+    <div class="bbs-comment-done flex-item"><a href="#"><i class="fa fa-thumbs-o-up"></i> <span class="js_thumbs_num">12</span></a></div>
+  </div>
+</div> -->
+      </div>
+      <!-- 一篇结束 -->
+    </div>
+  </div>
+<include file="Public:footer" />

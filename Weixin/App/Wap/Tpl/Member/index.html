@@ -1,0 +1,86 @@
+<include file="Public:header" />
+  <title>个人中心首页</title>
+</head>
+<body>
+  <div class="user-center">
+      <div class="user-center-banber">
+        <div class="user-info flex">
+          <div class="u-img">
+            <img src="{jasxun:$member['headerpic']}" alt="{jasxun:$member['wxname']}" />
+          </div>
+          <div class="flex-item">
+            <p>昵称：{jasxun:$member['wxname']}</p>
+            <p>会员ID：{jasxun:$member['cardid']}</p>
+          </div>
+        </div>
+        <a href="/index.php/wap/member/set" class="setting"><i class="fa fa-cog"></i></a>
+      </div>
+      <div class="tab-wrap">
+        <div class="ticket-tab-bar flex">
+          <div class="flex-item tab-btn cur">订票消息</div>
+          <div class="flex-item tab-btn">优惠券</div>
+        </div>
+        <div class="tab-container user-ticket white-box">
+          <foreach name="order" item="list">
+          <div class="ticket-item">
+            <div class="flex">
+              <div class="flex-item">
+                <h4>{jasxun:$list['title']}{jasxun$list['start_time']|date='m月d日',###}-{jasxun$list['end_time']|date='m月d日',###}</h4>
+                <p>总价:<span class="price">&yen;{jasxun:$list['price']}</span> ({jasxun:$list['num']}张)</p>
+                <p class="base-color">SN码：{jasxun:$list['sn']}</p>
+              </div>
+              <div class="flex-item text-right">
+                <button type="button" class="btn btn-sm <if condition="$list['status'] eq 0">btn-success<else/>btn-defalut</if>"><if condition="$list['status'] eq 0">未兑票<else/>已兑票</if></button>
+                <p class="gray-font">订票时间:{jasxun$list['addtime']|date='Y-m-d H:s',###}</p>
+              </div>
+            </div>
+          </div>
+          <!--  未领取-->
+         </foreach>
+        </div>
+        <!-- 订票信息结束 -->
+        <div class="tab-container user-ticket white-box" style="display:none">
+          <foreach name="discount" item="discount">
+          <div class="ticket-item">
+            <div class="flex">
+              <div class="flex-item">
+                <h4>{jasxun:$discount['title']}{jasxun$discount['start_time']|date='m月d日',###}-{jasxun$discount['end_time']|date='m月d日',###}</h4>
+                <p>原价:<span class="price">&yen;{jasxun:$discount['price']}</span></p>
+                <p class="price">优惠：{jasxun:$discount['discount']}%</p>
+              </div>
+              <div class="flex-item text-right js_get_coupon_box">
+                <php>$is_get = is_get_dis($_SESSION['uid'],$discount['id'])</php>
+                <if condition="$is_get eq 0">
+                    
+                    <button type="button" class="btn btn-sm btn-success js_get_coupon" data-id="{jasxun:$discount['id']}" data-url="{jasxun:U('Wap/Member/get_discount')}">
+                      <php>if(time()<=$list['end_time']){</php>
+                         领取
+                     <php>}else{</php>
+                          已过期
+                     <php>}</php> 
+                    </button>
+                    <p class="gray-font">过期时间:{jasxun$discount['end_time']|date='Y-m-d',###}</p>  
+                   
+                <else/>
+                <php>$sn = get_dis_sn($_SESSION['uid'],$discount['id'])</php>
+                <php>$status = get_dis_status($_SESSION['uid'],$discount['id'])</php>
+                     <if condition="$status eq 0">
+                    <p>已领取</p>
+                    <p class="gray-font">过期时间:{jasxun$discount['end_time']|date='Y-m-d',###}</p>
+                    <p class="base-color">SN码：{jasxun:$sn} </p>
+                      <else/>
+                      <p>已使用</p>
+                      <p class="gray-font">过期时间:{jasxun$discount['end_time']|date='Y-m-d',###}</p>
+                      <p class="base-color">SN码：{jasxun:$sn} </p>
+                         </if>
+                </if>   
+              </div>
+            </div>
+          </div>
+             </foreach>
+
+        </div>
+        <!-- 优惠券结束 -->
+      </div>
+  </div>
+<include file="Public:footer" />

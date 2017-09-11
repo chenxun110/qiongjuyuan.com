@@ -1,0 +1,174 @@
+<include file="Public:header"/>
+<style type="text/css">
+.appmsg_content {
+    padding: 0 14px;
+    position: relative;
+}
+.appmsg {
+    background-color: #fff;
+    border: 1px solid #e7e7eb;
+    color: #666;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+appmsg_item:after {
+    clear: both;
+    content: "​";
+    display: block;
+    height: 0;
+}
+.appmsg_item {
+    border-top: 1px solid #e7e7eb;
+    padding: 20px 14px;
+    position: relative;
+}
+.cover_appmsg_item {
+    margin: 0 14px 14px;
+    position: relative;
+}
+.appmsg_thumc{
+    float: right;
+    margin-left: 14px;
+    min-width: 100%;
+}
+.appmsg_item .appmsg_thumb {
+    float: right;
+    height: 60px;
+    margin-left: 14px;
+    width: 60px;
+}
+.cover_appmsg_item .appmsg_title{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6) !important;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.appmsg_title {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    max-height: 56px;
+    overflow: hidden;
+    padding-top: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.appmsg_opr {
+    background-color: #f4f4f4;
+    border-top: 1px solid #e7e7eb;
+}
+.appmsg_opr_item {
+    float: left;
+    height: 44px;
+    line-height: 44px;
+}
+.size1of2 {
+    width: 50%;
+}
+ul, ol {
+    list-style-type: none;
+}
+.appmsg {
+    color: #666;
+}
+.appmsg_list .tj_item {
+    font-size: 14px;
+    text-align: left;
+}
+input, textarea, button, a {
+    outline: 0 none;
+}
+.cover_appmsg_item .appmsg_title a {
+    color: #fff;
+    padding: 0 8px;
+}
+.appmsg_info {
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
+}
+.appmsg_info {
+    font-size: 13px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.appmsg_list .tj_item {
+    font-size: 14px;
+    text-align: left;
+}
+.appmsg_title a {
+    color: #666;
+    display: block;
+}
+a {
+    color: #459ae9;
+    text-decoration: none;
+}
+input, textarea, button, a {
+    outline: 0 none;
+}
+
+.appmsg_thumb_wrp {
+    height: 160px;
+    overflow: hidden;
+}
+.appmsg_item {
+    border-top: 1px solid #e7e7eb;
+    padding: 20px 14px;
+    position: relative;
+}
+</style>
+<!-- main -->
+<div class="main span10">
+<div class="btn-group pull-right">
+<a href="{jasxun:U(GROUP_NAME.'/Muti/add')}" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加图文</a>
+</div>
+<h4>多图文管理</h4>
+<hr>
+  <foreach name="list" item="list">
+
+  <div class="span3">
+    <div class="appmsg ">
+       <div class="appmsg_content">
+        
+            <div class="appmsg_info">
+                <em class="appmsg_date">{jasxun$list['addtime']|date='m月d日',###}</em>
+            </div>
+            <div class="cover_appmsg_item">
+                <h4 class="appmsg_title"><a href="javascript:void(0);">{jasxun$list['child'][0]['title']}</a></h4>
+                <div class="appmsg_thumb_wrp"><img class="appmsg_thumc" alt="" src="{jasxun$list['child'][0]['picurl']}"></div>
+            </div>
+            <foreach name="list['child']" item="alist" key='v'> 
+                <if condition="$v gt 0">
+            <div class="appmsg_item">
+                <img class="appmsg_thumb" alt="" src="{jasxun$alist['picurl']}">
+                <h4 class="appmsg_title">{jasxun$alist['title']}</h4>
+            </div>
+               </if>
+            </foreach>
+        
+    </div>
+    <div class="appmsg_opr">
+       <ul>
+            <li class="appmsg_opr_item grid_item size1of2">
+            <a  href="{jasxun:U(GROUP_NAME.'/Muti/edit',array('id'=>$list['id']))}" >编辑</i></a>
+            </li>
+            <li class="appmsg_opr_item grid_item size1of2 no_extra">
+                <a onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})" href="javascript:void(0);">删除</i></a>
+            </li>
+        </ul>
+    </div>
+  </div>
+  </div>
+  </foreach>
+
+</div>
+  <div class="span8">
+  {jasxun:$page}
+</div>
+<!-- main -->
+<include file="Public:footer"/>

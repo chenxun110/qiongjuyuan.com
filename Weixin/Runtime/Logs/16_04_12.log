@@ -1,0 +1,10 @@
+[ 2016-04-12T17:15:01+08:00 ] 118.114.245.37 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-04-12T17:15:20+08:00 ] 118.114.245.37 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+

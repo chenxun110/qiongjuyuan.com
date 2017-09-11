@@ -1,0 +1,66 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+  <div class="btn-group pull-right">
+<a href="{jasxun:U(GROUP_NAME.'/Bigwheel/add')}" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加活动</a>
+</div>
+<h4>大转盘活动管理</h4>
+<hr/>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>活动名称</th>
+        <th>关键词</th>
+        <th>添加时间</th>           
+        <th>是否发布</th>   
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$key+1}</td>
+        <td>{jasxun:$list['title']}</td>
+        <td>{jasxun:$list['keyword']}</td>
+        <td>{jasxun$list['addtime']|date='Y-m-d H:i:s',###}</td>
+         <td onclick="status({jasxun:$list['id']})" id="status_{jasxun:$list['id']}">
+        <if condition="$list['is_show'] eq 1">
+        <span style="cursor:pointer;" class="btn btn-success disabled btn-mini">是</span>
+        <else/>
+        <span style="cursor:pointer;" class="btn disabled btn-mini">否</span>
+        </if>
+        </td>
+        <td>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <div class="btn-group">
+              <a href="{jasxun:U(GROUP_NAME.'/Bigwheel/edit',array('id'=>$list['id']))}" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
+              <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})"><i class="icon-remove"></i> 删除</a>
+               <a href="{jasxun:U(GROUP_NAME.'/wheeldata/index',array('pid'=>$list['id']))}" class="btn btn-mini btn-primary" >抽奖记录</a>
+            </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </foreach>
+        
+    </tbody>
+  </table>
+</div>
+  <div class="span8">
+  {jasxun:$page}
+</div>
+<script type="text/javascript">
+ function status(id){
+   $.post("{jasxun:U(GROUP_NAME.'/Bigwheel/ajax_status')}",{'id':id},function(data){
+        if(data.status==1){
+           $("#status_"+id).html(data.html);
+        }
+
+   });
+ }
+
+</script>
+<!-- main -->
+<include file="Public:footer"/>

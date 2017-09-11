@@ -1,0 +1,36 @@
+<include file="Public:header" />
+  <title>{jasxun:$data['title']}</title>
+</head>
+<body>
+  <div class="app-wrap container">
+    <div class="article-title">
+        <h2>{jasxun:$data['title']}</h2>
+      </div> 
+    <div class="performer-article clearfix">
+      <div class="performer-img">
+        <img src="{jasxun:$data['thumb']}" />
+      </div>
+      <!-- 名角个人图片,缩略图?） -->
+      {jasxun:$data['content']}
+    </div>
+    <!-- 下面应该是跳去新页面? -->
+    <div class="view-audio-wrap">
+      <if condition="$data['video_id'] neq 0">
+      <a href="{jasxun:U('Wap/Artice/video',array('id'=>$data['video_id']))}" class="media-btn">
+        <button class="btn btn-success" type="button">
+          <i class="fa fa-video-camera"></i>
+        </button>
+        <p>视频</p>
+      </a>
+    </if>
+     <if condition="$data['audio_id'] neq 0">
+      <a href="{jasxun:U('Wap/Artice/audio',array('id'=>$data['audio_id']))}" class="media-btn">
+        <button class="btn btn-success" type="button">
+          <i class="fa fa-tripadvisor"></i>
+        </button>
+        <p>音频</p>
+      </a>
+      </if>
+    </div>
+  </div>
+<include file="Public:footer" />

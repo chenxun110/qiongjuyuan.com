@@ -1,0 +1,22 @@
+<include file="Public:header" />
+  <title>{jasxun:$data['title']}</title>
+</head>
+<body>
+  <div class="app-wrap container">
+    <div class="app-article">
+
+      <div class="article-title">
+      	<h2>{jasxun:$data['title']}</h2>
+      	<span> {jasxun$data['addtime']|date="Y-m-d H:i:s",###}</span>
+      </div> 
+      <div class="article-brief">
+         摘要：{jasxun:$data['discription']}
+      </div>
+      <div class="article-body">
+         {jasxun:$data['content']}
+
+      </div>
+    </div>  
+  </div>
+
+<include file="Public:footer" />

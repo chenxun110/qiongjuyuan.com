@@ -1,0 +1,80 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+<div class="btn-group pull-right">
+<a href="{jasxun:U(GROUP_NAME.'/Order/add')}" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加</a>
+</div>
+<h4>微信预定</h4>
+<hr/>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+
+      <tr>
+        <th>编号</th>
+        <th>演出排期</th>
+        <th>会员昵称</th>
+        <th>手机号</th>
+        <th>订票数量</th>
+        <th>总价格</th>
+        <th>到期时间</th>
+        <th>预订时间</th>
+        <th>sn码</th>
+        <th>兑换时间</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$list['id']}</td>
+        <td>{jasxun:$list['title']}</td>
+        <td>{jasxun:$list['wxname']}</td>
+        <td>{jasxun:$list['mobile']}</td>
+        <td>{jasxun:$list['num']}</td>
+        <td>{jasxun:$list['price']}</td>
+        <td>{jasxun$list['end_time']|date='Y-m-d H:i',###}</td>
+        <td>{jasxun$list['addtime']|date='Y-m-d H:i:s',###}</td>
+         <td><font color="blue">{jasxun:$list['sn']}</font></td>
+        <td id="utime_{jasxun:$list['id']}">{jasxun$list['use_time']|default=''|date='Y-m-d H:i:s',###}</td>
+        <td id="status_{jasxun:$list['id']}"><if condition="$list['status'] eq 1"><span style="color:red;">已兑换</span><else/><span style="color:green;">未兑换</span></if></td>
+     
+        <td  id="opt_{jasxun:$list['id']}"> 
+              <if condition="$list['status'] eq 0">
+                 <php>if(time()<=$list['end_time']){</php>
+                 <a href="javascript:void(0);" onclick="status({jasxun:$list['id']})" class="btn btn-success">兑换</a>
+                <php>}else{</php>
+                <a href="javascript:void(0);" style="color:#666">已过期</a>
+                <php>}</php>
+               <else/> 
+                 <a href="javascript:void(0);" >已使用</a>
+              </if>
+        </td>
+      </tr>
+      </foreach>
+     
+    </tbody>
+  </table>
+</div>
+  <div class="span8">
+  {jasxun:$page}
+</div>
+<script type="text/javascript">
+    function status (id) {
+      if(confirm("确定兑换这个订单吗？")){
+        var url ="{jasxun:U(GROUP_NAME.'/Order/order_status')}";
+        $.post(url,{'id':id},function(data){
+           if(data.s==0){
+               $("#opt_"+id).html(" <a href='javascript:void(0);' class='btn'>已使用</a>");
+              $("#status_"+id).html(data.span);
+               $("#utime_"+id).html(data.utime);
+           }else{
+              alert(data.msg);
+           }
+        },'json');
+      }
+    }
+
+</script>
+<!-- main -->
+<include file="Public:footer"/>

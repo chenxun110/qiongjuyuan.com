@@ -1,0 +1,937 @@
+[ 2016-04-16T17:13:37+08:00 ] 59.50.63.207 /user/login/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001010s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001155s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007825s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000315s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000316s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000201s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001417s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000758s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2016-04-16T17:14:02+08:00 ] 59.50.63.207 /user/login/checkLogin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000881s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+NOTIC: [8] Use of undefined constant is_POST - assumed 'is_POST' /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/LoginAction.class.php 第 17 行.
+NOTIC: 建议使用I方法替代_post
+NOTIC: 建议使用I方法替代_post
+NOTIC: [8] Undefined variable: verify /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/LoginAction.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `wx_admin` [ RunTime:0.001848s ]
+SQL: SELECT * FROM `wx_admin` WHERE ( `username` = 'qjy' ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.001025s ]
+SQL: SELECT * FROM `wx_wxuser` ORDER BY id desc LIMIT 1   [ RunTime:0.000176s ]
+
+[ 2016-04-16T17:14:10+08:00 ] 59.50.63.207 /user/wxuser/set
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000874s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000828s ]
+SQL: SELECT * FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000197s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017767s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000393s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000387s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000245s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001654s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000606s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2016-04-16T17:14:23+08:00 ] 59.50.63.207 /user/wxuser/set
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000891s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.001113s ]
+SQL: SELECT * FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000122s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022758s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022840s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000322s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000307s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000221s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001411s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000602s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2016-04-16T17:14:40+08:00 ] 59.50.63.207 /user/replynews/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.001627s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_replynews` LIMIT 1   [ RunTime:0.000183s ]
+SQL: SELECT * FROM `wx_replynews` ORDER BY id desc LIMIT 0,18   [ RunTime:0.000186s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019239s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000360s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000332s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000197s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001501s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000631s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2016-04-16T17:14:50+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000858s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000982s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001494s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000285s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000270s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021919s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022007s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000323s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000384s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000221s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001512s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000684s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-04-16T17:15:08+08:00 ] 59.50.63.207 /Wap/artice/index?code=0019c64e6584bd6d2011d0fd7b0a683D&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000951s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000959s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000531s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011151s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000330s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000334s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000215s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001826s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000731s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-04-16T17:15:14+08:00 ] 59.50.63.207 /wap/artice/details/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000901s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000887s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000277s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009422s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009539s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000431s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000315s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000194s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001540s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000681s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-04-16T17:15:21+08:00 ] 59.50.63.207 /user/article/edit/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000849s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000788s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000082s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019247s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000349s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000335s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000202s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001486s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000667s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2016-04-16T17:25:57+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001037s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000777s ]
+SQL: UPDATE `wx_article` SET `title`='艺术特点',`discription`='海南省琼剧院的前身为成立于1959年的广东琼剧院，1988年海南建省后改为今名。剧院集琼剧名流于一家，融剧种艺术名流为一体，既拥有郑长和、韩文华、王凤梅、王黄文、林道修、陈华、红梅、王英蓉等誉满琼岛的艺术家，又有一批鼎足艺坛的优秀中青年表演人才，以及一批编导、乐手、舞美设计与理论研究人员',`thumb`='http://jasxun1-public.stor.sinaapp.com/upload/20151113/20151113185835_97793.png',`content`='<span style=\"font-size:14px;\"> \r\n<div class=\"rich_media_thumb_wrp\" id=\"media\" style=\"margin:0px 0px 6px;padding:0px;font-family:\'Helvetica Neue\', Helvetica, \'Hiragino Sans GB\', \'Microsoft YaHei\', Arial, sans-serif;font-size:16px;\">\r\n	<span style=\"color:#3E3E3E;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416172548_99163.jpg\" alt=\"\" />&nbsp;\r\n	<p class=\"MsoNormal\">\r\n		&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;琼剧的音乐唱腔可分为两大类：前期为<span>“</span>曲牌体<span>”</span>，并有帮唱。如<span>《琵琶记》</span>、<span>《槐荫记》</span>、<span>《蟠桃宴》</span>、<span>《八仙贺寿》</span>等一些剧目，唱词均有牌子，有的还采用一些大字牌子和小曲。后期则演化为<span>“</span>板腔体<span>”</span>。原有的曲牌体和帮腔逐渐淘汰，现在只在某些戏或<span>“</span>程途<span>”</span>、中板等板腔中能够找到痕迹。板腔体分中板、程途、苦叹板、腔类、专腔专用类五种板式。还有一种专门操台（即闹台）的锣鼓谱。此外，还吸收海南道坛乐曲如〔芙蓉〕、〔<span>志高</span>〕、〔金线〕、〔金字科〕、〔灵宝科〕等曲调以及其他<span>民间音乐</span>、歌舞音乐。唱腔以中板为核心（包括三七中板），这种唱腔系由帮腔的七字板（又叫<span>“</span>七平板<span>”</span>）演变而成，有中、慢、快、散、正线、反线、外线、内线等不同板式。有较大的适应性。不论生、末、净、丑、杂各行当，在表演喜怒哀乐的不同感情变化时都可以使用，是琼剧较为古老的唱腔。 <span></span>\r\n	</p>\r\n	<p class=\"MsoNormal\">\r\n		&nbsp;<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416172108_76805.jpg\" alt=\"\" />\r\n	</p>\r\n	<p class=\"MsoNormal\">\r\n		&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;琼剧武功属南派，拳宗少林，曾使用真刀真枪，也有杂技表演。清未有不少名<span>武师</span>，能使用十几件武器，并有飞剑穿柱、穿刀圈、舞火架等特技，建国后，兼学北派武打。布景最早年大小班均在台中挂一白布，画乐工图案（锣、鼓、唢呐三乐师和乐器）。文、武场乐工分置于左右侧。清末改为黑色或花布幕，两侧挂观众赠送的彩幅。<span>“</span>五四<span>”</span>运动后，开始用彩色和绣绒幕布，进而用各种绘画布景（如厅坐、宫廷、楼阁、山水等），并按剧本场序起落。服装原来只用汉、明两朝冠服。官服蟒袍全是绒绣，书生、村姑、强盗只用白、黑、蓝、红等色的市衫、裙、袍套。靴鞋均是薄底；兵皂、强盗穿草履。建国前后始作改革，按剧本需要设计冠服。<span></span>\r\n	</p>\r\n</span>\r\n</div>\r\n<div class=\"rich_media_content \" id=\"js_content\" style=\"margin:0px;padding:0px;color:#3E3E3E;font-family:\'Helvetica Neue\', Helvetica, \'Hiragino Sans GB\', \'Microsoft YaHei\', Arial, sans-serif;font-size:16px;\">\r\n	<p>\r\n		<br />\r\n	</p>\r\n	<p>\r\n		<span id=\"__kindeditor_bookmark_end_92__\"></span>\r\n	</p>\r\n</div>\r\n</span>' WHERE ( `id` = 498 ) [ RunTime:0.000339s ]
+
+[ 2016-04-16T17:26:02+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000852s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000886s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000359s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000297s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018355s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018422s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000325s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000391s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000239s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001558s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000637s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-04-16T17:26:03+08:00 ] 59.50.63.207 /wap/artice/details/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000924s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001056s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001045s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000331s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.427170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.427304s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000459s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000395s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000213s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001706s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000694s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-04-16T17:26:13+08:00 ] 59.50.63.207 /user/article/edit/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000964s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001087s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001129s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000109s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017559s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000328s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000308s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000210s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001411s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000614s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-04-16T17:26:42+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000835s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000743s ]
+SQL: UPDATE `wx_article` SET `title`='艺术特点',`discription`='琼剧的音乐唱腔可分为两大类：前期为“曲牌体”，并有帮唱。',`thumb`='http://jasxun1-public.stor.sinaapp.com/upload/20151113/20151113185835_97793.png',`content`='<span style=\"font-size:14px;\"> \r\n<div class=\"rich_media_thumb_wrp\" id=\"media\" style=\"margin:0px 0px 6px;padding:0px;font-family:\'Helvetica Neue\', Helvetica, \'Hiragino Sans GB\', \'Microsoft YaHei\', Arial, sans-serif;font-size:16px;\">\r\n	<span style=\"color:#3E3E3E;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416172548_99163.jpg\" alt=\"\" />&nbsp;\r\n	<p class=\"MsoNormal\">\r\n		&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;琼剧的音乐唱腔可分为两大类：前期为<span>“</span>曲牌体<span>”</span>，并有帮唱。如<span>《琵琶记》</span>、<span>《槐荫记》</span>、<span>《蟠桃宴》</span>、<span>《八仙贺寿》</span>等一些剧目，唱词均有牌子，有的还采用一些大字牌子和小曲。后期则演化为<span>“</span>板腔体<span>”</span>。原有的曲牌体和帮腔逐渐淘汰，现在只在某些戏或<span>“</span>程途<span>”</span>、中板等板腔中能够找到痕迹。板腔体分中板、程途、苦叹板、腔类、专腔专用类五种板式。还有一种专门操台（即闹台）的锣鼓谱。此外，还吸收海南道坛乐曲如〔芙蓉〕、〔<span>志高</span>〕、〔金线〕、〔金字科〕、〔灵宝科〕等曲调以及其他<span>民间音乐</span>、歌舞音乐。唱腔以中板为核心（包括三七中板），这种唱腔系由帮腔的七字板（又叫<span>“</span>七平板<span>”</span>）演变而成，有中、慢、快、散、正线、反线、外线、内线等不同板式。有较大的适应性。不论生、末、净、丑、杂各行当，在表演喜怒哀乐的不同感情变化时都可以使用，是琼剧较为古老的唱腔。 <span></span> \r\n	</p>\r\n	<p class=\"MsoNormal\">\r\n		&nbsp;<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416172108_76805.jpg\" alt=\"\" /> \r\n	</p>\r\n	<p class=\"MsoNormal\">\r\n		&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;琼剧武功属南派，拳宗少林，曾使用真刀真枪，也有杂技表演。清未有不少名<span>武师</span>，能使用十几件武器，并有飞剑穿柱、穿刀圈、舞火架等特技，建国后，兼学北派武打。布景最早年大小班均在台中挂一白布，画乐工图案（锣、鼓、唢呐三乐师和乐器）。文、武场乐工分置于左右侧。清末改为黑色或花布幕，两侧挂观众赠送的彩幅。<span>“</span>五四<span>”</span>运动后，开始用彩色和绣绒幕布，进而用各种绘画布景（如厅坐、宫廷、楼阁、山水等），并按剧本场序起落。服装原来只用汉、明两朝冠服。官服蟒袍全是绒绣，书生、村姑、强盗只用白、黑、蓝、红等色的市衫、裙、袍套。靴鞋均是薄底；兵皂、强盗穿草履。建国前后始作改革，按剧本需要设计冠服。<span></span> \r\n	</p>\r\n</span> \r\n</div>\r\n<div class=\"rich_media_content \" id=\"js_content\" style=\"margin:0px;padding:0px;color:#3E3E3E;font-family:\'Helvetica Neue\', Helvetica, \'Hiragino Sans GB\', \'Microsoft YaHei\', Arial, sans-serif;font-size:16px;\">\r\n	<p>\r\n		<br />\r\n	</p>\r\n	<p>\r\n		<span id=\"__kindeditor_bookmark_end_92__\"></span> \r\n	</p>\r\n</div>\r\n</span>\"' WHERE ( `id` = 498 ) [ RunTime:0.000314s ]
+
+[ 2016-04-16T17:26:46+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000846s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000993s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000370s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019631s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000342s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000319s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000206s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001437s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000628s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2016-04-16T17:26:47+08:00 ] 101.226.233.151 /weixin?signature=a65db4b3c4883fe7a356553b014854164ee22885&timestamp=1460798807&nonce=714811492
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000885s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000844s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000225s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000090s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.001387s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000707s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000258s ]
+
+[ 2016-04-16T17:26:48+08:00 ] 59.50.63.207 /Wap/artice/index?code=021866dbf4ec38a5abecdacc21614e6I&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000863s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000985s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000856s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000510s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015819s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000475s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000532s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000252s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001956s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000639s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-04-16T17:26:51+08:00 ] 59.50.63.207 /wap/artice/details/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000861s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000875s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000245s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009230s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000352s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000359s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000194s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001528s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000753s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-04-16T17:28:21+08:00 ] 59.50.63.207 /user/article/edit/id/497
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000886s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000875s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 497 ) LIMIT 1   [ RunTime:0.000329s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019305s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000351s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000320s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000204s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001568s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000660s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-04-16T17:30:35+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000855s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000762s ]
+SQL: UPDATE `wx_article` SET `title`='演出习俗',`discription`='琼剧用海南方言（俗称海南话．属闽南语系）演唱，清代俗称“土戏”，琼山、海口一带俗称为“斋”，清末民初又名“海南戏”。',`thumb`='',`content`='<p>\r\n	<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416172858_81376.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">&nbsp; &nbsp; &nbsp; &nbsp;琼剧用海南方言（俗称</span>海南话<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">．属闽南语系）演唱，清代俗称“土戏”，琼山、海口一带俗称为“斋”，清末民初又名“海南戏”；因其形成于古称琼州所在地琼山，因此国外琼籍华侨谓之“琼州戏”、“琼音”。“琼剧”之称始于1932仿</span>傀儡戏<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">产生的，但是，还没有确凿的佐证。据琼山和海口两地老人及琼剧艺人相传，明清时，福建</span>正字戏<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">和</span>白字戏<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">（潮剧）都曾在海南岛演出。《海口舆地志》和《海口福建会馆碑志》均有“闽广大船停泊白沙津深，……常有潮广剧演唱”的记载。所谓“潮广剧”，即正字戏和潮剧。今琼剧有些曲调与潮剧相同或相似。据此，土戏是在正字戏、潮剧曲调的基础上，改用土音演唱，其间又吸收当地民歌及歌舞八音乐曲，于清中叶以前发展形成。</span>\r\n</p>' WHERE ( `id` = 497 ) [ RunTime:0.000317s ]
+
+[ 2016-04-16T17:30:38+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000892s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000752s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000295s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018655s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000344s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000330s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000210s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001463s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000614s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2016-04-16T17:30:40+08:00 ] 59.50.63.207 /wap/artice/details/id/497
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000995s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001099s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 497 ) LIMIT 1   [ RunTime:0.000331s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013892s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000322s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000293s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000194s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001392s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000631s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2016-04-16T17:31:04+08:00 ] 59.50.63.207 /user/article/edit/id/497
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000864s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000740s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 497 ) LIMIT 1   [ RunTime:0.000073s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017541s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000353s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000330s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000210s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001481s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000612s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2016-04-16T17:31:32+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000894s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000798s ]
+SQL: UPDATE `wx_article` SET `title`='演出习俗',`discription`='琼剧用海南方言（俗称海南话．属闽南语系）演唱，清代俗称“土戏”，琼山、海口一带俗称为“斋”，清末民初又名“海南戏”。',`thumb`='',`content`='<p>\r\n	<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416172858_81376.jpg\" alt=\"\" />\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;琼剧用海南方言（俗称海南话．属闽南语系）演唱，清代俗称“土戏”，琼山、海口一带俗称为“斋”，清末民初又名“海南戏”；因其形成于古称琼州所在地琼山，因此国外琼籍华侨谓之“琼州戏”、“琼音”。“琼剧”之称始于1932仿傀儡戏产生的，但是，还没有确凿的佐证。据琼山和海口两地老人及琼剧艺人相传，明清时，福建正字戏和白字戏（潮剧）都曾在海南岛演出。《海口舆地志》和《海口福建会馆碑志》均有“闽广大船停泊白沙津深，……常有潮广剧演唱”的记载。所谓“潮广剧”，即正字戏和潮剧。今琼剧有些曲调与潮剧相同或相似。据此，土戏是在正字戏、潮剧曲调的基础上，改用土音演唱，其间又吸收当地民歌及歌舞八音乐曲，于清中叶以前发展形成。</span>\r\n</p>' WHERE ( `id` = 497 ) [ RunTime:0.000282s ]
+
+[ 2016-04-16T17:31:35+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000843s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000747s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000319s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018031s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000312s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000316s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000210s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001432s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000638s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000699s ]
+
+[ 2016-04-16T17:31:36+08:00 ] 59.50.63.207 /wap/artice/details/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000868s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000889s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000295s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009029s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000309s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000371s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000214s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001494s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000718s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2016-04-16T17:31:49+08:00 ] 59.50.63.207 /user/article/edit/id/496
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000851s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000967s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000819s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 496 ) LIMIT 1   [ RunTime:0.000233s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017284s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000334s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000343s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000193s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001440s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000638s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2016-04-16T17:34:47+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000896s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001021s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000858s ]
+SQL: UPDATE `wx_article` SET `title`='历史渊源与发展 ',`discription`='清乾隆五年（1740）至五十八年（1793），海口先后建起福建、高州、潮州、五邑（南海、番禺、佛山、江门、新会）会馆，这些会馆门前建有固定石戏台，且年年集资聘请家乡戏班来海口演出。',`thumb`='http://jasxun1-public.stor.sinaapp.com/upload/20151113/20151113183921_74796.jpg',`content`='<p>\r\n	<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416173342_25137.jpg\" alt=\"\" />\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 清乾隆五年（1740）至五十八年（1793），海口先后建起福建、高州、潮州、五邑（南海、番禺、佛山、江门、新会）会馆，这些会馆门前建有固定石戏台，且年年集资聘请家乡戏班来海口演出。有些戏班还设科班教授门徒，有些艺人则在海南岛落户。如光绪年间（1875-1908）琼剧名净黄匡生的先祖，就是乾隆时跟班会至海南落户的。这些外来的戏班，对土戏的发展起了推动作用，使它的成为表演艺术渐趋成熟。咸丰年间（1851-1861）至光绪年间是琼剧较繁盛和变化较大时期。太平天国革命失败后，粤剧艺人受到清政府的迫害，流入海南岛，与琼剧艺人互相拜师结亲，有的开设科班教戏，有的插班演戏，对琼剧的兴盛起了很大的促进作用。这时，粤剧的二黄、梆子等声腔，以及新、老“江湖”十八本等均为琼剧吸收，又在这些声腔的基础上创造了“海南腔”等板腔，使琼剧从曲牌体逐步蜕变为板腔体，原有的锣鼓谱、小曲、帮腔等也被摒弃。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416173410_47963.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;“五四”运动以后，在文明戏的影响下，琼剧作家吴发凤、名旦张禄金等，组织了琼崖土戏改良社，编演了《救国运动》、《新的婚姻》、《省港大罢工》等内容进步、形式新颖的剧目，其他十余班社也编演了一批具有爱国思想的剧目，如《正气歌》、《桃花扇》、《木兰从军》等。这一时期，在音乐和舞台美术方面，均有所改革。1927年后，琼崖土戏改良社解散，琼剧受资本主义商业化的影响，有些班社竞相以荒诞内容的剧目和低级趣味的表演迎合低级趣味，致使它逐渐失去原有特色。抗日战争爆发后，不少班社流亡海外，岛内只存一个文武大班和几个中小（专演文戏）班子。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416173431_25044.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<div>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 中华人民共和国成立后，在党“百花齐放、推陈出新”的方针政策指导下，琼剧获得新生，有很大的发展。1950年初，岛内只有七个戏班活动。至1952年，离散的艺人重新归队。重返舞台，各县市陆续成立二十余个民营剧团，并开展正常的演出活动。1953年，开展改戏、改人、改制运动，废除班主制，艺人当家作主，其社会地位得到了重视与提高。同时，在革除上演“通宵戏”和“提纲戏”的陋习后，一方面，积极排演中央和省推荐的优秀剧目，另一方面，挖掘整理演出优秀传统剧目及创作改编优秀的历史剧和现代戏，琼剧舞台面目一新。1955年，进行职业剧团登记，经改革整顿，剧团拨归各县市人民政府领导与管理。1956年，广东琼剧团在广州宣布成立，1959年改组扩建成立广东琼剧院，同时，进行全区剧团整编，成立各市县琼剧团。1960年初，创办海南艺术学校（后改名海南琼剧学校）。此外，还举办各种规模的培训班，培养琼剧新人才，新一代琼剧艺术工作者和老一辈艺术家携手合作。经过一系列组织建设、健全机构工作和经营管理的改善，琼剧艺术更有了长足的发展。这段时期，先后整理出《红叶题诗》、《红色娘子军》、《秦香莲》等优秀历史剧和现代化戏，在舞中艺术方面，建立编导制和以剧本为依据的排演制度。1966年至1976年的“文化大革命”期间，琼剧遭受浩劫，大多数琼剧团被遣散；琼剧学校停办，戏曲机构陷入瘫痪，艺人或被下放劳动、或被迫转行、或被遣散回农村。建国后十多年来收集的各种珍贵艺术资料均被毁灭殆尽。</span>\r\n</div>\r\n<br />' WHERE ( `id` = 496 ) [ RunTime:0.000392s ]
+
+[ 2016-04-16T17:34:53+08:00 ] 59.50.63.207 /wap/artice/details/id/496
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000983s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001075s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 496 ) LIMIT 1   [ RunTime:0.000466s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009463s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000330s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000304s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000192s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001403s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000658s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2016-04-16T17:34:54+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000753s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000289s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018187s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000312s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000321s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000217s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001447s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000620s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001214s ]
+
+[ 2016-04-16T17:35:04+08:00 ] 59.50.63.207 /wap/artice/details/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001045s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001191s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001002s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000323s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011332s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000403s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000382s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000289s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001697s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000769s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000848s ]
+
+[ 2016-04-16T17:35:10+08:00 ] 59.50.63.207 /wap/artice/details/id/495
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000938s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000860s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 495 ) LIMIT 1   [ RunTime:0.000265s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009013s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000299s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000321s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000212s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000797s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001796s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000717s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000789s ]
+
+[ 2016-04-16T17:41:31+08:00 ] 59.50.63.207 /user/article/edit/id/495
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000971s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001091s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000828s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 495 ) LIMIT 1   [ RunTime:0.000085s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019044s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000400s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000398s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000401s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002020s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000873s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2016-04-16T19:22:57+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001309s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001525s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000877s ]
+SQL: UPDATE `wx_article` SET `title`='地理环境',`discription`='海南省总面积35354平方千米，森林面积2041333公顷，森林覆盖率达60.2%。热带天然林约占全省森林面积一半的比例。',`thumb`='http://jasxun1-public.stor.sinaapp.com/upload/20151113/20151113183921_74796.jpg',`content`='<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416174540_47322.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 海南省，简称琼，位于中国最南端，北以琼州海峡与广东划界，西临北部湾与越南民主共和国相对，东濒南海与台湾省相望，东南和南边在南海中与菲律宾、文莱和马来西亚为邻。海南是中国唯一的热带海岛省份，包括海南岛和西沙群岛、中沙群岛和南沙群岛的岛礁及其海域，是中国国土面积最大（含海洋）的省份，同时也是中国海洋面积最大、陆地面积最小的省。全省陆地面积约3.54万平方公里，海域面积约210万平方公里，常住人口867.15万人，省会为海口市。</span>\r\n</p>\r\n<p style=\"text-align:center;\">\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192244_76280.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192157_89937.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 海南省总面积35354平方千米，森林面积2041333公顷，森林覆盖率达60.2%。热带天然林约占全省森林面积一半的比例。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192235_73240.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;海南岛与美国夏威夷处在相近纬度，在长达1528公里的海岸上遍布可以开发建设成为世界一流旅游圣地的旅游资源，岛上终年气候宜人，四季鸟语花香，矿物、动植物资源丰富，尤其石油与天然气蕴藏量可观。所孕育的热带雨林和红树林为中国少有的森林类型，是开展科研、旅游和教学最理想的选择之地。</span><br />' WHERE ( `id` = 495 ) [ RunTime:0.000492s ]
+
+[ 2016-04-16T19:23:00+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000891s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000996s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022166s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000537s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000376s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000208s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000766s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002058s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000738s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2016-04-16T19:23:02+08:00 ] 59.50.63.207 /user/article/edit/id/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000897s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001027s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000889s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000287s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017591s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017705s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000356s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000344s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000229s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001543s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000637s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2016-04-16T19:26:20+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000861s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000857s ]
+SQL: UPDATE `wx_article` SET `title`='琼剧介绍',`discription`='是中国海南省的汉族民间戏曲艺术。琼剧是南方戏剧的其中一个支系，主要以海南话为戏曲语言，因此流行地域亦仅限于海南岛及两广之间。琼剧是当地的本土文化象征之一，相信已有一段颇长的历史，但实际起源时期却难以考知。',`thumb`='http://jasxun1-public.stor.sinaapp.com/upload/20151112/20151112011836_21996.jpg',`content`='<p>\r\n	<span style=\"font-size:16px;\">琼剧起源的问题，至少可以归纳出四种观点：</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; (一)“模仿说”，其代表为《海南岛志》。其志曰：“戏剧之在海南，在元代已有手托木头班之演唱，来自潮州。明之初中叶，土人仿之，而土剧遂兴。”也就是说，琼剧是明初的海南人对流行于元代的木偶戏的模仿。此说其实是中国戏曲“模仿说”的翻版。先秦“优孟衣冠”和宋傀儡戏表演，都曾被认为是戏曲的起源。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192614_53790.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192520_94592.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;(二)“外来说”，其坚持者多为琼剧老艺人。崖城老艺人范景乐说：“琼州土戏的前身是杂剧，来源于福建。崖州人过去称琼剧为闽南杂剧、琼州杂剧。”琼东老艺人李斗光说：“琼剧源渊于潮州的正音戏，后学潮剧才文戏唱琼音，武戏含官话。”在中国戏曲的起源问题上，也曾有人认为中国本无戏曲，是在汉代受到来自印度的梵剧的影响后，才有产生了中国戏曲。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; (三)“土著说”，此说在琼剧界颇有影响。明确提出此说者，是著有《海南汉人戏剧概论》一文的岑家梧。他认为，琼剧起源于海南当地民间歌谣，是一种土生土长的艺术。拥护此说的较多，认为琼剧界流传的“无中板，即无琼剧”，就是此说的佐证。他们认为，作为琼剧的核心——“中板”先于琼剧，其源头为海南的民间歌谣。陈之也《琼剧史略》认为：“海南土戏产生后，根据海南语音的特点，对梨园戏音乐唱腔加以发行吸收了本地民歌小调、歌舞八音，甚至抛弃了曲牌，仅留滚调部分，由此逐渐显出地方色彩。”这就是说，先有海南土戏，然后才有土戏对梨园戏等弋阳腔诸剧的吸收改造。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;(四)“宗教说”。不少琼剧爱好者都认为：“琼剧来源于道教”。这种观点其实是王国维的“巫觋说”。在《宋元戏曲考》中，王国维指出：“后世戏剧，当自巫、优二者出”。“巫与优之别：巫以乐神，而优以乐人；巫以歌舞为主，而优以调谑为主；巫为女为之，而优以男为之。”他还认为，戏曲与“巫”的关系要比与“优”的关系更密切：“巫觋之兴，虽在上皇之世，然俳优则远在其后。”“巫”，在《说文解字》中，被解为“祝也，女能事无形以舞，降神者也。”琼剧源于道教的观点虽然缺乏有力的论证，但决不可忽视。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 这四种琼剧起源观，虽然都有一定的理由，但未必都很准确。正如中国戏曲的起源一样，琼剧的发生与形成也不能简单地归因于某一要素，而应从多元的文化背景中去理解诸种要素的影响和作用。其实，就在中国戏曲已经走向成熟的南戏时期，偏安一隅的海南岛仍然不知戏剧为何物。苏轼谪儋，用他凝炼的诗歌语言给我们提供了北宋的海南已有民谣和舞蹈存在的史实。苏轼诗云：“野老已歌半岁语，除书欲放逐臣回。”清人翁方纲有诗记苏轼离儋时的情景：“黎歌蛮舞祝公归。”“野歌”、“黎歌”和“蛮舞”，足以说明当时的海南只有歌舞而无戏剧。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;海南有戏剧(木偶戏)，最早也应在宋末元初。金兵南下和元朝建立，使躲避战乱的来琼移民剧增。在大陆移民中，不管道流浪江湖的木偶戏艺人。简单的道具，易于掌握的表演艺术，使木偶戏在海南岛很容易地落下脚来。木偶戏源于北宋时的开封，后流入临安，在南宋濒亡时又随江湖艺人漂泊到闽南，最后又经粤东，穿过琼州海峡，来到海南岛。当时流行于海南岛的木偶戏形态，如今已很难确知，但从今日文昌、琼山一带仍以木偶戏祭祖敬神和婚娶丧葬，可知当时的木偶戏也不外乎是酬神娱人。然而，当时的木偶戏与现在的海南木偶戏肯定不同。前者是宋元杂剧的一部分，而后者已是琼剧文化的组成，其语言唱腔、行当和锣鼓均与琼剧无异。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 正是元代有木偶戏流行的事实，产生了琼剧源于木偶戏的“模仿”说。《海南岛志》论证说：“故今之土剧班，称木头班为师史。”琼剧产生以前，海南人祈求平安，主要是以载歌载舞的“傩”。“木头班”进入海南后，便代替了原始歌舞，成为海南人做“斋”的主要形式。由于戏剧的起源与宗教的关系极为密切，人们便误以为琼剧的师法对象是木偶戏。根据戏剧发生的规律，我们只能说，木偶戏对琼剧的生成有着重要的影响，但并不是本源。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">其次，我们再来看看琼剧的外来说。杂万里，在海南的出现仅晚于木偶戏。大约在明中叶，海南便有了“杂剧”演出。明《正德琼台志》云：“迎春日，府卫盛服至东郊迎春馆，武弁各竟办杂剧。五月十一日，卫所扮装关王会。“府卫”、“卫所”等，是元明时期朝廷在海南的军屯治所，至今在海南岛的西部还有以卫、所、屯等命名的村镇。驻琼军人扮演杂剧，当然不可能具有专业水平。他们的目的只在于通过杂剧的演出，自娱自乐，以减轻对于中原家乡的罹。他们所演的杂剧与宋元杂剧当属相同体系，不重声腔，但强调科白，是一种用“官话”表演的戏剧。由于是军人演出，这种重科白和武打的“杂剧”，便被称为“军戏”。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">因此，关于琼剧起源的各种说法都不够全面。琼剧在其形成与发展的过程中模仿过传入海南的各种戏曲剧种，但这些剧种只是琼剧生成“流”，而不是“源”。仅有“模仿”，是产生不出魅力独特的艺术的。综上所述，琼剧是在中国传统文化雄浑广阔的背景下，以海南文化为基础，并且经过传入海南的中国戏曲诸剧种的碰撞、交流和融汇，最后才在海南岛生长出来的新剧种，从而使中国戏曲百花园绽开了一枝别具特色的“琼花”——琼剧。</span>\r\n</p>' WHERE ( `id` = 1 ) [ RunTime:0.000396s ]
+
+[ 2016-04-16T19:26:27+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000890s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001056s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000435s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000581s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018495s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000315s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000328s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000254s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001442s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000623s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2016-04-16T19:26:29+08:00 ] 59.50.63.207 /user/article/edit/id/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000920s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001048s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000851s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000314s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017353s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000417s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000443s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000223s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001761s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000635s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-04-16T19:28:43+08:00 ] 59.50.63.207 /user/article/update
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000876s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001007s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000877s ]
+SQL: UPDATE `wx_article` SET `title`='琼剧介绍',`discription`='是中国海南省的汉族民间戏曲艺术。琼剧是南方戏剧的其中一个支系，主要以海南话为戏曲语言，因此流行地域亦仅限于海南岛及两广之间。琼剧是当地的本土文化象征之一，相信已有一段颇长的历史，但实际起源时期却难以考知。',`thumb`='http://jasxun1-public.stor.sinaapp.com/upload/20151112/20151112011836_21996.jpg',`content`='<p>\r\n	<span style=\"font-size:16px;\">琼剧起源的问题，至少可以归纳出四种观点：</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; (一)“模仿说”，其代表为《海南岛志》。其志曰：“戏剧之在海南，在元代已有手托木头班之演唱，来自潮州。明之初中叶，土人仿之，而土剧遂兴。”也就是说，琼剧是明初的海南人对流行于元代的木偶戏的模仿。此说其实是中国戏曲“模仿说”的翻版。先秦“优孟衣冠”和宋傀儡戏表演，都曾被认为是戏曲的起源。</span>\r\n</p>\r\n<p>\r\n	<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192614_53790.jpg\" alt=\"\" />\r\n</p>\r\n<p>\r\n	<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192520_94592.jpg\" alt=\"\" />\r\n</p>\r\n<p>\r\n	<img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192711_30660.jpg\" alt=\"\" />\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\"><img src=\"http://qjywx.cn.com/Public/upload/image/20160416/20160416192827_88459.jpg\" alt=\"\" /><br />\r\n</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;(二)“外来说”，其坚持者多为琼剧老艺人。崖城老艺人范景乐说：“琼州土戏的前身是杂剧，来源于福建。崖州人过去称琼剧为闽南杂剧、琼州杂剧。”琼东老艺人李斗光说：“琼剧源渊于潮州的正音戏，后学潮剧才文戏唱琼音，武戏含官话。”在中国戏曲的起源问题上，也曾有人认为中国本无戏曲，是在汉代受到来自印度的梵剧的影响后，才有产生了中国戏曲。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; (三)“土著说”，此说在琼剧界颇有影响。明确提出此说者，是著有《海南汉人戏剧概论》一文的岑家梧。他认为，琼剧起源于海南当地民间歌谣，是一种土生土长的艺术。拥护此说的较多，认为琼剧界流传的“无中板，即无琼剧”，就是此说的佐证。他们认为，作为琼剧的核心——“中板”先于琼剧，其源头为海南的民间歌谣。陈之也《琼剧史略》认为：“海南土戏产生后，根据海南语音的特点，对梨园戏音乐唱腔加以发行吸收了本地民歌小调、歌舞八音，甚至抛弃了曲牌，仅留滚调部分，由此逐渐显出地方色彩。”这就是说，先有海南土戏，然后才有土戏对梨园戏等弋阳腔诸剧的吸收改造。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;(四)“宗教说”。不少琼剧爱好者都认为：“琼剧来源于道教”。这种观点其实是王国维的“巫觋说”。在《宋元戏曲考》中，王国维指出：“后世戏剧，当自巫、优二者出”。“巫与优之别：巫以乐神，而优以乐人；巫以歌舞为主，而优以调谑为主；巫为女为之，而优以男为之。”他还认为，戏曲与“巫”的关系要比与“优”的关系更密切：“巫觋之兴，虽在上皇之世，然俳优则远在其后。”“巫”，在《说文解字》中，被解为“祝也，女能事无形以舞，降神者也。”琼剧源于道教的观点虽然缺乏有力的论证，但决不可忽视。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 这四种琼剧起源观，虽然都有一定的理由，但未必都很准确。正如中国戏曲的起源一样，琼剧的发生与形成也不能简单地归因于某一要素，而应从多元的文化背景中去理解诸种要素的影响和作用。其实，就在中国戏曲已经走向成熟的南戏时期，偏安一隅的海南岛仍然不知戏剧为何物。苏轼谪儋，用他凝炼的诗歌语言给我们提供了北宋的海南已有民谣和舞蹈存在的史实。苏轼诗云：“野老已歌半岁语，除书欲放逐臣回。”清人翁方纲有诗记苏轼离儋时的情景：“黎歌蛮舞祝公归。”“野歌”、“黎歌”和“蛮舞”，足以说明当时的海南只有歌舞而无戏剧。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;海南有戏剧(木偶戏)，最早也应在宋末元初。金兵南下和元朝建立，使躲避战乱的来琼移民剧增。在大陆移民中，不管道流浪江湖的木偶戏艺人。简单的道具，易于掌握的表演艺术，使木偶戏在海南岛很容易地落下脚来。木偶戏源于北宋时的开封，后流入临安，在南宋濒亡时又随江湖艺人漂泊到闽南，最后又经粤东，穿过琼州海峡，来到海南岛。当时流行于海南岛的木偶戏形态，如今已很难确知，但从今日文昌、琼山一带仍以木偶戏祭祖敬神和婚娶丧葬，可知当时的木偶戏也不外乎是酬神娱人。然而，当时的木偶戏与现在的海南木偶戏肯定不同。前者是宋元杂剧的一部分，而后者已是琼剧文化的组成，其语言唱腔、行当和锣鼓均与琼剧无异。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp; 正是元代有木偶戏流行的事实，产生了琼剧源于木偶戏的“模仿”说。《海南岛志》论证说：“故今之土剧班，称木头班为师史。”琼剧产生以前，海南人祈求平安，主要是以载歌载舞的“傩”。“木头班”进入海南后，便代替了原始歌舞，成为海南人做“斋”的主要形式。由于戏剧的起源与宗教的关系极为密切，人们便误以为琼剧的师法对象是木偶戏。根据戏剧发生的规律，我们只能说，木偶戏对琼剧的生成有着重要的影响，但并不是本源。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">其次，我们再来看看琼剧的外来说。杂万里，在海南的出现仅晚于木偶戏。大约在明中叶，海南便有了“杂剧”演出。明《正德琼台志》云：“迎春日，府卫盛服至东郊迎春馆，武弁各竟办杂剧。五月十一日，卫所扮装关王会。“府卫”、“卫所”等，是元明时期朝廷在海南的军屯治所，至今在海南岛的西部还有以卫、所、屯等命名的村镇。驻琼军人扮演杂剧，当然不可能具有专业水平。他们的目的只在于通过杂剧的演出，自娱自乐，以减轻对于中原家乡的罹。他们所演的杂剧与宋元杂剧当属相同体系，不重声腔，但强调科白，是一种用“官话”表演的戏剧。由于是军人演出，这种重科白和武打的“杂剧”，便被称为“军戏”。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">因此，关于琼剧起源的各种说法都不够全面。琼剧在其形成与发展的过程中模仿过传入海南的各种戏曲剧种，但这些剧种只是琼剧生成“流”，而不是“源”。仅有“模仿”，是产生不出魅力独特的艺术的。综上所述，琼剧是在中国传统文化雄浑广阔的背景下，以海南文化为基础，并且经过传入海南的中国戏曲诸剧种的碰撞、交流和融汇，最后才在海南岛生长出来的新剧种，从而使中国戏曲百花园绽开了一枝别具特色的“琼花”——琼剧。</span>\r\n</p>\r\n\"' WHERE ( `id` = 1 ) [ RunTime:0.000442s ]
+
+[ 2016-04-16T19:28:46+08:00 ] 59.50.63.207 /user/article/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000838s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000973s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001097s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `wx_article` WHERE ( `cate_id` = 1 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 0,18   [ RunTime:0.000381s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018099s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000354s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000360s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000200s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001465s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000621s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2016-04-16T19:29:52+08:00 ] 101.226.233.140 /weixin?signature=487645e348a119a758f039d4410c827141f27ba8&timestamp=1460806192&nonce=558086496
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000888s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000741s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000068s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000059s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.000449s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000067s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000464s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000084s ]
+
+[ 2016-04-16T19:29:54+08:00 ] 59.50.63.207 /Wap/artice/index?code=001f23af1842ad8e81a7bcdbb42efc4p&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000847s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001064s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000587s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010537s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000377s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000313s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000205s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001525s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000676s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000759s ]
+
+[ 2016-04-16T19:29:59+08:00 ] 59.50.63.207 /wap/artice/details/id/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000863s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000279s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009385s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000373s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000322s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000773s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002134s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000706s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2016-04-16T19:30:05+08:00 ] 59.50.63.207 /wap/artice/details/id/495
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000927s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000868s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 495 ) LIMIT 1   [ RunTime:0.000281s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009427s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000354s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000307s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000234s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001507s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000718s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-04-16T19:30:18+08:00 ] 59.50.63.207 /user/article/edit/id/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000966s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001083s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/User/Action/BaseAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001133s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000126s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024149s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000621s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000351s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000222s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001799s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000642s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000722s ]
+

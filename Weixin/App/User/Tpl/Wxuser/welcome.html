@@ -1,0 +1,29 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+    <h4>关注时回复<a href="{jasxun:U(GROUP_NAME.'/Wxuser/index')}" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
+<hr>
+    <form action="{jasxun:U(GROUP_NAME.'/Wxuser/welcome')}" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+      <table class="table table-bordered table-wordpress postlist-table">
+        <tbody>
+          
+        <tr>
+          <td width="25%"><label for="welcome">关注时回复内容<font color="red">*</font></label></td>
+          <td><textarea name="welcome" style="width:500px;height:150px;"/>{jasxun:$vo['welcome']}</textarea>
+        </tr> 
+        <tr>
+          <td><label for="keyword">关键词<font color="red">*</font></label></td>
+          <td><input type="text" name="keyword" value="{jasxun:$vo['keyword']}" id="keyword" class="span4"/></td>
+        </tr>  
+      
+        <tr><td></td>
+           <input name="id" type="hidden" value="{jasxun:$vo['id']}">
+        <td><input type="submit" value="保存" id="submit" class="btn btn-large btn-success"  /></td>
+       </tr>
+        </tbody>
+    </table>
+        
+    </form>
+</div>
+<!-- main -->
+<include file="Public:footer"/>

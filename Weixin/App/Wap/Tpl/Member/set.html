@@ -1,0 +1,102 @@
+<include file="Public:header" />
+  <title>用户设置</title>
+</head>
+<body>
+  <div class="app-wrap container">
+    <div class="bbs-coment">
+      <form class="form-horizontal container-fluid not-padding js_set_user" method="post" action="{jasxun:U('Wap/Member/set')}">
+        <div class="form-group">
+          <label for="wxname" class="col-xs-3 col-sm-2 control-label">微信昵称</label>
+          <div class="col-xs-9 col-sm-10">
+            <input type="text" class="form-control" id="wxname" value="{jasxun:$member['wxname']}" name="wxname"placeholder="{jasxun:$member['wxname']}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="wxtel" class="col-xs-3 col-sm-2 control-label">手机号码</label>
+          <div class="col-xs-9 col-sm-10">
+            <input type="tel" class="form-control" id="wxtel"  name="mobile" value="{jasxun:$member['mobile']}" placeholder="手机号码">
+          </div>
+        </div>
+        <div class="user-photot-set">
+          <h4>请设置头像(点击头像上传新头像)</h4>
+          <div class="set-photo-upload">
+            <input type="hidden" name="headerpic" value="{jasxun:$member['headerpic']}" />
+            <div class="upload-user-photo" id="js_upload_photo" data-url="{jasxun:U('Wap/Member/upload')}">
+              <img class="js_my_photo fl" src="{jasxun:$member['headerpic']}" /><!-- 将微信头像取回填入 -->
+              <div class="state"><i class="fa fa-spinner fa-spin"></i></div>
+            </div>
+            <p></p>
+          </div>
+          <h4>或者选择下面的头像</h4>
+          <div class="sys-photo row">
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/2.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/3.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/4.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/5.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/6.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/38.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/8.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/9.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/10.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/11.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/17.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-xs-3 col-md-2">
+              <a href="javascript:void(0);" data-img="" class="thumbnail js_choose_this_photo">
+                <img src="__CSS__photo/22.jpg" alt="...">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12 col-sm-12">
+            <button type="submit" class="btn btn-success full-control">提交修改</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<include file="Public:footer" />

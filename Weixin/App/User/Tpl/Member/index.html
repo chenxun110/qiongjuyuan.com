@@ -1,0 +1,56 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+<h4>会员列表</h4>
+<hr/>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+
+      <tr>
+        <th>编号</th>
+        <th>手机号</th>
+        <th>微信名称</th>
+         <th>会员ID</th>
+        <th>头像</th>
+        <th>性别</th> 
+        <th>注册时间</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$list['id']}</td>
+        <td>{jasxun:$list['mobile']}</td>
+        <td>{jasxun:$list['wxname']}</td>
+         <td>{jasxun:$list['cardid']}</td>
+        <td><img src="{jasxun:$list['headerpic']}" style="height:38px;width:38px;"></td>
+        <td><if condition="$list['sex'] eq 1">男<elseif condition="$list['sex'] eq 2"/>女<else/>未知</if></td>
+            <td>{jasxun$list['addtime']|date='Y-m-d H:i:s',###}</td>
+        <td>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})"><i class="icon-remove"></i> 删除</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </foreach>
+        
+    </tbody>
+  </table>
+  {jasxun:$page}
+</div>
+<script type="text/javascript">
+ function status(id){
+   $.post("{jasxun:U(GROUP_NAME.'/Member/ajax_status')}",{'id':id},function(data){
+        if(data.status==1){
+           $("#status_"+id).html(data.html);
+        }
+
+   });
+ }
+
+</script>
+<!-- main -->
+<include file="Public:footer"/>

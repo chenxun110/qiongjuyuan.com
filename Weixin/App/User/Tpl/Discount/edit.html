@@ -1,0 +1,66 @@
+<include file="Public:header"/>
+<link rel="stylesheet" href="__PUBLIC__/kindeditor-4.1.7/themes/default/default.css" />
+<script src="__PUBLIC__/kindeditor-4.1.7/kindeditor.js"></script>
+<script src="__PUBLIC__/kindeditor-4.1.7/lang/zh_CN.js"></script>
+<script src="__PUBLIC__/date/WdatePicker.js"></script>
+    <script>
+      KindEditor.ready(function(K) {
+        var editor = K.create('textarea[name="content"]', {
+          allowFileManager : true,
+          urlType:'domain',
+          afterBlur : function(){  
+                    //编辑器失去焦点时直接同步，可以取到值  
+                    this.sync();  
+                }  
+        });
+      });
+    </script>
+<!-- main -->
+<div class="main span10">
+    <h4>编辑<a href="{jasxun:U(GROUP_NAME.'/Discount/index')}" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
+<hr>
+    <form action="{jasxun:U(GROUP_NAME.'/Discount/update')}" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+      <table class="table table-bDiscounted table-wordpress postlist-table">
+        <tbody>
+        
+         <tr>
+         <td width="25%"><label for="title">演出排期ID号<font color="red">*</font></label></td>
+         <td><input type="text" name="schedule_id" value="{jasxun:$vo['schedule_id']}" id="schedule_id" class="span8"/></td>
+       </tr>     
+        <tr>
+          <td width="25%"><label for="title">标题<font color="red">*</font></label></td>
+          <td><input type="text" name="title" value="{jasxun:$vo['title']}" id="title" class="span8"/></td>
+        </tr>  
+        <tr>
+          <td width="25%"><label for="title">折扣<font color="red">*</font></label></td>
+          <td><input type="text" name="discount" value="{jasxun:$vo['discount']}" id="discount" class="span8"/></td>
+        </tr> 
+        <tr>
+          <td width="25%"><label for="title">价格<font color="red">*</font></label></td>
+          <td><input type="text" name="price" value="{jasxun:$vo['price']}" id="price" class="span8"/></td>
+        </tr> 
+        <tr>
+          <td width="25%"><label for="title">数量<font color="red">*</font></label></td>
+          <td><input type="text" name="num" value="{jasxun:$vo['num']}" id="num" class="span8"/></td>
+        </tr> 
+        <tr>
+          <td><label for="title">内容 <font color="red">*</font></label></td>
+          <td><textarea name="content" class="span8" style="height:380px;">{jasxun:$vo['content']}</textarea>
+          </td>
+        </tr> 
+       <tr>
+          <td><label for="rate">使用时间<font color="red">*</font></label></td>
+          <td>开始于<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss'})" name="start_time" value="{jasxun$vo['start_time']|date='Y-m-d H:i:s',###}" id="start_time" class="span4"/>至
+            <input type="text" name="end_time" onfocus="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss',minDate:'#F{$dp.$D(\'start_time\')}'})" value="{jasxun$vo['end_time']|date='Y-m-d H:i:s',###}" id="end_time" class="span4"/>结束</td>
+        </tr>  
+        <tr><td></td>
+        <td><input name="id" value="{jasxun:$vo['id']}" type="hidden">
+          <input type="submit" value="保存" id="submit" class="btn btn-large btn-success"  /></td>
+       </tr>
+        </tbody>
+    </table>
+        
+    </form>
+</div>
+<!-- main -->
+<include file="Public:footer"/>

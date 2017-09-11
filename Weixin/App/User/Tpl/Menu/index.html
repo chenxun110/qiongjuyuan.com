@@ -1,0 +1,67 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+<div class="btn-group pull-right">
+<a href="javascript:void(0);" onclick="send()" class="btn btn-success"><i class="icon-plus icon-white"></i> 生成菜单</a>
+<a href="{jasxun:U(GROUP_NAME.'/Menu/add')}" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加菜单</a>
+</div>
+<h4>自定义菜单列表</h4>
+<hr/>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+
+      <tr>
+        <th>编号</th>
+        <th>菜单名称</th>
+        <th>关键词</th>
+        <th>链接url</th>
+        <th>显示</th>     
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$key+1}</td>
+        <td><if condition="$list['html'] neq ''">&nbsp;&nbsp;&nbsp;&nbsp;</if>{jasxun:$list['html']}{jasxun:$list['title']}</td>
+        <td>{jasxun:$list['keyword']}</td>
+         <td>{jasxun:msubstr($list['url'],0,100)}</td>
+        <td onclick="status({jasxun:$list['id']})" id="status_{jasxun:$list['id']}">
+        <if condition="$list['is_show'] eq 1">
+        <span style="cursor:pointer;" class="btn btn-success disabled btn-mini">是</span>
+        <else/>
+        <span style="cursor:pointer;" class="btn disabled btn-mini">否</span>
+        </if>
+        </td>
+        <td>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a href="{jasxun:U(GROUP_NAME.'/Menu/edit',array('id'=>$list['id']))}" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
+              <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})"><i class="icon-remove"></i> 删除</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </foreach>
+        
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+ function status(id){
+   $.post("{jasxun:U(GROUP_NAME.'/Menu/ajax_status')}",{'id':id},function(data){
+        if(data.status==1){
+           $("#status_"+id).html(data.html);
+        }
+
+   },'json');
+ }
+ 
+ function send(){
+   $.post("{jasxun:U(GROUP_NAME.'/Menu/send')}",{'id':1},function(d){
+          ys_tips({w: d.msg,t: d.s,url: d.url});
+   },'json');
+ }
+</script>
+<!-- main -->
+<include file="Public:footer"/>

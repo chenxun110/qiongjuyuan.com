@@ -1,0 +1,40 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+<h4>关键词列表</h4>
+<hr/>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+
+      <tr>
+        <th>编号</th>
+        <th>关键词</th>
+        <th>关联类型</th>
+        <th>标题</th>
+        <th>添加时间</th>   
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$list['id']}</td>
+        <td>{jasxun:$list['keyword']}</td>
+        <td><if condition="$list['type'] eq 1">文本<elseif condition="$list['type'] eq 2"/>单图文<elseif condition="$list['type'] eq 3"/>多图文<else/>大转盘</if></td>
+        <td>{jasxun:get_title($list['source_table'],$list['aim_id'])}</td>
+        <td>{jasxun$list['addtime']|date='Y-m-d H:i:s',###}</td>
+        <td>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})"><i class="icon-remove"></i> 删除</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </foreach>
+        
+    </tbody>
+  </table>
+</div>
+<!-- main -->
+<include file="Public:footer"/>

@@ -1,0 +1,790 @@
+[ 2016-05-06T19:59:36+08:00 ] 101.226.62.86 /weixin?signature=024f5fcaced1abd7a113e3fa73614af53f16d4fd&timestamp=1462535976&nonce=2032873892
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000852s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.022780s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.007778s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000092s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.013766s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.004319s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.004122s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000614s ]
+
+[ 2016-05-06T19:59:41+08:00 ] 153.0.5.171 /Wap/artice/zwgklist?code=031hfzaH1aoT6d0HgzaH1IPDaH1hfzaC&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000834s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000962s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.013980s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 4 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.007009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/33c5cc52cc394bb785f4b92ac5d52bab.php 第 23 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.041280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041407s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000572s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000489s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000350s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002298s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001037s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001131s ]
+
+[ 2016-05-06T19:59:55+08:00 ] 153.0.5.171 /wap/artice/details/id/527
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000837s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000950s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001149s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 527 ) LIMIT 1   [ RunTime:0.000323s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026343s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000521s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000474s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000398s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002413s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001027s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2016-05-06T19:59:58+08:00 ] 153.0.5.171 /Wap/artice/zwgklist?code=031hfzaH1aoT6d0HgzaH1IPDaH1hfzaC&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000873s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001004s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000995s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 4 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000103s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/33c5cc52cc394bb785f4b92ac5d52bab.php 第 23 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015878s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000509s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000463s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000331s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000687s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002247s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000718s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-05-06T20:00:02+08:00 ] 101.226.62.86 /weixin?signature=0c90de63129d19a18e196b8b40eb22687bae4ea5&timestamp=1462536002&nonce=1376779862
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000910s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.001079s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000095s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000096s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.000695s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000098s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000742s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000212s ]
+
+[ 2016-05-06T20:00:02+08:00 ] 153.0.5.171 /Wap/artice/troupelist?code=011iWtN60inH1w10MON60pYxN60iWtNL&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000912s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001036s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001003s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 3 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.009574s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/6aa39ffa8da54f6584f4cdff3757dd71.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031179s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000379s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000309s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000190s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001498s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000652s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-05-06T20:00:09+08:00 ] 153.0.5.171 /wap/artice/troupedetails/id/493
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000943s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000989s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 493 ) LIMIT 1   [ RunTime:0.000255s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024012s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000342s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000313s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000212s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001500s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000796s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2016-05-06T20:00:50+08:00 ] 153.0.5.171 /Wap/artice/troupelist?code=011iWtN60inH1w10MON60pYxN60iWtNL&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000898s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000821s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 3 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000082s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/6aa39ffa8da54f6584f4cdff3757dd71.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010684s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000361s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000300s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000206s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001469s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000758s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2016-05-06T20:00:53+08:00 ] 153.0.5.171 /wap/artice/troupedetails/id/492
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000860s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001128s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 492 ) LIMIT 1   [ RunTime:0.000338s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014835s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000310s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000306s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000212s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001388s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000805s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-05-06T20:01:02+08:00 ] 153.0.5.171 /Wap/artice/troupelist?code=011iWtN60inH1w10MON60pYxN60iWtNL&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000871s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000775s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 3 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000081s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/6aa39ffa8da54f6584f4cdff3757dd71.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010278s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000299s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000689s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000192s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001809s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000709s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2016-05-06T20:01:06+08:00 ] 101.226.62.86 /weixin?signature=2f7fc4ae0bc43820ed0b20ce148802c4c99ca625&timestamp=1462536066&nonce=706641326
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000919s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001049s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.001140s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000099s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000092s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.000690s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000663s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000104s ]
+
+[ 2016-05-06T20:01:06+08:00 ] 153.0.5.171 /Wap/artice/index?code=041rWU8J1h0FIa0su39J1ItY8J1rWU8C&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000850s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000778s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000991s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034405s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000308s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000394s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000226s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001589s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000688s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-05-06T20:01:12+08:00 ] 153.0.5.171 /wap/artice/details/id/498
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000881s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.000836s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `id` = 498 ) LIMIT 1   [ RunTime:0.000243s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008979s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009047s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000327s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000296s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000197s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001396s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000653s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2016-05-06T20:01:23+08:00 ] 153.0.5.171 /Wap/artice/index?code=041rWU8J1h0FIa0su39J1ItY8J1rWU8C&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000926s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `wx_article` [ RunTime:0.001014s ]
+SQL: SELECT * FROM `wx_article` WHERE ( `cate_id` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000169s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010677s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000293s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000314s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000198s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001483s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000640s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2016-05-06T20:01:27+08:00 ] 101.226.62.84 /weixin?signature=1f2c78308329fdc6cc827f6bdf4ee7a7cec2fdeb&timestamp=1462536086&nonce=2132551649
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001087s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000854s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000069s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000062s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.000484s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000068s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000494s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000079s ]
+
+[ 2016-05-06T20:01:28+08:00 ] 153.0.5.171 /Wap/Schedule/index?code=001egKap1Yi8Hv05Ktcp13WHap1egKaN&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000849s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+NOTIC: [8] Undefined index:  uid /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Wap/Action/BaseAction.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000993s ]
+SQL: SELECT `AppId`,`Secret`,`id` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.012465s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `openid` = 'o5Wc0uAP4_Py3ygd6xmLAIS9hCKI' ) LIMIT 1   [ RunTime:0.005493s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.011234s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `status` = 0 )  [ RunTime:0.023710s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/4b69f6ab1518bd7bc53b51d4bf3ca643.php 第 23 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018496s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000303s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000360s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000214s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001476s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000638s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2016-05-06T20:01:32+08:00 ] 153.0.5.171 /wap/schedule/details/id/534
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000879s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.001091s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.000769s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `id` = 534 ) LIMIT 1   [ RunTime:0.000289s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018648s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000374s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000313s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000195s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001544s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000714s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2016-05-06T20:01:42+08:00 ] 153.0.5.171 /Wap/Schedule/index?code=001egKap1Yi8Hv05Ktcp13WHap1egKaN&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000884s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.000747s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.000526s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `status` = 0 )  [ RunTime:0.000106s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/4b69f6ab1518bd7bc53b51d4bf3ca643.php 第 23 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010202s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000300s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000292s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000209s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001394s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000650s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2016-05-06T20:01:44+08:00 ] 153.0.5.171 /wap/schedule/details/id/525
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000846s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.001031s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000107s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.000837s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `id` = 525 ) LIMIT 1   [ RunTime:0.000324s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010811s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000312s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000314s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000232s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001454s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000647s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000706s ]
+
+[ 2016-05-06T20:01:50+08:00 ] 153.0.5.171 /Wap/Schedule/index?code=001egKap1Yi8Hv05Ktcp13WHap1egKaN&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000842s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.000888s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.000543s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `status` = 0 )  [ RunTime:0.000135s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/4b69f6ab1518bd7bc53b51d4bf3ca643.php 第 23 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030144s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000391s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000336s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000254s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001602s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000665s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-05-06T20:01:53+08:00 ] 153.0.5.171 /wap/schedule/details/id/535
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000836s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000962s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.000747s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.100631s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.000866s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `id` = 535 ) LIMIT 1   [ RunTime:0.100620s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010774s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000344s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000324s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000217s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001561s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000661s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2016-05-06T20:01:57+08:00 ] 153.0.5.171 /Wap/Schedule/index?code=001egKap1Yi8Hv05Ktcp13WHap1egKaN&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000901s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `wx_member` [ RunTime:0.000986s ]
+SQL: SELECT * FROM `wx_member` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000074s ]
+SQL: SHOW COLUMNS FROM `wx_schedule` [ RunTime:0.000527s ]
+SQL: SELECT * FROM `wx_schedule` WHERE ( `status` = 0 )  [ RunTime:0.000126s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/4b69f6ab1518bd7bc53b51d4bf3ca643.php 第 23 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010799s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000311s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000367s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000211s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001531s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000732s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000794s ]
+
+[ 2016-05-06T20:02:01+08:00 ] 101.226.62.86 /weixin?signature=ec6602286461a967deb8c6e74b86a2c0e25b0c9e&timestamp=1462536121&nonce=688749620
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000973s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000879s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000099s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000075s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.000454s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000080s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000472s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000081s ]
+
+[ 2016-05-06T20:02:02+08:00 ] 153.0.5.171 /Wap/artice/media_video?code=031DfamR0KhRje2eZMkR03b9mR0Dfams&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000904s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.092507s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `type` = 0 ) AND ( `available` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/5ab735364166554ecf5abcbe02071772.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.057975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058087s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000409s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000336s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000211s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001582s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000661s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2016-05-06T20:02:10+08:00 ] 153.0.5.171 /wap/artice/videolist/id/34
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000942s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `wx_video` [ RunTime:0.002931s ]
+SQL: SELECT * FROM `wx_video` WHERE ( `cate_id` = 34 )  [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000643s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000257s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/c9e10968d9420113fa438f3137ef9a19.php 第 34 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.036507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036611s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000338s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000357s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000205s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001628s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000766s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-05-06T20:02:32+08:00 ] 153.0.5.171 /Wap/artice/media_video?code=031DfamR0KhRje2eZMkR03b9mR0Dfams&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.001021s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `type` = 0 ) AND ( `available` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000109s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/5ab735364166554ecf5abcbe02071772.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012122s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000457s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000470s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000212s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001940s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000655s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2016-05-06T20:02:40+08:00 ] 101.226.62.86 /weixin?signature=7a32df43f45d3f3316f7d4386f1c871a11ec5583&timestamp=1462536159&nonce=111700253
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000934s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001097s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+NOTIC: [8] Undefined index:  echostr /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/ORG/Wechat.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.000843s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000065s ]
+SQL: SELECT `wxid` FROM `wx_wxuser` LIMIT 1   [ RunTime:0.000068s ]
+NOTIC: [8] Undefined index:  Content /home/qjywxjqujiy7wbx/wwwroot/Weixin/App/Home/Action/WeixinAction.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `wx_keyword` [ RunTime:0.000522s ]
+SQL: SELECT * FROM `wx_keyword` WHERE ( `keyword` LIKE '%%' ) LIMIT 1   [ RunTime:0.000082s ]
+SQL: SHOW COLUMNS FROM `wx_replynews` [ RunTime:0.000575s ]
+SQL: SELECT * FROM `wx_replynews` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.000114s ]
+
+[ 2016-05-06T20:02:40+08:00 ] 153.0.5.171 /Wap/artice/media_audio?code=031q5Yso0X68Ed1Ojhro0fGXso0q5YsT&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.001018s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `type` = 1 ) AND ( `available` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000491s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/6a957d7ad08d3cffae69498c364489af.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013722s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000310s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000316s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000186s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001393s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000650s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2016-05-06T20:02:45+08:00 ] 153.0.5.171 /wap/artice/audiolist/id/45
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `wx_video` [ RunTime:0.000761s ]
+SQL: SELECT * FROM `wx_video` WHERE ( `cate_id` = 45 )  [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000473s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `id` = 45 ) LIMIT 1   [ RunTime:0.000181s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/a3b7229f5f209dd367c6e1fc32cf1be0.php 第 35 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018703s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000314s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000333s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000213s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001470s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000653s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-05-06T20:02:50+08:00 ] 153.0.5.171 /Wap/artice/media_audio?code=031q5Yso0X68Ed1Ojhro0fGXso0q5YsT&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000878s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000772s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `type` = 1 ) AND ( `available` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000073s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/6a957d7ad08d3cffae69498c364489af.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.625998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.626090s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000376s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000311s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000220s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001513s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000824s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2016-05-06T20:02:52+08:00 ] 153.0.5.171 /wap/artice/audiolist/id/33
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000838s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `wx_video` [ RunTime:0.001085s ]
+SQL: SELECT * FROM `wx_video` WHERE ( `cate_id` = 33 )  [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000856s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000298s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/a3b7229f5f209dd367c6e1fc32cf1be0.php 第 35 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012680s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000282s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000324s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000203s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001356s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000707s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2016-05-06T20:02:54+08:00 ] 180.153.206.31 /wap/artice/audiolist/id/33
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000926s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `wx_video` [ RunTime:0.000783s ]
+SQL: SELECT * FROM `wx_video` WHERE ( `cate_id` = 33 )  [ RunTime:0.000076s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000478s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000087s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/a3b7229f5f209dd367c6e1fc32cf1be0.php 第 35 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015188s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000430s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000522s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000209s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001869s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000710s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000789s ]
+
+[ 2016-05-06T20:02:57+08:00 ] 153.0.5.171 /wap/artice/audio/id/525
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000843s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `wx_video` [ RunTime:0.000828s ]
+SQL: SELECT * FROM `wx_video` WHERE ( `id` = 525 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM wx_comment c [ RunTime:0.000097s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM wx_comment c
+SQL: SELECT c.*,m.wxname,m.headerpic FROM wx_comment c left join wx_member m on c.member_id=m.id WHERE ( c.cid=525 and c.type_id=2 ) ORDER BY c.id desc LIMIT 1000   [ RunTime:0.932525s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016869s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000513s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000330s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000237s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001811s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000743s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2016-05-06T20:03:04+08:00 ] 153.0.5.171 /wap/artice/audiolist/id/33
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000854s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `wx_video` [ RunTime:0.000752s ]
+SQL: SELECT * FROM `wx_video` WHERE ( `cate_id` = 33 )  [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000624s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000076s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/a3b7229f5f209dd367c6e1fc32cf1be0.php 第 35 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010954s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000283s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000325s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000211s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001376s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000865s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2016-05-06T20:03:07+08:00 ] 153.0.5.171 /Wap/artice/media_audio?code=031q5Yso0X68Ed1Ojhro0fGXso0q5YsT&state=123
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000906s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `wx_videocate` [ RunTime:0.000858s ]
+SQL: SELECT * FROM `wx_videocate` WHERE ( `type` = 1 ) AND ( `available` = 1 ) ORDER BY id desc LIMIT 1000   [ RunTime:0.000076s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  keyword /home/qjywxjqujiy7wbx/wwwroot/Weixin/Runtime/Cache/Wap/6a957d7ad08d3cffae69498c364489af.php 第 24 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011566s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000500s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000537s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000309s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002287s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000675s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000741s ]
+

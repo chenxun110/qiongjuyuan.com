@@ -1,0 +1,72 @@
+<include file="Public:header"/>
+<style type="text/css">
+ .news li{
+  list-style: none;
+  line-height: 36px;
+  border-bottom: 1px dashed #bbb;
+ }
+  .news li a{
+    float: right;
+  }
+</style>
+<!-- main -->
+<div class="main span10">
+    <h4>添加多图文<a href="{jasxun:U(GROUP_NAME.'/Muti/index')}" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
+<hr>
+    <form action="{jasxun:U(GROUP_NAME.'/Muti/insert')}" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+      <table class="table table-bordered table-wordpress postlist-table">
+        <tbody>
+          
+        <tr>
+          <td width="25%"><label for="title">标题<font color="red">*</font></label></td>
+          <td><input type="text" name="title" value="" id="title" class="span4"/></td>
+        </tr> 
+        <tr>
+          <td><label for="keyword">关键词<font color="red">*</font></label></td>
+          <td><input type="text" name="keyword" value="" id="keyword" class="span4"/></td>
+        </tr>   
+        <tr>
+          <td><label for="content">关联图文<font color="red">*</font></label></td>
+          <td> <input type="button" value="选择图文" id="news" class="btn btn-primary">
+            <hr/>
+            <ul class="news span6">
+           
+            </ul>
+          </td>
+        </tr>  
+        <tr><td></td>
+        <td><input type="submit" value="添加" id="submit" class="btn btn-large btn-success"  /></td>
+       </tr>
+        </tbody>
+    </table>
+        
+    </form>
+</div>
+    <script>
+     $(function(){
+     $("#news").click(function(){
+          $('#newslist').modal({
+                   show:true
+             });
+       });
+
+     }); 
+    </script>
+<!--图文列表-->
+<div id="newslist" class="modal hide fade"  tabindex="-1" style="width:800px;height:500px;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+    <iframe scrolling="no" marginheight="0" marginwidth="0" frameborder="0" style="height:1130px;width:100%;" src="{jasxun:U(GROUP_NAME.'/Muti/selectenews')}" ></iframe>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function(){
+  $(".del-news").live("click",function(){
+    //写你的单击事件代码
+   $(this).parent("li").remove();
+
+  });
+
+});
+</script>
+<!-- main -->
+<include file="Public:footer"/>

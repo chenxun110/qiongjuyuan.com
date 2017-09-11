@@ -1,0 +1,55 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+<h4>公众号配置</h4>
+<hr/>
+    <div class="alert alert-success">
+    url:<strong>{jasxun:C('SITE_URL')}/index.php/weixin</strong><br/>
+    token:<strong>{jasxun:C('TOKEN')}</strong>
+    </div>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+
+      <tr>
+        <th>编号</th>
+        <th>公众号名称</th>
+        <th>公众号类型</th>
+        <th>公众号头像</th>
+        <th>添加时间</th>   
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$key+1}</td>
+        <td>{jasxun:$list['wxname']}</td>
+        <td><if condition="$list['type'] eq 1">服务号<elseif condition="$list['type'] eq 2"/>企业号<else/>订阅号</if></td>
+        <td><img src="{jasxun:$list['headpic']}" style="height:38px;width:38px;"></td>
+        <td>{jasxun$list['addtime']|date='Y-m-d H:i:s',###}</td>
+        <td>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a href="{jasxun:U(GROUP_NAME.'/Wxuser/edit',array('id'=>$list['id']))}" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </foreach>
+        
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+ function status(id){
+   $.post("{jasxun:U(GROUP_NAME.'/Wxuser/ajax_status')}",{'id':id},function(data){
+        if(data.status==1){
+           $("#status_"+id).html(data.html);
+        }
+
+   });
+ }
+
+</script>
+<!-- main -->
+<include file="Public:footer"/>

@@ -1,0 +1,650 @@
+@charset "utf-8";
+@import "_reset";
+@import "_common";
+
+body{
+  background:#f0f3f4;
+}
+
+a{
+  color:#444;
+  text-decoration:none;
+}
+
+.app-wrap{
+  padding:0.5rem;
+}
+
+.article-body{
+  line-height:1.8;
+}
+
+.head-search{
+  position:relative;
+  padding-right:80px;
+  .btn{
+    position:absolute;
+    right:0;
+    top:0;
+  }
+}
+
+/* 新闻列表 */
+.news-list{
+  list-style:none;
+  padding:0.5rem 0;
+}
+.news-list-item{
+  display:block;
+  padding:0.3rem;
+  margin-bottom:0.5rem;
+  background:#fff;
+  border:1px solid #eee;
+  box-shadow:1px 1px 3px #eee;
+  color:#444;
+  @include flex;
+  .news-list-pic{
+    width:100px;
+    margin-right:0.5rem;
+    img{
+      width:100px;
+      height:80px;
+    }
+  }
+  .news-list-info{
+    @include flex_item;
+  }
+}
+
+/* 名角内容页 */
+.performer-img{
+  float:left;
+  width:100px;
+  margin-right:10px;
+  _display:inline;
+}
+
+
+.view-audio-wrap{
+  margin-top:30px;
+  @include flex;
+  padding-top:1rem;
+  background:#fff;
+  border:1px dotted #ddd;
+  .media-btn{
+    display:block;
+    @include flex_item;
+    padding:0 10px;
+    text-align:center;
+    .btn{
+      width:3rem;
+      height:3rem;
+      padding:0;
+      @include rounded(50%);
+    }
+  }
+}
+
+.video-box{
+  *{
+    width:100%;
+  }
+}
+
+.video-bar{
+  color:$base-blue;
+}
+
+/* videolist swiper */
+.video-slider{
+  .swiper-slide{
+    a{
+      display:block;
+      width:100%;
+    }
+  }
+  img{
+    display:block;
+    width:100%;
+  }
+  .swiper-pagination{
+    width:90% !important;
+    left:5% !important;
+    background:rgba(255, 255, 255, 0.5);
+    border-radius:1rem;
+    .swiper-pagination{
+      background:#fff;
+      opacity:1;
+    }
+    .swiper-pagination-bullet-active{
+      background:$base-blue;
+    }
+  }
+}
+
+.video-list{
+  .video-item{
+    float:left;
+    width:33.33%;
+    a{
+      display:block;
+      margin:5px;
+      img{
+        display:block;
+        width:100%;
+      }
+    }
+  }
+}
+
+.plus-nav{
+  position:fixed;
+  left:10px;
+  bottom:45px;
+  color:$base-blue;
+  font-size:2rem;
+  a{
+    position:absolute;
+    color:$base-blue;
+    &:nth-of-type(1){
+      right:0;
+      top:-4rem;
+    }
+    &:nth-of-type(2){
+      right:-2.5rem;
+      top:-3rem;
+    }
+    &:nth-of-type(3){
+      right:-3.5rem;
+      bottom:0;
+    }
+  }
+}
+
+.schedule-list{
+  padding:0;
+  li{
+    margin-bottom:0.5rem;
+    border:1px dotted #ddd;
+    a{
+      position:relative;
+      display:block;
+      padding:0.5rem 2rem 0.5rem 0.5rem;
+      background:#fff;
+      .fa-angle-double-right{
+        position:absolute;
+        right:0.5rem;
+        top:50%;
+        margin-top:-0.6rem;
+      }
+    }
+    .schedule-tiem{
+      .fa-clock-o{
+        color:#999;
+        margin-right:0.5rem;
+      }
+    }
+    .schedule-tit{
+      color:$base-blue;
+    }
+  }
+}
+.repertory{
+  margin-bottom:1rem;
+}
+
+.repertory-tit{
+  color:$base-blue;
+}
+
+.repertory-content{
+  min-height:25rem;
+}
+
+.ticket-list{
+  padding:0;
+  list-style:none outside none;
+  li{
+    margin-bottom:0.5rem;
+    border:1px solid #ddd;
+    a{
+      display:block;
+      padding:0.5rem;
+      background:#fff;
+      @include flex;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      align-items: center;
+      .btn{
+      }
+      .ticket-item{
+        @include flex-item;
+      }
+    }
+  }
+}
+
+.ticket-book-form{
+  list-style:none;
+  padding:0;
+  background:#fff;
+  li{
+    text-align:center;
+    &:nth-child(2){
+      border:1px solid #eee;
+      border-width:0 1px;
+    }
+    .ticket-chip{
+      padding:0.5rem 0;
+      border-bottom:1px solid #eee;
+      &:last-child{
+        border:none;
+      }
+    }
+  }
+}
+
+.ticket-buy-num{
+  position:relative;
+  padding:0 3.2rem;
+  margin:0 0.2rem;
+  border:1px solid $base-blue;
+  border-radius:0.5rem;
+  color:$base-blue;
+  input{
+    width:100%;
+    height:2.5rem;
+    text-align:center;
+    border:none;
+    background:none;
+  }
+  .fa{
+    position:absolute;
+    top:0;
+    width:3.2rem;
+    line-height:2.5rem;
+    text-align:center;
+  }
+  .fa-minus{
+    left:0;
+  }
+  .fa-plus{
+    right:0;
+  }
+}
+
+.ticket-info-item{
+  h4{
+    color:$base-blue;
+  }
+}
+
+.ticket-book-ok{
+  h3{
+    color:$base-blue;
+  }
+  p{
+    color:$base-green;
+  }
+}
+
+.comments{
+  margin-top:1rem;
+  .dates{
+    color:#999;
+  }
+}
+
+.upload-user-photo{
+  position:relative;
+  width:62px;
+  height:62px;
+  img{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  .state{
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    .fa{
+      position:absolute;
+      left:50%;
+      top:50%;
+      color:#fff;
+      margin:-0.5rem 0 0 -0.5rem;
+    }
+  }
+}
+
+
+.bbs-pic-show{
+  img{
+    display:block;
+    margin:5px 0;
+    width:100%;
+  }
+}
+
+.bbs-comment-title{
+  padding: 5px 5px;
+  margin: 0 -0.5rem;
+  color: $base-blue;
+  border-bottom: 1px solid #eee;
+  a{
+    color:$base-blue;
+  }
+}
+
+.bbs-comment-header{
+  position:relative;
+  padding:0 0 0 3.5rem;
+  min-height:3rem;
+  .u-img{
+    position:absolute;
+    left:0;
+    top:0;
+  }
+  .date{
+    color:#999;
+  }
+}
+
+.bbs-comment-item{
+  padding:0.5rem;
+  margin-bottom:0.5rem;
+  background:#fff;
+  border:1px solid #eee;
+}
+
+.bbs-comment-done{
+  text-align:center;
+  .fa{
+    font-size:1.6rem;
+    color:$base-blue;
+  }
+}
+
+.bbs-comment-body{
+  margin-bottom:0.5rem;
+}
+
+.bbs-comment-handle{
+  margin:0 -0.5rem -0.5rem;
+  padding:0.5rem;
+  box-sizing:content-box;
+  border-top:1px solid #eee;
+  .bbs-comment-done{
+    border-right:1px solid #eee;
+    &:last-child{
+      border:none;
+    }
+    a{
+      display:block;
+    }
+  }
+}
+
+.bbs-comment-content{
+  padding:0.5rem 0;
+}
+
+.bbs-comment-more{
+  padding:0.8rem 0;
+  color:$base-blue;
+}
+
+.bbs-item-block{
+  display:block;
+}
+
+.bbs-photo-list{
+  .bbs-photo-item {
+    width:80px;
+    height:80px;
+    padding:3px;
+    img{
+      display:block;
+      width:100%;
+      height:100%;
+    }
+  }
+}
+
+.post-bbs{
+  margin:-0.5rem;
+  background:#fff;
+  box-sizing:content-box;
+}
+
+.upload-pic-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  min-height:52px;
+  @extend .clearfix;
+  .upload-control{
+    position:relative;
+    float:left;
+    margin:0 3px 3px 0;
+    overflow:hidden;
+    img{
+      display:block;
+      width:100%;
+      height:100%;
+    }
+  }
+}
+
+.call-wrap{
+  position:relative;
+  padding-right:50px;
+  .call-btn{
+    position:absolute;
+    right:0;
+    top:0;
+  }
+
+}
+
+.player-upload{
+  position:relative;
+  padding:5px;
+  margin-bottom:5px;
+  border:1px dotted #ddd;
+  .pic-del-box{
+    position:absolute;
+    right:5px;
+    top:5px;
+    display:block;
+    opacity: 1;
+    color:#f60;
+    background:none;
+  }
+  .fa-video-camera,
+  .fa-tripadvisor{
+    color:#f60;
+  }
+}
+
+.has-upload{
+  .state{
+    position:absolute;
+    left:50%;
+    top:50%;
+    color:#000;
+    margin:-0.5rem 0 0 -0.5rem;
+  }
+}
+
+.pic-del-box{
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:0;
+  width:100%;
+  height:100%;
+  color:#fff;
+  background:rgba(0,0,0,0.5);
+  .fa{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-0.5rem 0 0 -0.5rem;
+  }
+}
+
+.upload-control{
+  width:52px;
+  height:52px;
+  color:#999;
+  text-align:center;
+  line-height:52px;
+  border:1px dotted #999;
+}
+
+.footer{
+  padding-top:50px;
+}
+
+.footer-nav{
+  position:fixed;
+  left:0;
+  bottom:0;
+  z-index:1500;
+  width:100%;
+  padding:0;
+  margin:0;
+  list-style:none;
+  background:#fff;
+  border-top:1px solid #ddd;
+  li{
+    -webkit-box-pack:center;
+    -moz-box-pack: center;
+    -ms-flex-align:center;/* IE 10 */
+  }
+  a{
+    display:block;
+    padding:0.5rem 0;
+    text-align:center;
+    color:#000;
+  }
+  .fa{
+    display:block;
+    margin:0 auto;
+  }
+}
+
+.user-center-banber{
+  position:relative;
+  height:12rem;
+  padding:0.5rem;
+  color:#fff;
+  background:url(../../images/user-banner.jpg) no-repeat;
+  background-size:100% 100%;
+}
+
+.setting{
+  position:absolute;
+  top:0.5rem;
+  right:0.5rem;
+  display:inline-block;
+  padding:0.5rem;
+  font-size:1.8rem;
+  color:#fff;
+}
+
+.user-info{
+  .u-img{
+    width:5.2rem;
+    height:5.2rem;
+    margin-right:1rem;
+  }
+  p{
+    margin-bottom:1rem;
+  }
+}
+
+.ticket-tab-bar{
+  color:#fff;
+  background:$base-blue;
+  .tab-btn{
+    padding:0.5rem 0;
+    line-height:2.5rem;
+    text-align:center;
+    &.cur{
+      color:#444;
+      background:#fff;
+    }
+  }
+}
+
+.ticket-item{
+  padding:0.5rem 0;
+  background:#fff;
+  h4{
+    margin:0 0 0.2rem;
+  }
+  p{
+    margin-bottom:0.2rem;
+  }
+}
+
+.user-ticket{
+  min-height:300px;
+  .ticket-item{
+    border-bottom:1px solid #eee;
+  }
+}
+
+.sys-photo{
+  padding:0.5rem;
+  margin-bottom:1rem;
+  background:#fff;
+}
+
+.stop-upload{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:3;
+}
+
+.player-del{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  text-align:right;
+  .fa{
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-0.5rem;
+    color:#f00;
+  }
+}
+
+.upload-control-box{
+  position:relative;
+}
+
+#bbs-player{
+  video{
+    width:100%;
+  }
+}
+
+//加入响应式
+
+@import "_response";

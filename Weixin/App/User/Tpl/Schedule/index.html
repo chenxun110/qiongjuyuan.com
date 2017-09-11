@@ -1,0 +1,57 @@
+<include file="Public:header"/>
+<!-- main -->
+<div class="main span10">
+<div class="btn-group pull-right">
+<a href="{jasxun:U(GROUP_NAME.'/Schedule/add')}" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加</a>
+</div>
+<h4>演出排期</h4>
+<hr/>
+  <table class="table table-bordered table-wordpress postlist-table">
+    <thead>
+
+      <tr>
+        <th>编号</th>
+        <th>标题</th>
+        <th>演出时间</th>
+        <th>演出地点</th>
+        <th>总票数</th>
+        <th>已预定票数</th>
+        <th>剩余票数</th>
+        <th>截止时间</th>
+        <th>状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+        <foreach name="list" item="list">
+      <tr class="tr-publish">
+        <td>{jasxun:$list['id']}</td>
+        <td>{jasxun:$list['title']}</td>
+        <td>{jasxun:$list['playtime']}</td>
+        <td>{jasxun:$list['address']}</td>
+        <td>{jasxun:$list['num']}张</td>
+         <td>{jasxun:$list['pay_num']}张</td>
+        <td>{jasxun:($list['num']-$list['pay_num'])}张</td>
+          <td>{jasxun$list['start_time']|date='Y-m-d H:i',###}至<br/>{jasxun$list['end_time']|date='Y-m-d H:i',###}</td>      
+        <td>
+          <if condition="$list['status'] eq 0">正常<else/>状态</if>
+        </td>
+        <td>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <a href="{jasxun:U(GROUP_NAME.'/Schedule/edit',array('id'=>$list['id']))}" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
+              <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})"><i class="icon-remove"></i> 删除</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      </foreach>
+        
+    </tbody>
+  </table>
+</div>
+  <div class="span8">
+  {jasxun:$page}
+</div>
+<!-- main -->
+<include file="Public:footer"/>

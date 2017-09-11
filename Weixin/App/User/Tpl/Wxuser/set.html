@@ -1,0 +1,76 @@
+<include file="Public:header"/>
+<link rel="stylesheet" href="__PUBLIC__/kindeditor-4.1.7/themes/default/default.css" />
+<script src="__PUBLIC__/kindeditor-4.1.7/kindeditor.js"></script>
+<script src="__PUBLIC__/kindeditor-4.1.7/lang/zh_CN.js"></script>
+    <script>
+      KindEditor.ready(function(K) {
+        var editor = K.editor({
+          allowFileManager : true,
+          urlType:'domain',
+          afterBlur : function(){  
+                    //编辑器失去焦点时直接同步，可以取到值  
+                    this.sync();  
+                }  
+        });
+        K('#upload').click(function() {
+          editor.loadPlugin('image', function() {
+            editor.plugin.imageDialog({
+              showRemote : false,
+              imageUrl : K('#headpic').val(),
+              clickFn : function(url, title, width, height, border, align) {
+                var url = "{jasxun:C('SITE_URL')}"+url;
+                K('#headpic').val(url);
+                K('#pic').attr('src',url);
+                editor.hideDialog();
+              }
+            });
+          });
+        });
+      });
+    </script>
+<!-- main -->
+<div class="main span10">
+  <h4>公众号配置</h4>
+  <hr/>
+      <div class="alert alert-success">
+      url:<strong>{jasxun:C('SITE_URL')}/weixin</strong><br/>
+      token:<strong>{jasxun:C('TOKEN')}</strong>
+      </div>
+    <form action="{jasxun:U(GROUP_NAME.'/Wxuser/set')}" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+      <table class="table table-bordered table-wordpress postlist-table">
+        <tbody>
+          
+        <tr>
+          <td width="25%"><label for="title">公众号名称<font color="red">*</font></label></td>
+          <td><input type="text" name="wxname" value="{jasxun:$vo['wxname']}" id="wxname" class="span4"/></td>
+        </tr> 
+        <tr>
+          <td><label for="title">公众号原始id<font color="red">*</font></label></td>
+          <td><input type="text" name="wxid" value="{jasxun:$vo['wxid']}" id="wxid" class="span4"/></td>
+        </tr>   
+        <tr>
+        <td><label for="title">公众号类型<font color="red">*</font></label></td>
+          <td>
+          <input name="type" <if condition="$vo['type'] eq 0">checked="checked"</if> value="0" type="radio">订阅号
+          <input name="type" <if condition="$vo['type'] eq 1">checked="checked"</if> value="1" type="radio">服务号
+        </td>
+        </tr> 
+         <tr>
+          <td><label for="title">AppId<font color="red">*</font></label></td>
+          <td><input type="text" name="AppId" value="{jasxun:$vo['AppId']}" id="AppId" class="span4"/></td>
+        </tr> 
+         <tr>
+          <td><label for="title">Secret<font color="red">*</font> </label></td>
+          <td><input type="text" name="Secret" value="{jasxun:$vo['Secret']}" id="Secret" class="span8"/></td>
+        </tr>
+        <tr><td></td>
+        <td><input name="id" value="{jasxun:$vo['id']}" type="hidden">
+          <input type="submit" value="保存" id="submit" class="btn btn-large btn-success"  /></td>
+       </tr>
+        </tbody>
+    </table>
+        
+    </form>
+</div>
+<!-- main -->
+<include file="Public:footer"/>
