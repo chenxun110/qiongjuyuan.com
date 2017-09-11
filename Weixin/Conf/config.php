@@ -14,16 +14,16 @@ return array(
     'SESSION_AUTO_START'   => TRUE, 
     'APP_AUTOLOAD_PATH'    => '@.ORG',
     //微信和域名配置
-    'SITE_URL'             => 'http://qjywx.cn.com',//域名
+    'SITE_URL'             => 'http://qiongjuyuan.com',//域名
     'AppID'                => 'wx5a97f05af959b0b1',//公众号appid
     'EncodingAESKey'       => 'ZW2vUzAsWEItSAg3UwEypOL7H9jiuQl6ELwQh2rI2nK',//消息加解密密钥
     'TOKEN'                => 'qiongjuyuan',//微信接入token值
      //数据库配置信息
     'DB_TYPE'              => 'mysql', // 数据库类型
     'DB_HOST'              => 'localhost', // 服务器地址
-    'DB_NAME'              => 'qjywx', // 数据库名
-    'DB_USER'              => 'qjywx', // 用户名
-    'DB_PWD'               => 'n8p2bhac', // 密码
+    'DB_NAME'              => 'qiongjuyuan.com', // 数据库名
+    'DB_USER'              => 'root', // 用户名
+    'DB_PWD'               => '123456', // 密码
     'DB_PORT'              => 3306, // 端口
     'DB_PREFIX'            => 'wx_', // 数据库表前缀
 );
