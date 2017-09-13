@@ -69,38 +69,36 @@
 <!-- main -->
 <div class="main span10">
 <div class="btn-group pull-right">
-<a href="javascript:void(0);" onclick="send()" class="btn btn-success"><i class="icon-plus icon-white"></i> 生成菜单</a>
-<a href="<?php echo U(GROUP_NAME.'/Menu/add');?>" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加菜单</a>
+<a href="<?php echo U(GROUP_NAME.'/Interact/add');?>" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加</a>
 </div>
-<h4>自定义菜单列表</h4>
+<h4>互动平台</h4>
 <hr/>
   <table class="table table-bordered table-wordpress postlist-table">
     <thead>
 
       <tr>
         <th>编号</th>
-        <th>菜单名称</th>
-        <th>关键词</th>
-        <th>链接url</th>
-        <th>显示</th>     
+        <th>标题</th>
+        <th>加心数</th>
+        <th>点赞数</th>
+        <th>评论数</th>
+        <th>添加时间</th>
         <th>操作</th>
       </tr>
     </thead>
     <tbody>
         <?php if(is_array($list)): foreach($list as $key=>$list): ?><tr class="tr-publish">
-        <td><?php echo $key+1;?></td>
-        <td><?php if($list['html'] != ''): ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php endif; echo $list['html']; echo $list['title'];?></td>
-        <td><?php echo $list['keyword'];?></td>
-         <td><?php echo msubstr($list['url'],0,100);?></td>
-        <td onclick="status(<?php echo $list['id'];?>)" id="status_<?php echo $list['id'];?>">
-        <?php if($list['is_show'] == 1): ?><span style="cursor:pointer;" class="btn btn-success disabled btn-mini">是</span>
-        <?php else: ?>
-        <span style="cursor:pointer;" class="btn disabled btn-mini">否</span><?php endif; ?>
-        </td>
+        <td><?php echo $list['id'];?></td>
+        <td><?php echo $list['title'];?></td>
+        <td><?php echo $list['likes'];?></td>
+        <td><?php echo $list['zans'];?></td>
+        <td><?php echo $list['comments'];?></td>
+        <td><?php echo (date('Y-m-d H:i:s',$list['addtime'])); ?></td>
+      
         <td>
           <div class="btn-toolbar">
             <div class="btn-group">
-              <a href="<?php echo U(GROUP_NAME.'/Menu/edit',array('id'=>$list['id']));?>" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
+              <a href="<?php echo U(GROUP_NAME.'/Interact/edit',array('id'=>$list['id']));?>" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
               <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<?php echo $list['id']; ?>)})"><i class="icon-remove"></i> 删除</a>
             </div>
           </div>
@@ -110,22 +108,9 @@
     </tbody>
   </table>
 </div>
-<script type="text/javascript">
- function status(id){
-   $.post("<?php echo U(GROUP_NAME.'/Menu/ajax_status');?>",{'id':id},function(data){
-        if(data.status==1){
-           $("#status_"+id).html(data.html);
-        }
-
-   },'json');
- }
- 
- function send(){
-   $.post("<?php echo U(GROUP_NAME.'/Menu/send');?>",{'id':1},function(d){
-          ys_tips({w: d.msg,t: d.s,url: d.url});
-   },'json');
- }
-</script>
+  <div class="span8">
+  <?php echo $page;?>
+</div>
 <!-- main -->
 </div>
 <!-- row-fluid -->

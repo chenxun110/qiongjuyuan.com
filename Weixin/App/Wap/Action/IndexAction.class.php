@@ -7,7 +7,7 @@
  */
 class IndexAction extends BaseAction{
  public function index(){
- 	$this->display();
+ 	$this->redirect("Booking/index");
  }
  
 }

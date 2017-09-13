@@ -1,8 +1,8 @@
 <?php
 /*
- * 用户中心
+ * 互动分享
  */
-class MemberAction extends BaseAction{
+class InteractAction extends BaseAction{
 
 public function index(){
 	

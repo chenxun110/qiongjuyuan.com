@@ -6,13 +6,6 @@ function getCateName($cate_id){
  	}
  	return $subject;
  }
- function get_vname($cate_id){
-    $subject = M('videocate')->where(array('id'=>$cate_id))->getField('subject');
-    if(empty($subject)){
-       $subject = '全部分类';
-    }
-    return $subject;
- }
 function msubstr($str, $start=0, $length, $charset="utf-8", $suffix=true) {
 	if(function_exists("mb_substr"))
 	$slice = mb_substr($str, $start, $length, $charset);
@@ -106,43 +99,6 @@ function randCode($length = 5, $type = 0) {
         }
         return $code;
     }
-function get_type_piao($sid,$type){
-  $count = M('order')->where(array('schedule_id'=>$sid,'type_id'=>$type))->sum('num');
-  return intval($count);
-}
-function get_all_piao($sid){
-  $count = M('order')->where(array('schedule_id'=>$sid))->sum('num');
-  return intval($count);
-}
-function get_all_discount($sid){
-  $count = M('discount_order')->where(array('discount_id'=>$sid))->count();
-  return intval($count);
-}
-//是否已赞
-function is_zan($member_id,$id){
-if(!$member_id){
-    return 0;
-}    
-$result = M('zan')->where("member_id={$member_id} and zan_id={$id}")->find();
-if(!empty($result)){
-    return 1;
-}else{
-    return 0;
-}
-}
-//是否已赞
-function is_like($member_id,$id){
-if(!$member_id){
-    return 0;
-}    
-$result = M('likes')->where("member_id={$member_id} and likes_id={$id}")->find();
-if(!empty($result)){
-    return 1;
-}else{
-    return 0;
-}
-}
-
 function getuserinfo(){
     $public = M('wxuser')->field('AppId,Secret,id')->find();
     $appid = $public['AppId'];
@@ -170,22 +126,7 @@ function getoken(){
  $_SESSION['token'] = $public['token'];
  return $_SESSION['token'];
 }
-function  is_get_dis($uid,$id){
- $result = M('discount_order')->where(array('member_id'=>$uid,'discount_id'=>$id))->find();
- if(!empty($result)){
-    return 1;
- }else{
-    return 0;
- }
-}
-function get_dis_sn($uid,$id){
-    $sn = M('discount_order')->where(array('member_id'=>$uid,'discount_id'=>$id))->getField('sn'); 
-    return $sn ;
-}
-function get_dis_status($uid,$id){
-    $status = M('discount_order')->where(array('member_id'=>$uid,'discount_id'=>$id))->getField('status'); 
-    return $status ;
-}
+
 
 function get_memberinfo($uid,$field){
     $member = M('member')->where(array('id'=>$uid))->find();
@@ -272,10 +213,3 @@ function get_wxid(){
    $wxid = M('wxuser')->getField('wxid');
     return $wxid?$wxid:false;
 } 
-function get_pc($id){
-  return false;
- $url =""; 
- $article = M('article')->where(array('id'=>$id))->find();
- $data = json_encode($article);
- $result = https_request($url, $data);
-}

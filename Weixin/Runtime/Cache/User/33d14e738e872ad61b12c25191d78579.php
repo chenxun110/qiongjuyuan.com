@@ -117,116 +117,43 @@ $(function(){
 
 </script>
 <!-- sidebar -->
-<link rel="stylesheet" href="__PUBLIC__/kindeditor-4.1.7/themes/default/default.css" />
-<script src="__PUBLIC__/kindeditor-4.1.7/kindeditor.js"></script>
-<script src="__PUBLIC__/kindeditor-4.1.7/lang/zh_CN.js"></script>
-    <script>
-      KindEditor.ready(function(K) {
-        var editor = K.editor({
-          allowFileManager : true,
-          urlType:'domain',
-          afterBlur : function(){  
-                    //编辑器失去焦点时直接同步，可以取到值  
-                    this.sync();  
-                }  
-        });
-        editor = K.create('textarea[name="content"]', {
-          allowFileManager : true
-        });
-        K('#upload').click(function() {
-          editor.loadPlugin('image', function() {
-            editor.plugin.imageDialog({
-              showRemote : false,
-              imageUrl : K('#headpic').val(),
-              clickFn : function(url, title, width, height, border, align) {
-                var url = "<?php echo C('SITE_URL');?>"+url;
-                K('#headpic').val(url);
-                K('#pic').attr('src',url);
-                editor.hideDialog();
-              }
-            });
-          });
-        });
-      });
-    </script>
 <!-- main -->
 <div class="main span10">
-    <h4>编辑<a href="<?php echo U(GROUP_NAME.'/Video/index');?>" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
+    <h4>添加菜单<a href="<?php echo U(GROUP_NAME.'/Menu/index');?>" class="pull-right" ><i class="icon-backward"></i> <strong>返回列表</strong></a></h4>
 <hr>
-    <form action="<?php echo U(GROUP_NAME.'/Video/update');?>" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
+    <form action="<?php echo U(GROUP_NAME.'/Menu/insert');?>" method="post" accept-charset="utf-8" class="well form-inline" id="f" onSubmit="return qjy_ajaxform(this,function(d){opt_ok_return(d)})"> 
       <table class="table table-bordered table-wordpress postlist-table">
         <tbody>
-          <tr>
-            <td width="25%"><label for="title">选择栏目<font color="red">*</font></label></td>
-            <td>
-                <select name="cate_id">
-                <?php if(is_array($cate)): foreach($cate as $key=>$list): ?><option value="<?php echo $list['id'];?>" <?php if($list['id'] == $vo['cate_id']): ?>selected="selected"<?php endif; ?>><?php echo $list['subject'];?></option><?php endforeach; endif; ?>
+        <tr>
+          <td width="25%"><label for="title">父级<font color="red">*</font></label></td>
+          <td>
+             <select name="pid">
+                <option value="0">无</option>
+                <?php if(is_array($cate)): foreach($cate as $key=>$list): ?><option value="<?php echo $list['id'];?>"><?php echo $list['title'];?></option><?php endforeach; endif; ?>
              </select>
-
-            </td>
-          </tr>   
-        <tr>
-          <td><label for="title">标题<font color="red">*</font></label></td>
-          <td><input type="text" name="title" value="<?php echo $vo['title'];?>" id="wxid" class="span4"/></td>
-        </tr>  
-         <tr>
-          <td><label for="title">缩略图  <font color="red">*</font></label></td>
-          <td>
-              <img src="<?php echo $vo['thumb'];?>" id="pic" style="height:60px;width:60px;"><br/>
-            <input type="text" name="thumb" value="<?php echo $vo['thumb'];?>" id="thumb" class="span4"  />
-            <input type="button" value="选择图片" id="upload" class="btn btn-primary"></td>
-        </tr>  
-        <tr>
-          <td><label for="title">内容 <font color="red">*</font></label></td>
-          <td><textarea name="content" class="span8" style="height:380px;"><?php echo $vo['content'];?>"</textarea>
           </td>
-        </tr> 
-        <tr>
-          <td width="25%"><label for="title">上传文件<font color="red">*</font></label></td>
-          <td>
-            <input class="label-input span8" type="text" name="url" value="<?php echo $vo['url'];?>" style="width:600px;" id="download_url"><br/>
-            <input  class="btn" id="uploadfile" value="选择文件"><br/><span>上传文件大小限制：<?php echo ini_get('upload_max_filesize');?></span>
-          </td>
-        </tr> 
-        <tr>
-          <td width="25%"><label for="title">时长<font color="red">*</font></label></td>
-          <td><input type="text" name="length" value="<?php echo $vo['length'];?>" id="length" class="span4"/></td>
         </tr>   
+        <tr>
+          <td width="25%"><label for="title">菜单名称<font color="red">*</font></label></td>
+          <td><input type="text" name="title" value="" id="title" class="span4"/></td>
+        </tr> 
+        <tr>
+          <td><label for="keyword">关键词<font color="red">*</font></label></td>
+          <td><input type="text" name="keyword" value="" id="keyword" class="span4"/></td>
+        </tr>  
+        <tr>
+          <td><label for="url">链接url <font color="red">*</font></label></td>
+          <td><input type="text" name="url" value="" id="url" class="span8"/></td>
+        </tr> 
+        
         <tr><td></td>
-        <td><input name="id" value="<?php echo $vo['id'];?>" type="hidden">
-          <input type="submit" value="保存" id="submit" class="btn btn-large btn-success"  /></td>
+        <td><input type="submit" value="添加" id="submit" class="btn btn-large btn-success"  /></td>
        </tr>
         </tbody>
     </table>
         
     </form>
 </div>
-<script src="/Public/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="/Public/uploadify/uploadify.css">
-  <script type="text/javascript">
-    <?php $timestamp = time();?>
-    $(function() {
-      $('#uploadfile').uploadify({
-        'formData'     : {
-          '<?php echo session_name();?>' : '<?php echo session_id();?>', //此处获取SESSIONID
-          'timestamp' : '<?php echo $timestamp;?>',
-          'token'     : '<?php echo md5('unique_salt' . $timestamp);?>'
-        },
-        'swf'      : '/Public/uploadify/uploadify.swf',
-        'buttonText':'选择视频文件',
-        'uploader' : '/home/index/uploadify',
-        'onUploadSuccess' : function(file, data, response) {
-          var jsonObject = jQuery.parseJSON(data);
-          if(jsonObject.s==0){
-            $('#download_url').val(jsonObject.url);
-          }else{
-            alert(jsonObject.msg);
-          }
-         
-        },
-      });
-    });
-  </script>
 <!-- main -->
 </div>
 <!-- row-fluid -->
