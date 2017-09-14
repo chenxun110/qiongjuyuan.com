@@ -75,7 +75,7 @@ class BookingAction extends BaseAction{
 			$sn = randCode(6, 1); 
 			M('booking_detail')->where(['id'=>$did])->save(['sn'=>$sn]);
 		}
-		echo json_encode(['status'=>0,'msg'=>,'选座成功！']);exit();
+		echo json_encode(['status'=>0,'msg'=>'选座成功！']);exit();
 	}
    
    //输入信息

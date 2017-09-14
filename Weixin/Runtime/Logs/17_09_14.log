@@ -1990,3 +1990,13 @@ SQL: SELECT t.price FROM wx_place p left join wx_place_type t on p.type_id=t.id 
 SQL: INSERT INTO `wx_booking_detail` (`schedule_id`,`addtime`,`token`,`member_id`,`place_id`,`price`,`book_id`) VALUES (525,1505381467,'gh_8fbbef2cdbc6',4,2,'20.00',30) [ RunTime:0.024702s ]
 SQL: UPDATE `wx_booking_detail` SET `sn`='704832' WHERE ( `id` = 20 ) [ RunTime:0.030618s ]
 
+[ 2017-09-14T17:49:34+08:00 ] 127.0.0.1 /wap/Booking/seat
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000242s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Common\common.php 第 217 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+
