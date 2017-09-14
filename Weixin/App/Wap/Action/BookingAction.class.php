@@ -75,12 +75,16 @@ class BookingAction extends BaseAction{
 			$sn = randCode(6, 1); 
 			M('booking_detail')->where(['id'=>$did])->save(['sn'=>$sn]);
 		}
-		echo json_encode(['status'=>0,'msg'=>'选座成功！']);exit();
+		echo json_encode(['status'=>0,'msg'=>'选座成功！','book_id'=>$book_id]);exit();
 	}
    
    //输入信息
 	public function input_info(){
-     $this->display();
+
+	$book_id = $_GET['book_id'];
+	$this->assign('book_id',$book_id);	
+    $this->display();
+    
 	}
 
     //确认订单【支付】
@@ -89,7 +93,19 @@ class BookingAction extends BaseAction{
 	   error_reporting(E_ERROR);
 	   require_once APP_PATH."Common/Wxpay/lib/WxPay.Api.php";
 	   require_once APP_PATH."Common/Wxpay/WxPay.JsApiPay.php";
-	   $bill = array('out_trade_no'=>time(),'remark'=>'订单名称','money'=>'0.01');
+	   $book_id = $_GET['book_id'];
+	   $book =  M('book')->where(['id'=>$book_id])->find();
+	   $now = time();
+	   $out_trade_no = $now . randCode(6, 1);    //商户侧订单号
+	   $bill = [
+	   'money'  => $book['all_price'],
+	   'out_trade_no' => $out_trade_no,
+	   'add_time' => $now,
+	   'status'=>0,
+	   'member_id' =>$book['member_id'],
+	   'book_id' =>$book_id
+	   ];
+	   $insert_id = M('bill')->add($bill);
 	   //①、获取用户openid
 	   $tools = new \JsApiPay();
 	   //$openId = $tools->GetOpenid();
