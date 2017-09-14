@@ -75,12 +75,6 @@ class WeixinAction extends Action{
                 $data_arr = array(
                     'headerpic' =>$json_arr['headimgurl'],
                     'wxname' =>$json_arr['nickname'],
-                    'sex' =>$json_arr['sex'],
-                    'city' =>$json_arr['city'],
-                    'province' =>$json_arr['province'],
-                    'country' =>$json_arr['country'],
-                    'status' => 0,
-                    'sub_time' => time()
                 );
                 //更新
                 M('member')->where(array('openid'=>$this->data['FromUserName']))->save($data_arr);
@@ -95,15 +89,7 @@ class WeixinAction extends Action{
                     'openid' => $this->data['FromUserName'],
                     'headerpic' =>$json_arr['headimgurl'],
                     'wxname' =>$json_arr['nickname'],
-                    'sex' =>$json_arr['sex'],
-                    'city' =>$json_arr['city'],
-                    'province' =>$json_arr['province'],
-                    'country' =>$json_arr['country'],
                     'addtime' => time(),
-                    'sub_time' => time(),
-                    'cardid'=>random(16, 1),
-                    'status' => 0,
-                    'last_time' => time(), 
                 );
                 //新增
                 M('member')->add($data_arr);
@@ -124,23 +110,6 @@ class WeixinAction extends Action{
              return $return;
            
         }
-
-        //取消关注
-        if('unsubscribe' == strtolower($data['Event'])) { 
-         //会员信息处理
-             $member = M('member')->field('id')->where(array('openid'=>$this->data['FromUserName']))->find();
-              if(!empty($member)){
-                //更新会员信息
-                    $data_arr = array(
-                    'status' => 1,//取消关注
-                    'unsub_time' => time()//取消关注时间
-                );
-                M('member')->where(array('openid'=>$this->data['FromUserName']))->save($data_arr);
-
-              }
-
-        }
-
         //用户扫码事件推送
         if('user_scan_product' == strtolower($data['Event'])) { 
            //扫一扫记录【开发中】
@@ -158,8 +127,8 @@ class WeixinAction extends Action{
         $key = $data['Content'];
         switch ($key) {
                  //自定义关键词回复  
-            case '微信墙':
-               $msg ="输入格式如：#微信墙#世界那么大,我想去玩玩！";
+            case '订票':
+               $msg ="";
                $return = array('','text');
                 return $return;
               break;      

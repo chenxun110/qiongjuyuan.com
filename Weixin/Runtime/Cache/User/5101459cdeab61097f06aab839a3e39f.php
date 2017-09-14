@@ -59,9 +59,9 @@
 	
 	<ul class="nav nav-tabs nav-stacked">
 		<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>网上订票</a></li>
-		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">剧目管理</a></li>	
-		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">座位管理</a></li>
-		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">订单管理</a></li>
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/schedule/index');?>">琼剧排期</a></li>	
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Place/index');?>">座位管理</a></li>
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Booking/index');?>">订单管理</a></li>
 	</ul>
     </div>
 </div>

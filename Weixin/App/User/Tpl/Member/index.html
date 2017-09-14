@@ -1,6 +1,10 @@
 <include file="Public:header"/>
 <!-- main -->
 <div class="main span10">
+
+<div class="btn-group pull-right">
+<a href="{jasxun:U(GROUP_NAME.'/Member/add')}" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加</a>
+</div>
 <h4>会员列表</h4>
 <hr/>
   <table class="table table-bordered table-wordpress postlist-table">
@@ -8,11 +12,12 @@
 
       <tr>
         <th>编号</th>
+        <th>openid</th>
+        <th>微信头像</th>
         <th>手机号</th>
-        <th>微信名称</th>
-         <th>会员ID</th>
-        <th>头像</th>
-        <th>性别</th> 
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th> 
         <th>注册时间</th>
         <th>操作</th>
       </tr>
@@ -21,15 +26,18 @@
         <foreach name="list" item="list">
       <tr class="tr-publish">
         <td>{jasxun:$list['id']}</td>
-        <td>{jasxun:$list['mobile']}</td>
+        <td>{jasxun:$list['openid']}</td>
         <td>{jasxun:$list['wxname']}</td>
-         <td>{jasxun:$list['cardid']}</td>
         <td><img src="{jasxun:$list['headerpic']}" style="height:38px;width:38px;"></td>
+        <td>{jasxun:$list['mobile']}</td>
+        <td>{jasxun:$list['real_name']}</td>
         <td><if condition="$list['sex'] eq 1">男<elseif condition="$list['sex'] eq 2"/>女<else/>未知</if></td>
+        <td>{jasxun:$list['age']}</td>
             <td>{jasxun$list['addtime']|date='Y-m-d H:i:s',###}</td>
         <td>
           <div class="btn-toolbar">
             <div class="btn-group">
+            <a href="{jasxun:U(GROUP_NAME.'/Member/edit',array('id'=>$list['id']))}" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
               <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<php>echo $list['id'];</php>)})"><i class="icon-remove"></i> 删除</a>
             </div>
           </div>

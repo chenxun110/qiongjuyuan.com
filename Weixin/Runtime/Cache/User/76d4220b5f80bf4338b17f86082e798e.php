@@ -20,15 +20,6 @@
 				
 				<?php if($_SESSION['token'] != ''): ?><li><a style="color:#fff;" href="javascript:void(0);">当前：<?php echo session('wxname');?></a>
 				</li><?php endif; ?>
-				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Article/index');?>"><i class="icon-home"></i>海南省琼剧院</a></li>
-				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Video/index');?>"><i class="icon-film"></i>琼剧赏析</a></li>
-				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Schedule/index');?>"><i class="icon-road"></i>演出及动态</a></li>
-				<!--
-				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Order/index');?>"><i class="icon-home"></i>微信预定</a></li>
-				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Interact/index');?>"><i class="icon-home"></i>互动平台</a>
-				</li>-->
-				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Member/index');?>"><i class="icon-user"></i>用户管理</a>
-				</li>
 				<li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Index/changepassword');?>"><i class="icon-key"></i>修改密码</a>
 				</li>
                 <li><a style="color:#fff;" href="<?php echo U(GROUP_NAME.'/Index/logout');?>"><i class="icon-off" ></i>安全退出</a></li>
@@ -53,69 +44,27 @@
 		<li <?php if((MODULE_NAME == 'Keyword')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Keyword/index');?>">关键词维护</a></li>		
 	</ul>
 	<ul class="nav nav-tabs nav-stacked">
-	<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>海南省琼剧院</a></li>	
-	 <li <?php if((MODULE_NAME == 'Article')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Article/index');?>">琼剧概况</a></li>
-	  <li <?php if((MODULE_NAME == 'Club')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Club/index');?>">院团名角介绍</a></li>
-	  <li <?php if((MODULE_NAME == 'Zwgk')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Zwgk/index');?>">政务公开</a></li>
-	  <!--<li <?php if((MODULE_NAME == 'About')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/About/index');?>">关于我们</a></li>	-->
+	<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>琼剧相关</a></li>	
+	<li <?php if((MODULE_NAME == 'Article')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Article/index');?>">琼剧概况</a></li>
+	<li <?php if((MODULE_NAME == 'Club')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Club/index');?>">院团和名角</a></li>
+	<li <?php if((MODULE_NAME == 'About')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/About/index');?>">关于我们</a></li>
+	<li <?php if((MODULE_NAME == 'News')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/News/index');?>">戏曲新闻</a></li>
+	<li <?php if((MODULE_NAME == 'Member')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Member/index');?>">多媒体资料</a></li>
 	</ul>	
 	 <ul class="nav nav-tabs nav-stacked">
-	 <li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>用户管理</a></li>
-	  <li <?php if((MODULE_NAME == 'Member')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Member/index');?>">用户管理</a></li>
-	  <!--<li <?php if((MODULE_NAME == 'Interact')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Interact/index');?>">互动平台</a></li>	-->
+	 <li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>互动分享</a></li>
+	  <li <?php if((MODULE_NAME == 'Member')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Member/index');?>">用户中心</a></li>
+	  <li <?php if((MODULE_NAME == 'Interact')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Interact/index');?>">互动平台</a></li>	
 	 </ul>	
+	
 	<ul class="nav nav-tabs nav-stacked">
-	<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>琼剧赏析</a></li>
-	 <li <?php if((MODULE_NAME == 'Videocate')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Videocate/index');?>">视频分类</a></li>
-	 <li <?php if((MODULE_NAME == 'Video')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Video/index');?>">视频管理</a></li>
-	 <li <?php if((MODULE_NAME == 'Audiocate')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Audiocate/index');?>">音频分类</a></li>	
-	 <li <?php if((MODULE_NAME == 'Audio')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Audio/index');?>">音频管理</a></li>	
-		
-	</ul>		
-	<ul class="nav nav-tabs nav-stacked">
-		<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>演出及动态</a></li>	
-		 <li <?php if((MODULE_NAME == 'Schedule')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Schedule/index');?>">演出排期</a></li>
-		 <li <?php if((MODULE_NAME == 'News')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/News/index');?>">琼剧动态</a></li>
-		  <!--<li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">微信预定</a></li>-->
+		<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>网上订票</a></li>
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/schedule/index');?>">琼剧排期</a></li>	
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Place/index');?>">座位管理</a></li>
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Booking/index');?>">订单管理</a></li>
 	</ul>
-	  <!--<ul class="nav nav-tabs nav-stacked">
-		<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>优惠劵管理</a></li>	
-		<li <?php if((MODULE_NAME == 'Discount')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Discount/index');?>">优惠劵管理</a></li>
-		<li <?php if((MODULE_NAME == 'DiscountOrder')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/DiscountOrder/index');?>">优惠劵领取</a></li>
-	</ul>	-->	
     </div>
 </div>
-
-<script type="text/javascript">
-$(function(){ 
- $(".cur").parent().find('li').show();
- $(".cur").parent('ul').siblings('ul').find('li:not(.header)').hide();
-  $(".menu .header").click(function(){
-  	if($(this).siblings().css("display")=='none'){
-  		$(this).find('i').removeClass('icon-plus');
-  		$(this).find('i').addClass('icon-minus');
-       $(this).parent().find('li').show();
-       $(this).parent('ul').siblings('ul:last-child').find('li:not(.header)').show();
-  	}else{
-  	  $(this).find('i').removeClass('icon-minus');
-  	  $(this).find('i').addClass('icon-plus');
-      $(this).parent().find('li:not(.header)').hide();
-      $(this).parent('ul').siblings('ul:last-child').find('li:not(.header)').show();
-  	}
-       
-  });
-  $(".menu .header").parent('ul').siblings('ul:last-child').find('li:not(.header)').show();
-   $(".menu .header").each(function(){
-    if($(this).siblings().css("display")!='none'){
-      $(this).find('i').removeClass('icon-plus');
-      $(this).find('i').addClass('icon-minus');	
-    }
-   });
-
-
-});
-
-</script>
 <!-- sidebar -->
 <link rel="stylesheet" href="__PUBLIC__/kindeditor-4.1.7/themes/default/default.css" />
 <script src="__PUBLIC__/kindeditor-4.1.7/kindeditor.js"></script>
@@ -193,11 +142,11 @@ $(function(){
         <tbody>
           
         <tr>
-          <td width="25%"><label for="title">标题<font color="red">*</font></label></td>
+          <td width="25%"><label for="title">剧目名称<font color="red">*</font></label></td>
           <td><input type="text" name="title" value="" id="title" class="span8"/></td>
         </tr>  
          <tr>
-          <td><label for="title">缩略图  <font color="red">*</font></label></td>
+          <td><label for="title">图片<font color="red">*</font></label></td>
           <td><span id="pic"></span><input type="text" name="thumb" value="" id="thumb" class="span4"  />
             <input type="button" value="选择图片" id="upload" class="btn btn-primary"></td>
         </tr>  
@@ -208,77 +157,21 @@ $(function(){
         </tr> 
         <tr>
           <td width="25%"><label for="title">演出时间<font color="red">*</font></label></td>
-          <td><input type="text" name="playtime" value="" id="playtime" class="span8"/></td>
+          <td><input type="text" name="playtime" value="" onfocus="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss'})" id="playtime" class="span8"/></td>
         </tr>  
         <tr>
-          <td width="25%"><label for="address">演出地点<font color="red">*</font></label></td>
+          <td width="25%"><label for="address">演出厅<font color="red">*</font></label></td>
           <td><input type="text" name="address" value="" id="address" class="span8"/></td>
         </tr>  
-         <tr><td>
-          <label for="discription">入场规定</label></td>
-          <td><textarea name="rule" id="rule" class="input-autosave span8" ></textarea>                </td>
-        </tr> 
          <tr><td>
           <label for="discription">订票说明</label></td>
           <td><textarea name="rule" id="rule" class="input-autosave span8" ></textarea>                </td>
         </tr> 
-        <tr>
-          <td width="25%"><label for="title">总票数<font color="red">*</font></label></td>
-          <td><input type="text" name="num" value="" id="num" class="span4"/></td>
-        </tr>  
-        <tr>
-          <td width="25%"><label for="title">具体票价<font color="red">*</font></label></td>
-          <td>
-             排数：
-             <input type="text" name="price_content[0][title]" value="1-5"  class="span2"/>
-             价格：
-             <input type="text" name="price_content[0][price]" value="168"  class="span2"/>
-             票数：
-             <input type="text" name="price_content[0][num]" value="100"  class="span2"/>
-             <input type="hidden" name="price_content[0][type]" value="1">
-             <br/>
-             排数：
-             <input type="text" name="price_content[1][title]" value="6-10"  class="span2"/>
-             价格：
-             <input type="text" name="price_content[1][price]" value="388"  class="span2"/>
-               票数：
-             <input type="text" name="price_content[1][num]" value="100"  class="span2"/>
-             <input type="hidden" name="price_content[1][type]" value="2">
-             <br/>
-             排数：
-             <input type="text" name="price_content[2][title]" value="11-20"  class="span2"/>
-             价格：
-             <input type="text" name="price_content[2][price]" value="288"  class="span2"/>
-             票数：
-             <input type="text" name="price_content[2][num]" value="100"  class="span2"/>
-             <input type="hidden" name="price_content[2][type]" value="3">
-
-          </td>
-        </tr>  
-          <tr>
-          <td><label for="rate">预定时间<font color="red">*</font></label></td>
-          <td>开始于<input type="text" onfocus="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss'})" name="start_time" value="" id="start_time" class="span4"/>至<input type="text" name="end_time" onfocus="WdatePicker({dateFmt:'yyyy-M-d H:mm:ss',minDate:'#F{$dp.$D(\'start_time\')}'})" value="" id="end_time" class="span4"/>结束</td>
-        </tr>  
-        <tr>
-          <td width="25%"><label for="title">演出时长<font color="red">*</font></label></td>
-          <td><input type="text" name="length" value="" id="length" class="span4"/></td>
-        </tr>  
-            <tr><td>
-            <label for="title">幻灯片</label></td>
-            <td><div id="xmzb"></div>
-        </td>
-          </tr>
+  
            <tr><td></td>
                      <td><input id="xmzb_upload" name="xmzb_upload" class="file_upload" type="file" multiple="true"></td>
              <td>
-             </tr> 
-        <tr>
-           <td><label for="title">状态<font color="red">*</font></label></td>
-           <td>
-           <input name="status" value="0" type="radio" checked="checked">正常
-           <input name="status" value="1" type="radio">结束
-           </td>
-         </tr>     
+             </tr>     
         <tr><td></td>
         <td><input type="submit" value="添加" id="submit" class="btn btn-large btn-success"  /></td>
        </tr>

@@ -1,1 +1,1 @@
-<?php if (!defined('THINK_PATH')) exit();?>微信订票
+<?php if (!defined('THINK_PATH')) exit();?>选座

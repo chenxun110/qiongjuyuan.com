@@ -49,7 +49,7 @@
 	<li <?php if((MODULE_NAME == 'Club')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Club/index');?>">院团和名角</a></li>
 	<li <?php if((MODULE_NAME == 'About')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/About/index');?>">关于我们</a></li>
 	<li <?php if((MODULE_NAME == 'News')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/News/index');?>">戏曲新闻</a></li>
-	<li <?php if((MODULE_NAME == 'Member')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Member/index');?>">多媒体资料</a></li>
+	<li <?php if((MODULE_NAME == 'Member')): ?>class="cur"<?php endif; ?>><a href="">多媒体资料</a></li>
 	</ul>	
 	 <ul class="nav nav-tabs nav-stacked">
 	 <li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>互动分享</a></li>
@@ -59,15 +59,19 @@
 	
 	<ul class="nav nav-tabs nav-stacked">
 		<li class="header"><a href="javascript:void(0);"><i class="icon-plus" ></i>网上订票</a></li>
-		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">剧目管理</a></li>	
-		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">座位管理</a></li>
-		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Order/index');?>">订单管理</a></li>
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/schedule/index');?>">琼剧排期</a></li>	
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Place/index');?>">座位管理</a></li>
+		 <li <?php if((MODULE_NAME == 'Order')): ?>class="cur"<?php endif; ?>><a href="<?php echo U(GROUP_NAME.'/Booking/index');?>">订单管理</a></li>
 	</ul>
     </div>
 </div>
 <!-- sidebar -->
 <!-- main -->
 <div class="main span10">
+
+<div class="btn-group pull-right">
+<a href="<?php echo U(GROUP_NAME.'/Member/add');?>" class="btn btn-success"><i class="icon-plus icon-white"></i> 添加</a>
+</div>
 <h4>会员列表</h4>
 <hr/>
   <table class="table table-bordered table-wordpress postlist-table">
@@ -75,11 +79,12 @@
 
       <tr>
         <th>编号</th>
+        <th>openid</th>
+        <th>微信头像</th>
         <th>手机号</th>
-        <th>微信名称</th>
-         <th>会员ID</th>
-        <th>头像</th>
-        <th>性别</th> 
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th> 
         <th>注册时间</th>
         <th>操作</th>
       </tr>
@@ -87,15 +92,18 @@
     <tbody>
         <?php if(is_array($list)): foreach($list as $key=>$list): ?><tr class="tr-publish">
         <td><?php echo $list['id'];?></td>
-        <td><?php echo $list['mobile'];?></td>
+        <td><?php echo $list['openid'];?></td>
         <td><?php echo $list['wxname'];?></td>
-         <td><?php echo $list['cardid'];?></td>
         <td><img src="<?php echo $list['headerpic'];?>" style="height:38px;width:38px;"></td>
+        <td><?php echo $list['mobile'];?></td>
+        <td><?php echo $list['real_name'];?></td>
         <td><?php if($list['sex'] == 1): ?>男<?php elseif($list['sex'] == 2): ?>女<?php else: ?>未知<?php endif; ?></td>
+        <td><?php echo $list['age'];?></td>
             <td><?php echo (date('Y-m-d H:i:s',$list['addtime'])); ?></td>
         <td>
           <div class="btn-toolbar">
             <div class="btn-group">
+            <a href="<?php echo U(GROUP_NAME.'/Member/edit',array('id'=>$list['id']));?>" class="btn btn-mini" ><i class="icon-edit"></i> 更改</a>
               <a href="javascript:void(0);" class="btn btn-mini btn-danger" onclick="confirm('确定要删除吗？', function(){del(<?php echo $list['id']; ?>)})"><i class="icon-remove"></i> 删除</a>
             </div>
           </div>

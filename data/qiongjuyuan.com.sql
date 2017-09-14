@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2017-09-14 17:46:09
+Date: 2017-09-15 00:36:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -47,60 +47,6 @@ CREATE TABLE `wx_admin` (
 -- Records of wx_admin
 -- ----------------------------
 INSERT INTO `wx_admin` VALUES ('1', 'qjy', '44cc76bebe3924a8a2f99c7c7cd5bdbc', '1407213098');
-
--- ----------------------------
--- Table structure for `wx_advertise`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_advertise`;
-CREATE TABLE `wx_advertise` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) NOT NULL COMMENT '广告标题',
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否开启(0否,1是)',
-  `type_id` int(11) unsigned NOT NULL COMMENT '广告分类ID',
-  `sort` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '排序(数值越大越靠前)',
-  `img_url` varchar(250) NOT NULL COMMENT '图片链接地址',
-  `site_url` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_advertise
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_advertise_cate`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_advertise_cate`;
-CREATE TABLE `wx_advertise_cate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `subject` varchar(100) DEFAULT NULL COMMENT '广告类别名称',
-  `alias` varchar(100) DEFAULT NULL COMMENT '调用名称(方便区分哪个栏目)',
-  `status` tinyint(3) DEFAULT NULL COMMENT '是否开启(0否,1是)',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_advertise_cate
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_apply`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_apply`;
-CREATE TABLE `wx_apply` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `uid` int(10) NOT NULL,
-  `email` varchar(32) NOT NULL,
-  `addtime` int(10) NOT NULL,
-  `md5` char(32) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1',
-  `endtime` int(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_apply
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for `wx_article`
@@ -165,66 +111,6 @@ CREATE TABLE `wx_article_cate` (
 
 -- ----------------------------
 -- Records of wx_article_cate
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_audio`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_audio`;
-CREATE TABLE `wx_audio` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `title` varchar(255) NOT NULL COMMENT '标题',
-  `content` text NOT NULL COMMENT '内容',
-  `addtime` int(11) NOT NULL COMMENT '添加时间',
-  `visited` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '浏览次数',
-  `ispublish` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未发布,1=发布',
-  `source` varchar(255) DEFAULT NULL COMMENT '来源',
-  `length` varchar(255) DEFAULT NULL COMMENT '时长',
-  `url` varchar(255) DEFAULT NULL COMMENT '音频连接',
-  `thumb` varchar(255) DEFAULT NULL COMMENT '缩略图',
-  PRIMARY KEY (`id`),
-  KEY `ispublish` (`ispublish`)
-) ENGINE=MyISAM AUTO_INCREMENT=536 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_audio
--- ----------------------------
-INSERT INTO `wx_audio` VALUES ('525', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471407', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('526', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471408', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('527', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471408', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('528', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471408', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('529', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471409', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('530', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471409', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('531', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471409', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('532', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471409', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('533', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471410', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('534', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471410', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-INSERT INTO `wx_audio` VALUES ('535', '《琵琶记》', '元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著', '1447471410', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114112306_36684.png');
-
--- ----------------------------
--- Table structure for `wx_bigwheel`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_bigwheel`;
-CREATE TABLE `wx_bigwheel` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID号',
-  `token` varchar(100) NOT NULL DEFAULT '' COMMENT 'token值',
-  `title` varchar(255) NOT NULL DEFAULT '' COMMENT '活动名称',
-  `keyword` varchar(100) NOT NULL DEFAULT '' COMMENT '关键词',
-  `thumb` varchar(255) NOT NULL DEFAULT '' COMMENT '封面图',
-  `brief` text NOT NULL COMMENT '简介',
-  `content` text NOT NULL COMMENT '活动说明',
-  `total_times` int(10) unsigned NOT NULL COMMENT '每用户最多允许抽奖的总次数,0=不限制',
-  `prize` text NOT NULL COMMENT '奖品设置,奖项名称+奖品名称+奖品价值+中奖名额，JSON格式',
-  `rate` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '中奖率',
-  `begin_day` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '活动开始时间',
-  `end_day` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '活动结束时间',
-  `is_show` tinyint(1) unsigned NOT NULL COMMENT '状态，0=关闭；1=发布 ',
-  `addtime` int(10) unsigned NOT NULL COMMENT '添加时间',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_bigwheel
 -- ----------------------------
 
 -- ----------------------------
@@ -302,139 +188,6 @@ INSERT INTO `wx_booking_detail` VALUES ('19', 'gh_8fbbef2cdbc6', '4', '525', '30
 INSERT INTO `wx_booking_detail` VALUES ('20', 'gh_8fbbef2cdbc6', '4', '525', '30', '2', '20.00', '0', '1505381467', '0', '704832');
 
 -- ----------------------------
--- Table structure for `wx_comment`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_comment`;
-CREATE TABLE `wx_comment` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `member_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '会员id',
-  `type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '类型id,1=video,2=audio,3=interact',
-  `content` text NOT NULL COMMENT '内容',
-  `addtime` int(11) NOT NULL COMMENT '评论时间',
-  `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未发布,1=发布',
-  `cid` int(10) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=593 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_comment
--- ----------------------------
-INSERT INTO `wx_comment` VALUES ('525', '1', '1', 'ttrt', '1448033894', '0', '526');
-INSERT INTO `wx_comment` VALUES ('526', '1', '1', 'ttrt', '1448033903', '0', '526');
-INSERT INTO `wx_comment` VALUES ('527', '1', '1', '12', '1448033938', '0', '526');
-INSERT INTO `wx_comment` VALUES ('528', '1', '1', '测试评论', '1448033948', '0', '526');
-INSERT INTO `wx_comment` VALUES ('529', '1', '1', 'ttrt', '1448033956', '0', '526');
-INSERT INTO `wx_comment` VALUES ('530', '1', '1', 'gggg', '1448034135', '0', '526');
-INSERT INTO `wx_comment` VALUES ('531', '1', '1', '', '1448063096', '0', '526');
-INSERT INTO `wx_comment` VALUES ('532', '1', '1', '评论要不要分页显示？原型有倒三角。', '1448064695', '0', '526');
-INSERT INTO `wx_comment` VALUES ('533', '1', '1', '评论要不要分页显示？原型有倒三角。123', '1448064716', '0', '526');
-INSERT INTO `wx_comment` VALUES ('534', '1', '1', '1', '1448064777', '0', '526');
-INSERT INTO `wx_comment` VALUES ('535', '1', '1', '123', '1448064843', '0', '526');
-INSERT INTO `wx_comment` VALUES ('536', '1', '1', '123', '1448064857', '0', '526');
-INSERT INTO `wx_comment` VALUES ('537', '1', '1', '121212121212', '1448064896', '0', '526');
-INSERT INTO `wx_comment` VALUES ('538', '1', '1', '1212121212', '1448064923', '0', '526');
-INSERT INTO `wx_comment` VALUES ('539', '1', '1', 'aaaaaa', '1448064953', '0', '526');
-INSERT INTO `wx_comment` VALUES ('540', '1', '1', '12112121212', '1448064969', '0', '526');
-INSERT INTO `wx_comment` VALUES ('541', '1', '1', '1212121', '1448064981', '0', '526');
-INSERT INTO `wx_comment` VALUES ('542', '1', '1', 'ga', '1448065005', '0', '526');
-INSERT INTO `wx_comment` VALUES ('543', '1', '1', '121212', '1448065034', '0', '526');
-INSERT INTO `wx_comment` VALUES ('544', '1', '1', '123', '1448065056', '0', '526');
-INSERT INTO `wx_comment` VALUES ('545', '1', '1', '12121', '1448065074', '0', '526');
-INSERT INTO `wx_comment` VALUES ('546', '1', '1', '哈哈哈', '1448158548', '0', '526');
-INSERT INTO `wx_comment` VALUES ('547', '1', '2', '阿坝', '1448158627', '0', '525');
-INSERT INTO `wx_comment` VALUES ('548', '6', '2', '哈哈哈', '1448206486', '0', '525');
-INSERT INTO `wx_comment` VALUES ('549', '6', '2', '哈哈哈哈', '1448206857', '0', '525');
-INSERT INTO `wx_comment` VALUES ('550', '6', '1', '吃饭了吗', '1448206951', '0', '529');
-INSERT INTO `wx_comment` VALUES ('551', '7', '1', '1121212啊飒飒', '1448208273', '0', '526');
-INSERT INTO `wx_comment` VALUES ('552', '7', '1', '测试一下', '1448208531', '0', '526');
-INSERT INTO `wx_comment` VALUES ('553', '7', '1', '我来再次评论', '1448208580', '0', '526');
-INSERT INTO `wx_comment` VALUES ('554', '8', '1', '阿坝', '1448208804', '0', '526');
-INSERT INTO `wx_comment` VALUES ('555', '8', '1', '爸爸妈妈听我说这么多年了', '1448209113', '0', '531');
-INSERT INTO `wx_comment` VALUES ('556', '4', '1', '吃饭', '1448352597', '0', '526');
-INSERT INTO `wx_comment` VALUES ('557', '4', '2', '哈哈哈', '1448352731', '0', '525');
-INSERT INTO `wx_comment` VALUES ('558', '4', '2', '哈哈哈', '1448357159', '0', '525');
-INSERT INTO `wx_comment` VALUES ('559', '4', '1', '哈哈哈', '1448357663', '0', '526');
-INSERT INTO `wx_comment` VALUES ('560', '5', '3', '很好', '1448382654', '0', '527');
-INSERT INTO `wx_comment` VALUES ('561', '5', '3', '买注双色球', '1448382841', '0', '527');
-INSERT INTO `wx_comment` VALUES ('562', '4', '3', '嗯', '1448382941', '0', '525');
-INSERT INTO `wx_comment` VALUES ('563', '4', '3', '不好中啊！', '1448383087', '0', '527');
-INSERT INTO `wx_comment` VALUES ('564', '5', '3', '评论搞好了', '1448383120', '0', '527');
-INSERT INTO `wx_comment` VALUES ('565', '4', '3', '啦啦啦啦啦(≧▽≦)', '1448383232', '0', '526');
-INSERT INTO `wx_comment` VALUES ('566', '4', '3', '会吗？', '1448413790', '0', '528');
-INSERT INTO `wx_comment` VALUES ('567', '5', '3', '内容暂时不放标题，放顶部有点难看。再看看怎么排版', '1448419971', '0', '531');
-INSERT INTO `wx_comment` VALUES ('568', '5', '3', '5555', '1448453278', '0', '525');
-INSERT INTO `wx_comment` VALUES ('569', '5', '3', '视频音频还没搞好', '1448554902', '0', '534');
-INSERT INTO `wx_comment` VALUES ('570', '4', '3', '内容页好像也要当图片出来', '1448673874', '0', '534');
-INSERT INTO `wx_comment` VALUES ('571', '5', '3', '上传图片后，后台可以裁剪图片不？不然有的地方需要高宽一致的就变形了', '1448733863', '0', '537');
-INSERT INTO `wx_comment` VALUES ('572', '5', '3', '换回了HTML5播放器了，反正实在微信上，没问题。', '1448901601', '0', '540');
-INSERT INTO `wx_comment` VALUES ('573', '5', '2', '123', '1448984137', '0', '525');
-INSERT INTO `wx_comment` VALUES ('574', '4', '1', 'hggh', '1452560903', '0', '526');
-INSERT INTO `wx_comment` VALUES ('575', '4', '1', '阿坝', '1452587986', '0', '526');
-INSERT INTO `wx_comment` VALUES ('576', '9', '2', '哈哈哈', '1452614628', '0', '525');
-INSERT INTO `wx_comment` VALUES ('577', '14', '2', '阿坝', '1452616223', '0', '525');
-INSERT INTO `wx_comment` VALUES ('578', '14', '2', '爸爸妈妈', '1452616600', '0', '525');
-INSERT INTO `wx_comment` VALUES ('579', '14', '2', '爸爸', '1452616648', '0', '525');
-INSERT INTO `wx_comment` VALUES ('580', '14', '2', '哈哈哈哈', '1452616856', '0', '525');
-INSERT INTO `wx_comment` VALUES ('581', '14', '2', '哈哈哈哈', '1452616858', '0', '525');
-INSERT INTO `wx_comment` VALUES ('582', '14', '2', '阿坝', '1452616868', '0', '525');
-INSERT INTO `wx_comment` VALUES ('583', '15', '2', '的都', '1452617208', '0', '525');
-INSERT INTO `wx_comment` VALUES ('584', '15', '2', '爸爸', '1452617236', '0', '525');
-INSERT INTO `wx_comment` VALUES ('585', '16', '2', '阿坝', '1452617430', '0', '525');
-INSERT INTO `wx_comment` VALUES ('586', '16', '2', '阿坝', '1452617435', '0', '525');
-INSERT INTO `wx_comment` VALUES ('587', '17', '2', '擦擦a', '1452617531', '0', '525');
-INSERT INTO `wx_comment` VALUES ('588', '17', '2', '，吧啦', '1452617538', '0', '525');
-INSERT INTO `wx_comment` VALUES ('589', '18', '1', '播放不了', '1452645611', '0', '528');
-INSERT INTO `wx_comment` VALUES ('590', '18', '2', '可以播放了', '1452645682', '0', '525');
-INSERT INTO `wx_comment` VALUES ('591', '4', '2', '哈哈', '1456816628', '0', '525');
-INSERT INTO `wx_comment` VALUES ('592', '19', '2', '你好，阳光！', '1456914010', '0', '525');
-
--- ----------------------------
--- Table structure for `wx_discount`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_discount`;
-CREATE TABLE `wx_discount` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `schedule_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '演出id',
-  `title` varchar(255) NOT NULL COMMENT '标题',
-  `content` text NOT NULL COMMENT '简介',
-  `addtime` int(11) NOT NULL COMMENT '预定时间',
-  `start_time` int(11) NOT NULL COMMENT '开始时间',
-  `end_time` int(11) NOT NULL COMMENT '结束时间',
-  `discount` int(11) NOT NULL COMMENT '折扣',
-  `price` decimal(10,2) NOT NULL,
-  `num` int(10) NOT NULL,
-  `pay_num` int(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=526 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_discount
--- ----------------------------
-INSERT INTO `wx_discount` VALUES ('525', '525', '琵琶记', '请于演出开始前至少30分钟至现场凭SN码及相应票款兑换演出门票', '1447604537', '1448296536', '1448814937', '50', '288.00', '3000', '3');
-
--- ----------------------------
--- Table structure for `wx_discount_order`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_discount_order`;
-CREATE TABLE `wx_discount_order` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `addtime` int(11) NOT NULL COMMENT '预定时间',
-  `use_time` int(11) NOT NULL COMMENT '使用时间',
-  `discount_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '类型排',
-  `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未兑换,1=已兑换',
-  `sn` varchar(255) DEFAULT NULL COMMENT '兑换码',
-  `member_id` int(10) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_discount_order
--- ----------------------------
-INSERT INTO `wx_discount_order` VALUES ('1', '1448431966', '1448682478', '525', '1', 'QHQ667769915', '4');
-INSERT INTO `wx_discount_order` VALUES ('2', '1448451942', '1448714096', '525', '1', 'GYV005067515', '5');
-INSERT INTO `wx_discount_order` VALUES ('3', '1448714031', '1448714078', '525', '1', 'ADC831277258', '9');
-
--- ----------------------------
 -- Table structure for `wx_interact`
 -- ----------------------------
 DROP TABLE IF EXISTS `wx_interact`;
@@ -478,22 +231,6 @@ INSERT INTO `wx_interact` VALUES ('540', '5', '播放器不够完美啊', '原�
 INSERT INTO `wx_interact` VALUES ('541', '5', '测试', '分分哦哦', '1448931808', '29', '0', '0', '1', '0', 'http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090133_94404.mp4', 'http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090230_95561.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090149_21280.png,http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090201_17347.png,http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090240_57252.jpg,http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090252_36695.jpg,http://jasxun1-public.stor.sinaapp.com/upload/20151201/20151201090303_58068.jpg');
 
 -- ----------------------------
--- Table structure for `wx_js`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_js`;
-CREATE TABLE `wx_js` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `media_id` varchar(255) DEFAULT NULL,
-  `type` varchar(50) DEFAULT NULL,
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_js
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `wx_keyword`
 -- ----------------------------
 DROP TABLE IF EXISTS `wx_keyword`;
@@ -514,53 +251,11 @@ CREATE TABLE `wx_keyword` (
 INSERT INTO `wx_keyword` VALUES ('31', 'replynews', '介绍', '2', '15', '1456814896');
 
 -- ----------------------------
--- Table structure for `wx_likes`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_likes`;
-CREATE TABLE `wx_likes` (
-  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID号',
-  `member_id` int(10) unsigned DEFAULT '0',
-  `likes_id` int(10) DEFAULT NULL,
-  `add_time` int(10) unsigned DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `member_id` (`member_id`,`likes_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_likes
--- ----------------------------
-INSERT INTO `wx_likes` VALUES ('1', '4', '527', '1448382669');
-INSERT INTO `wx_likes` VALUES ('2', '4', '526', '1448382680');
-INSERT INTO `wx_likes` VALUES ('4', '4', '525', '1448382798');
-INSERT INTO `wx_likes` VALUES ('5', '4', '530', '1448385908');
-INSERT INTO `wx_likes` VALUES ('7', '5', '531', '1448418382');
-
--- ----------------------------
--- Table structure for `wx_links`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_links`;
-CREATE TABLE `wx_links` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `site_name` varchar(50) NOT NULL COMMENT '网站名称',
-  `site_url` varchar(100) NOT NULL COMMENT '网站地址',
-  `logo` varchar(255) DEFAULT NULL COMMENT '网站logo',
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否显示 1=显示，0=隐藏',
-  `show_style` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '显示方式 1=文字，0=logo',
-  `sort` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_links
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `wx_member`
 -- ----------------------------
 DROP TABLE IF EXISTS `wx_member`;
 CREATE TABLE `wx_member` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID号',
-  `token` varchar(100) NOT NULL COMMENT '公众号token',
   `openid` varchar(255) NOT NULL COMMENT '微信openid',
   `wxname` varchar(50) NOT NULL COMMENT '微信昵称',
   `headerpic` varchar(255) NOT NULL COMMENT '微信头像',
@@ -576,15 +271,13 @@ CREATE TABLE `wx_member` (
 -- ----------------------------
 -- Records of wx_member
 -- ----------------------------
-INSERT INTO `wx_member` VALUES ('4', 'gh_8fbbef2cdbc6', 'o5Wc0uNM45AQF6wdkMORZO1OgZME', '陈迅', 'http://wx.qlogo.cn/mmopen/LkWd8KagkeYG7SQY5jZ48Mh4iaC4Zg2RKfXA91LYKUJ2tVKQqytrM16yH5aeibhJLCj4jGpE4ribZkM7HI1KzETTFhnibtrJRAJM/0', '0', '1446881357', null, '13086069546', '1', '0');
-INSERT INTO `wx_member` VALUES ('5', 'gh_8fbbef2cdbc6', 'o5Wc0uDIPPKQX4xjGNdo832Z4UuA', '￥$', '/Public/Wap/photo/2.jpg', '0', '1447112632', null, '18789142117', '1', '0');
-INSERT INTO `wx_member` VALUES ('10', 'gh_8fbbef2cdbc6', 'o5Wc0uAP4_Py3ygd6xmLAIS9hCKI', '某个冬天', 'http://wx.qlogo.cn/mmopen/LkWd8KagkeYUkj8423ib9EQPN1joyCj6Wsmia6aia8qwZ7aH5oj4GDW1UBJIc6KeSOYFicU3S539JdkM9icg61qGyicO63Oib6aMaIm/0', '0', '1452586123', null, '', '1', '0');
-INSERT INTO `wx_member` VALUES ('18', 'gh_8fbbef2cdbc6', '', '谢谢', '', '0', '1452645606', null, '13006030725', '1', '0');
-INSERT INTO `wx_member` VALUES ('19', '', '', 'jasxun', '', '0', '1456914002', null, '13086069542', '1', '0');
-INSERT INTO `wx_member` VALUES ('11', 'gh_8fbbef2cdbc6', 'o5Wc0uC3TBQrPPR7PWhuQrU-_VIs', '陈贻炳', 'http://wx.qlogo.cn/mmopen/Cpo2XCpI7K1RE4mFPnI6iaYRibaMP5DM1omKo8kREYymUKb6cV80yZ9aXj6DW8n42zTMMXCl7mhMtJCibiaOYmYoYDxU2sz6KybC/0', '0', '1452586622', null, null, '1', '0');
-INSERT INTO `wx_member` VALUES ('12', 'gh_8fbbef2cdbc6', 'o5Wc0uFLMOYKP6YHWfdMwyuMQ2Gw', '倪文科', 'http://wx.qlogo.cn/mmopen/eHKMUh12XzAud24F5k3s0Rch366iaYvwzSdMfaiaHQqFh8JJleCeErZFENxlZwmFwsf9CU6y99KAnUeaGUC3s2Sn0dIVjW1fjT/0', '0', '1452586622', null, null, '1', '0');
-INSERT INTO `wx_member` VALUES ('13', 'gh_8fbbef2cdbc6', 'o5Wc0uKL8Mbf68MEqnApsejljVr8', '懒爞', 'http://wx.qlogo.cn/mmopen/1W83fUGRJI6OzouUmriaXjxLHiaEMdCCAApSDszKCgTL8ZJIeQ5x9xb0iaLmGWLicmT57fS07zicm8TL9Um7WicvFm0xpwZKT7h3ou/0', '0', '1452589388', null, null, '1', '0');
-INSERT INTO `wx_member` VALUES ('20', '', 'o5Wc0uKbNj7Ha0CTUuUb50OhLBwI', 'Jinni菁', 'http://wx.qlogo.cn/mmopen/EuKbnjjZx8xEyHUFqHKiaNwSQzYHujFmqscWQ2uPDFDa3KnWaYG3AuM6YS67X4FYhUBSVBujscXPa2FurobNFaAgcwQKcNz7I/0', '0', '1460684104', null, null, '1', '0');
+INSERT INTO `wx_member` VALUES ('4', 'o5Wc0uNM45AQF6wdkMORZO1OgZME', '陈迅', 'http://wx.qlogo.cn/mmopen/LkWd8KagkeYG7SQY5jZ48Mh4iaC4Zg2RKfXA91LYKUJ2tVKQqytrM16yH5aeibhJLCj4jGpE4ribZkM7HI1KzETTFhnibtrJRAJM/0', '0', '1446881357', null, '13086069546', '1', '0');
+INSERT INTO `wx_member` VALUES ('5', 'o5Wc0uDIPPKQX4xjGNdo832Z4UuA', '￥$', '/Public/Wap/photo/2.jpg', '0', '1447112632', null, '18789142117', '1', '0');
+INSERT INTO `wx_member` VALUES ('10', 'o5Wc0uAP4_Py3ygd6xmLAIS9hCKI', '某个冬天', 'http://wx.qlogo.cn/mmopen/LkWd8KagkeYUkj8423ib9EQPN1joyCj6Wsmia6aia8qwZ7aH5oj4GDW1UBJIc6KeSOYFicU3S539JdkM9icg61qGyicO63Oib6aMaIm/0', '0', '1452586123', null, '', '1', '0');
+INSERT INTO `wx_member` VALUES ('11', 'o5Wc0uC3TBQrPPR7PWhuQrU-_VIs', '陈贻炳', 'http://wx.qlogo.cn/mmopen/Cpo2XCpI7K1RE4mFPnI6iaYRibaMP5DM1omKo8kREYymUKb6cV80yZ9aXj6DW8n42zTMMXCl7mhMtJCibiaOYmYoYDxU2sz6KybC/0', '0', '1452586622', null, null, '1', '0');
+INSERT INTO `wx_member` VALUES ('12', 'o5Wc0uFLMOYKP6YHWfdMwyuMQ2Gw', '倪文科', 'http://wx.qlogo.cn/mmopen/eHKMUh12XzAud24F5k3s0Rch366iaYvwzSdMfaiaHQqFh8JJleCeErZFENxlZwmFwsf9CU6y99KAnUeaGUC3s2Sn0dIVjW1fjT/0', '0', '1452586622', null, null, '1', '0');
+INSERT INTO `wx_member` VALUES ('13', 'o5Wc0uKL8Mbf68MEqnApsejljVr8', '懒爞', 'http://wx.qlogo.cn/mmopen/1W83fUGRJI6OzouUmriaXjxLHiaEMdCCAApSDszKCgTL8ZJIeQ5x9xb0iaLmGWLicmT57fS07zicm8TL9Um7WicvFm0xpwZKT7h3ou/0', '0', '1452589388', null, null, '1', '0');
+INSERT INTO `wx_member` VALUES ('20', 'o5Wc0uKbNj7Ha0CTUuUb50OhLBwI', 'Jinni菁', 'http://wx.qlogo.cn/mmopen/EuKbnjjZx8xEyHUFqHKiaNwSQzYHujFmqscWQ2uPDFDa3KnWaYG3AuM6YS67X4FYhUBSVBujscXPa2FurobNFaAgcwQKcNz7I/0', '0', '1460684104', null, null, '1', '0');
 
 -- ----------------------------
 -- Table structure for `wx_menu`
@@ -617,26 +310,6 @@ INSERT INTO `wx_menu` VALUES ('57', '48', '院团名角介绍', '', '1', '0', 'h
 INSERT INTO `wx_menu` VALUES ('59', '48', '琼剧概况', '', '1', '0', 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx1cc1929d3b6c7b11&redirect_uri=http%3A%2F%2Fqjywx.cn.com%2FWap%2Fartice%2Findex&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect', 'view');
 
 -- ----------------------------
--- Table structure for `wx_message`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_message`;
-CREATE TABLE `wx_message` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `addtime` int(10) NOT NULL,
-  `author` varchar(10) NOT NULL,
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '1=审核，0=未审核',
-  `email` varchar(50) NOT NULL,
-  `replycontent` text,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_message
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `wx_muti`
 -- ----------------------------
 DROP TABLE IF EXISTS `wx_muti`;
@@ -652,6 +325,47 @@ CREATE TABLE `wx_muti` (
 -- ----------------------------
 -- Records of wx_muti
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `wx_order`
+-- ----------------------------
+DROP TABLE IF EXISTS `wx_order`;
+CREATE TABLE `wx_order` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `addtime` int(11) NOT NULL COMMENT '预定时间',
+  `use_time` int(11) NOT NULL COMMENT '使用时间',
+  `schedule_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '演出id',
+  `type_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '类型排',
+  `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未兑换,1=已兑换',
+  `sn` varchar(255) DEFAULT NULL COMMENT '兑换码',
+  `token` varchar(255) NOT NULL,
+  `member_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `num` int(10) NOT NULL DEFAULT '0',
+  `price` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of wx_order
+-- ----------------------------
+INSERT INTO `wx_order` VALUES ('1', '1448419325', '1448434097', '525', '1', '1', 'PHR552319677', '', '4', '1', '168.00');
+INSERT INTO `wx_order` VALUES ('2', '1448451933', '2015', '525', '2', '1', 'UHC551934631', '', '5', '1', '388.00');
+INSERT INTO `wx_order` VALUES ('3', '1448453176', '1448466907', '525', '3', '0', 'GLT611029747', '', '5', '2', '576.00');
+INSERT INTO `wx_order` VALUES ('4', '1448460038', '2015', '525', '1', '1', 'XPA765423430', '', '4', '1', '168.00');
+INSERT INTO `wx_order` VALUES ('5', '1448460057', '1448467724', '525', '2', '1', 'QOB634121491', '', '4', '2', '776.00');
+INSERT INTO `wx_order` VALUES ('6', '1448461153', '0', '525', '2', '0', 'PKX020394794', '', '4', '4', '1552.00');
+INSERT INTO `wx_order` VALUES ('7', '1448468823', '0', '525', '2', '0', 'OWA991642684', '', '4', '1', '388.00');
+INSERT INTO `wx_order` VALUES ('8', '1448678177', '0', '525', '1', '0', 'FNX631429181', '', '9', '1', '168.00');
+INSERT INTO `wx_order` VALUES ('9', '1448679769', '0', '525', '1', '0', 'SGK260989733', '', '4', '3', '504.00');
+INSERT INTO `wx_order` VALUES ('10', '1448982758', '0', '525', '1', '0', 'LVR712309152', '', '4', '1', '168.00');
+INSERT INTO `wx_order` VALUES ('11', '1448983410', '0', '525', '2', '0', 'EZR177216237', '', '5', '1', '388.00');
+INSERT INTO `wx_order` VALUES ('12', '1448983474', '0', '525', '1', '0', 'XOT132033808', '', '4', '1', '168.00');
+INSERT INTO `wx_order` VALUES ('13', '1448986208', '0', '525', '1', '0', 'VZN583474859', '', '5', '0', '0.00');
+INSERT INTO `wx_order` VALUES ('14', '1448986467', '0', '525', '2', '0', 'GEF481188553', '', '5', '4', '1552.00');
+INSERT INTO `wx_order` VALUES ('15', '1448987520', '0', '525', '1', '0', 'QVT946630679', '', '4', '5', '840.00');
+INSERT INTO `wx_order` VALUES ('16', '1449034909', '0', '525', '1', '0', 'NHQ281809890', '', '5', '4', '672.00');
+INSERT INTO `wx_order` VALUES ('17', '1449034939', '0', '525', '1', '0', 'YRM931372638', '', '5', '3', '504.00');
+INSERT INTO `wx_order` VALUES ('18', '1449803908', '0', '525', '3', '0', 'OEY575148612', '', '5', '1', '288.00');
 
 -- ----------------------------
 -- Table structure for `wx_place`
@@ -700,43 +414,6 @@ INSERT INTO `wx_place_type` VALUES ('2', '绿色区域', '20.00', '93', '0', '0'
 INSERT INTO `wx_place_type` VALUES ('3', '蓝色区域', '10.00', '43', '0', '0', '1');
 
 -- ----------------------------
--- Table structure for `wx_product`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_product`;
-CREATE TABLE `wx_product` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL COMMENT '产品名称',
-  `thumb` varchar(255) NOT NULL,
-  `cate_id` int(10) NOT NULL COMMENT '产品分类id',
-  `ispublish` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1=可用，0=不可用',
-  `discription` varchar(500) NOT NULL COMMENT '产品描述',
-  `content` text NOT NULL COMMENT '产品详情',
-  `sort` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_product
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_product_cate`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_product_cate`;
-CREATE TABLE `wx_product_cate` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `pid` int(10) unsigned NOT NULL DEFAULT '0',
-  `subject` varchar(50) NOT NULL,
-  `available` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '0=停用,1=可用',
-  `sort` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '排序，降序',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_product_cate
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `wx_replynews`
 -- ----------------------------
 DROP TABLE IF EXISTS `wx_replynews`;
@@ -763,118 +440,24 @@ INSERT INTO `wx_replynews` VALUES ('15', '海南省琼剧院', '介绍', 'http:/
 DROP TABLE IF EXISTS `wx_schedule`;
 CREATE TABLE `wx_schedule` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `title` varchar(255) NOT NULL COMMENT '标题',
+  `title` varchar(255) NOT NULL COMMENT '剧目名称',
   `content` text NOT NULL COMMENT '剧情简介',
   `addtime` int(11) NOT NULL COMMENT '添加时间',
-  `start_time` int(11) NOT NULL COMMENT '开始时间',
-  `end_time` int(11) NOT NULL COMMENT '结束时间',
-  `price_content` text NOT NULL COMMENT 'array(array(type=>1,price=>100,title=>1-5排),)',
   `remark` text NOT NULL COMMENT '订票说明',
   `num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '总票数',
-  `pay_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '购买票数',
-  `ispublish` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未发布,1=发布',
   `playtime` varchar(255) DEFAULT NULL COMMENT '演出时间',
   `address` varchar(255) DEFAULT NULL COMMENT '演出地点',
-  `rule` varchar(255) DEFAULT NULL COMMENT '规则',
   `thumb` varchar(255) DEFAULT NULL COMMENT '缩略图',
-  `length` varchar(255) DEFAULT NULL COMMENT '时长',
-  `token` varchar(255) NOT NULL,
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `adv` varchar(1024) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=536 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wx_schedule
 -- ----------------------------
-INSERT INTO `wx_schedule` VALUES ('525', '琵琶记', '<span style=\"font-size:16px;\">书生蔡伯喈与赵五娘新婚不久，恰逢朝廷开科取士，伯喈以父母年事已高，欲辞试留在家中，服侍父母。但蔡公不从，邻居张大公也在旁劝说。伯喈只好告别父母、妻子赴京试。应试及第，中了状元。牛丞相有一女未婚配，奉旨招新科状元为婿。伯喈以父母年迈，在家无人照顾，需回家尽孝为由，欲辞婚、辞官，但牛丞相与皇帝不允，强迫其滞留京城。自伯喈离家后，陈留连年遭受旱灾，五娘任劳任怨，尽服侍公婆，让公婆吃米，自己则背着公婆私下自咽糟糠。婆婆一时痛悔过甚而亡，蔡公</span><span style=\"font-size:16px;\">也死于饥荒。而伯喈被强赘入牛府后，终日思念父母。写信去陈留家中，信被拐儿骗走，致音信不通。一日，在书房弹琴抒发幽思，为牛氏听见，得知实情，告知父亲。牛丞相为女儿说服，遂派人去迎取伯喈父母、妻子来京。蔡公、蔡婆去世后，五娘祝发卖葬，罗裙包土，自筑坟墓。又亲手绘成公婆遗容，身背琵琶，沿路弹唱乞食，往京城寻夫。来京城，正遇弥陀寺大法会，便往寺中募化求食，将公婆真容供于佛前。正逢伯喈也来寺中烧香，祈祷父母路上平安。见到父母真容，便拿回府中挂在书房内。五娘寻至牛府，被牛氏请至府内弹唱。五娘见牛氏贤淑，便将自己的身世告知牛氏。牛氏为让五娘与伯喈团聚，又怕伯喈不认，便让五娘来到书房，在公婆的真容上题诗暗喻。伯喈回府，见画上所题之诗，正欲问牛氏，牛氏便带五娘入内，夫妻遂得以团聚。五娘告知家中事情，伯喈悲痛至极，即刻上表辞官，回乡守孝。得到牛丞相的同意，伯喈遂携赵氏、牛氏同归故里，庐墓守孝。后皇帝卜诏，旌表蔡氏一门。</span>', '1447467413', '1464748331', '1467253925', 'a:3:{i:0;a:4:{s:5:\"title\";s:3:\"1-5\";s:5:\"price\";s:3:\"168\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"1\";}i:1;a:4:{s:5:\"title\";s:4:\"6-10\";s:5:\"price\";s:3:\"388\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"2\";}i:2;a:4:{s:5:\"title\";s:5:\"11-20\";s:5:\"price\";s:3:\"288\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"3\";}}', '微信订票暂不收取票款，后台系统将自动为您预定座位，请您至少提前30分钟至现场凭兑票SN码及相应票款兑换演出门票。', '300', '36', '0', '2016年6月1日至2016年6月30日', '海南省琼剧院', '请于演出开始前至少30分钟至现场凭兑票SN码及相应票款兑换演出门票。', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114101644_26789.png', '2个小时', '', '0', '/Public/upload/image/20160417/20160417112426_77837.jpg,/Public/upload/image/20160417/20160417112434_36002.jpg,/Public/upload/image/20160417/20160417112443_70051.jpg');
-INSERT INTO `wx_schedule` VALUES ('534', '海瑞', '<p>\r\n	<span style=\"font-size:16px;\">      新编历史琼剧《海瑞》是省琼剧院为参加将于今年10月在山东举行的第十届中国艺术节，而专门创作的一出精品剧目。从选材、确定主题到排练演出，耗时近2年时间。今年元旦，《海瑞》在海口首次亮相，受到了专程前来观看的文化部、中国剧协有关专家的肯定和赞赏,并被视为角逐全国文华奖的重点剧目。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　独辟蹊径，确定创作方向</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　省文体厅厅长朱寒松是《海瑞》的创作发起人之一。“琼剧是海南的戏曲，一定要反映本土题材，我们曾考虑过冼夫人、黄道婆等题材，最后选定了海瑞。”朱寒松说，海瑞是历史名人，有个性、有故事，非常适合琼剧来表现。这一选题也得到了文化部和中国剧协的肯定，并推荐有着创作历史题材丰富经验的郑怀兴担任编剧。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　郑怀兴是福建省文联副主席，我国戏曲界颇负盛名的剧作家。而面对《海瑞》这样的命题作文，郑怀兴感到了压力。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　在接受这个任务前，郑怀兴颇费了一番踌躇。“海瑞戏在历史上太敏感了，而且已经有珠玉在前，要想突破非常困难。”郑怀兴说。1960年代，吴晗创作的京剧《海瑞罢官》、周信芳主演的京剧《海瑞上疏》等剧目在社会上有着巨大影响。郑怀兴决定另辟蹊径，寻找新的角度来切入。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　在查阅了大量有关海瑞的故事传说后，一则海瑞在浙江淳安担任县令时和浙江总督胡宗宪的故事引起了郑怀兴的兴趣。胡宗宪是一位在历史上颇有争议的人物：一方面，他肩负抗倭重任，对保卫海疆，平息倭乱，有着不可磨灭的贡献；另一方面，他又为保证军饷，投靠时任内阁首辅的权奸严嵩，不乏贪贿的传闻。“一个是刚正不阿的清官，一个是贪腐却又能做事的官员，把这两个人物放在一起写，一定会碰撞出令人意想不到的火花。”郑怀兴最终决定以此为主线，定下了《琼州海瑞》的创作走向。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　加大冲突，凸显反思意识</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　在《海瑞》中，海瑞和胡宗宪的矛盾冲突和惺惺相惜，成为贯穿全剧的纽带。在参阅了大量史料，对海瑞和胡宗宪的人物性格有了深入了解后，郑怀兴大胆设计了海瑞与胡宗宪这对人物关系，从中挖戏，开掘新意，使得该剧超越了传统的清官戏的社会意义，展示了海瑞人性的光辉。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　郑怀兴说，海瑞和胡宗宪两人为官之道不同，他们谁也说服不了谁，但又惺惺相惜。他们之间的观点分歧，其实就是人性善与恶的争斗。为了强化这一主题，郑怀兴在剧中还设计了一场海瑞与左都御史鄢懋卿较量的戏。鄢懋卿是一个有名的贪官，海瑞因不愿行贿得罪了这个权贵，受到了降职处理，自己在淳安刚推行的新政也全被鄢懋卿否定。这让海瑞痛切地感觉到，在整个官场腐败透顶的社会里，要坚守自己的情操，举步维艰，干不成事业。于是，他对胡宗宪不得不投靠内阁首辅严嵩，不得不向上送礼以换取足够的支持，及时得到军饷与兵力，以保证抗倭的胜利，就有了深切的理解，这也使得全剧具有了一份厚重的反思意识。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　目前全国正在开展干部作风建设和党风廉政建设，这也使得《海瑞》的现实意义更加突出。郑怀兴说，当初创作的时候并没有想到这些，只是想深度挖掘人性中的善恶裂变原因。一部优秀的艺术作品，应该能让不同的人体会到不一样的感悟。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　博采众长，增强舞台气质</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　看过《海瑞》的观众除了对剧中大段的演唱印象深刻外，还感觉到戏曲味更浓郁了。这一点也一直是导演石玉昆所追求的目标。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　当今戏曲界，石玉昆称得上全能导演。出身于京剧世家的他，迄今已执导了京剧、蒙古剧、昆剧、晋剧、汉剧、越剧、秦腔、苏剧、锡剧、莆仙戏等十余种地方戏作品。“戏曲都是相通的，尤其是在形体表现上，都呈现出相互吸收借鉴的趋势。”石玉昆说，《海瑞》就大量采用了京剧的表演方式，这让全剧更加富有舞台气质。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　由于琼剧长期以来剧种特征不明显，行当不齐全，这给《海瑞》的排演带来很多困难。石玉昆说，《海瑞》中生旦净末丑行当齐全，且剧中人物性格复杂、命运多舛，对演员提出了很高要求。对此海瑞的扮演者，省琼剧院一团团长符传杰深有感触：“我本来是唱小生的，现在改唱老生，等于是重起炉灶，这对于一个成型的演员来说难度太大了。”为了演好角色，不少演员晚上下乡演出，白天坚持排练，非常辛苦。在下乡演出中，省琼剧院也有意识地安排演出《海瑞》的部分片段，在实践中提高。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　以史为鉴，体现四种精神</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　就在《海瑞》今年1月首次亮相之后，该剧就以其鲜明的反腐倡廉主题思想受到了省纪委有关领导的关注，并决定作为在全省干部中开展廉政文化宣传建设的剧目，在全省举行巡演。省纪委常委、省监察厅副厅长廖光普说，在这部剧中，体现出了海瑞的四种精神。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　一是勤勉实干的精神。海瑞一生可谓历经波折，但他始终保持一种奋发有为、兢兢业业、真抓实干的精神。他在南平县任职时，大力整顿县学的风纪；在浙江淳安任知县时，“整顿吏治，救民疾苦”；在任应天巡抚时，着力疏通河道，完工后百姓连年丰收。可谓是尽职尽责，政绩斐然。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　二是为民谋利的精神。海瑞非常关心百姓的疾苦，有浓厚的民本主义思想。他做出各种规定，严禁下属盘剥百姓，谋取私利；他坚决打击乡官权贵侵害人民利益的行为。这些与我们党全心全意为人民服务的宗旨是一致的。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　三是刚正不阿的精神。海瑞平生最重气节，对那些无骨气、随风倒、和稀泥的“乡愿”深恶痛绝。曾冒死上书皇帝，直言皇帝的种种不是。他不阿谀逢迎，不怕得罪人，敢于坚持真理、坚持原则、秉公办事、刚直不阿。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　四是廉洁自律的精神。海瑞在淳安做县令的时候，平日穿布衣，吃粗粮，后来当上了巡抚，可他死后没什么遗物，所剩的钱连料理后事都不够。一辈子的自律，可谓是千古罕见。</span>\r\n</p>\r\n<p>\r\n	　　  <span style=\"font-size:16px;\">被省纪委列为宣传廉政文化的优秀剧目进行全省巡演，省琼剧院院长陈军称既在意料之外，又在情理之中。因为这部戏在主题思想的开掘上，不仅突破了海瑞题材传统的公正、勤政等内容，而且直指人物内心，刻画出了海瑞和胡宗宪两个分属不同政治阵营却又惺惺相惜的艺术形象，展示了廉政建设的艰巨性和复杂性。“这么有层次地开掘历史题材，在全国戏曲界也不多见。”陈军说。</span>\r\n</p>', '1460865502', '1462074263', '1464666263', 'a:3:{i:0;a:4:{s:5:\"title\";s:3:\"1-5\";s:5:\"price\";s:3:\"168\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"1\";}i:1;a:4:{s:5:\"title\";s:4:\"6-10\";s:5:\"price\";s:3:\"388\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"2\";}i:2;a:4:{s:5:\"title\";s:5:\"11-20\";s:5:\"price\";s:3:\"288\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"3\";}}', '微信订票暂不收取票款，后台系统将自动为您预定座位，请您至少提前30分钟至现场凭兑票SN码及相应票款兑换演出门票。', '500', '0', '0', '2016年05月01日至2016年05月31日', '海口市人民大会堂', '请于演出开始前至少30分钟至现场凭兑票SN码及相应票款兑换演出门票。', 'http://qjywx.cn.com/Public/upload/image/20160417/20160417114122_64114.jpg', '200分钟', '', '0', '/Public/upload/image/20160417/20160417115437_91911.jpg,/Public/upload/image/20160417/20160417115809_94273.jpg,/Public/upload/image/20160417/20160417115816_79770.jpg');
-INSERT INTO `wx_schedule` VALUES ('535', '下南洋', '<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">&nbsp; &nbsp; &nbsp; &nbsp;《下南洋》以海南侨乡文氏家族三代人的命运遭际为线索，采用编年体的结构方式，既大开大阖，又细致入微地表现了离乡者“下南洋”和留守者“望南洋”的双向历史，是一幅可歌可泣悲壮感人的心灵画卷。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　民国初年，海南岛连年闹兵灾粮荒，民不聊生。新婚三月的文昌告别妻子琼娘，同阿龙等乡亲结伴渡海下南洋谋生。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　10年后，文昌逾期未归，琼娘只身乔装下南洋寻夫。在新加坡，琼娘与文昌相逢，始知丈夫已与当地女子星姐同居。星姐是文昌的救命恩人，也是文昌在南洋创业的合伙人。琼娘眼见文昌与星姐已经难分难解，痛苦地选择了独自返乡。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　又10年，文昌带着星姐富贵还乡，不料自己和琼娘所生的儿子海亮却拒不认父。海亮在赌场中伤人闯祸，招致追捕，琼娘不得已让文昌带海亮下南洋避祸。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　海亮目睹了文昌在异国他乡的艰难拼搏，渐渐弥合了与父亲感情的裂痕。抗战时期，海亮在一次日军对南洋华侨的大屠杀中勇敢抗争，被日军枪杀。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　当文昌带着星姐和孙子文翔捧着海亮的遗像再次踏上海南故土时，已经相隔了漫长的42年。一生守望丈夫等待儿子的琼娘，怀抱着海亮年轻时的遗像无疾而终……</span>\r\n</p>', '1460866249', '1465963821', '1468469421', 'a:3:{i:0;a:4:{s:5:\"title\";s:3:\"1-5\";s:5:\"price\";s:3:\"168\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"1\";}i:1;a:4:{s:5:\"title\";s:4:\"6-10\";s:5:\"price\";s:3:\"388\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"2\";}i:2;a:4:{s:5:\"title\";s:5:\"11-20\";s:5:\"price\";s:3:\"288\";s:3:\"num\";s:3:\"100\";s:4:\"type\";s:1:\"3\";}}', '', '300', '0', '0', '2016年06月15日至2016年07月14日', '海口市人民大会堂', '微信订票暂不收取票款，后台系统将自动为您预定座位，请您至少提前30分钟至现场凭兑票SN码及相应票款兑换演出门票。', 'http://qjywx.cn.com/Public/upload/image/20160417/20160417120404_82480.jpg', '220分钟', '', '0', '/Public/upload/image/20160417/20160417120713_74024.jpg,/Public/upload/image/20160417/20160417120718_45804.jpg,/Public/upload/image/20160417/20160417120722_42751.jpg');
-
--- ----------------------------
--- Table structure for `wx_sign`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_sign`;
-CREATE TABLE `wx_sign` (
-  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID号',
-  `token` varchar(100) NOT NULL,
-  `sid` int(10) unsigned NOT NULL DEFAULT '0',
-  `openid` varchar(255) NOT NULL,
-  `wxname` varchar(50) NOT NULL,
-  `sex` tinyint(4) NOT NULL,
-  `headerpic` varchar(255) NOT NULL,
-  `country` varchar(50) NOT NULL,
-  `province` varchar(50) NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `status` tinyint(1) unsigned NOT NULL,
-  `addtime` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_sign
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_signevent`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_signevent`;
-CREATE TABLE `wx_signevent` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `token` varchar(100) NOT NULL,
-  `thumb` varchar(255) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `remark` text NOT NULL,
-  `addtime` int(10) NOT NULL DEFAULT '0',
-  `begin_day` int(10) unsigned NOT NULL DEFAULT '0',
-  `end_day` int(10) unsigned NOT NULL DEFAULT '0',
-  `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  `total_num` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_signevent
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_sign_data`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_sign_data`;
-CREATE TABLE `wx_sign_data` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `token` varchar(100) NOT NULL,
-  `sid` int(10) unsigned NOT NULL DEFAULT '0',
-  `openid` varchar(255) NOT NULL,
-  `headpic` varchar(255) NOT NULL,
-  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
-  `sex` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_sign_data
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_site`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_site`;
-CREATE TABLE `wx_site` (
-  `id` int(10) NOT NULL,
-  `site_name` varchar(255) NOT NULL,
-  `keyword` varchar(255) NOT NULL,
-  `discription` varchar(255) NOT NULL COMMENT '描述',
-  `site_url` varchar(255) NOT NULL COMMENT '网站地址',
-  `copyright` text NOT NULL COMMENT '版权信息',
-  `site_logo` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_site
--- ----------------------------
+INSERT INTO `wx_schedule` VALUES ('525', '琵琶记', '<span style=\"font-size:16px;\">书生蔡伯喈与赵五娘新婚不久，恰逢朝廷开科取士，伯喈以父母年事已高，欲辞试留在家中，服侍父母。但蔡公不从，邻居张大公也在旁劝说。伯喈只好告别父母、妻子赴京试。应试及第，中了状元。牛丞相有一女未婚配，奉旨招新科状元为婿。伯喈以父母年迈，在家无人照顾，需回家尽孝为由，欲辞婚、辞官，但牛丞相与皇帝不允，强迫其滞留京城。自伯喈离家后，陈留连年遭受旱灾，五娘任劳任怨，尽服侍公婆，让公婆吃米，自己则背着公婆私下自咽糟糠。婆婆一时痛悔过甚而亡，蔡公</span><span style=\"font-size:16px;\">也死于饥荒。而伯喈被强赘入牛府后，终日思念父母。写信去陈留家中，信被拐儿骗走，致音信不通。一日，在书房弹琴抒发幽思，为牛氏听见，得知实情，告知父亲。牛丞相为女儿说服，遂派人去迎取伯喈父母、妻子来京。蔡公、蔡婆去世后，五娘祝发卖葬，罗裙包土，自筑坟墓。又亲手绘成公婆遗容，身背琵琶，沿路弹唱乞食，往京城寻夫。来京城，正遇弥陀寺大法会，便往寺中募化求食，将公婆真容供于佛前。正逢伯喈也来寺中烧香，祈祷父母路上平安。见到父母真容，便拿回府中挂在书房内。五娘寻至牛府，被牛氏请至府内弹唱。五娘见牛氏贤淑，便将自己的身世告知牛氏。牛氏为让五娘与伯喈团聚，又怕伯喈不认，便让五娘来到书房，在公婆的真容上题诗暗喻。伯喈回府，见画上所题之诗，正欲问牛氏，牛氏便带五娘入内，夫妻遂得以团聚。五娘告知家中事情，伯喈悲痛至极，即刻上表辞官，回乡守孝。得到牛丞相的同意，伯喈遂携赵氏、牛氏同归故里，庐墓守孝。后皇帝卜诏，旌表蔡氏一门。</span>', '1447467413', '微信订票暂不收取票款，后台系统将自动为您预定座位，请您至少提前30分钟至现场凭兑票SN码及相应票款兑换演出门票。', '300', '1505395633', '海南省琼剧院', 'http://qiongjuyuan.com/Public/upload/image/20170914/20170914132308_99807.jpg', '0');
+INSERT INTO `wx_schedule` VALUES ('534', '海瑞', '<p>\r\n	<span style=\"font-size:16px;\">      新编历史琼剧《海瑞》是省琼剧院为参加将于今年10月在山东举行的第十届中国艺术节，而专门创作的一出精品剧目。从选材、确定主题到排练演出，耗时近2年时间。今年元旦，《海瑞》在海口首次亮相，受到了专程前来观看的文化部、中国剧协有关专家的肯定和赞赏,并被视为角逐全国文华奖的重点剧目。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　独辟蹊径，确定创作方向</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　省文体厅厅长朱寒松是《海瑞》的创作发起人之一。“琼剧是海南的戏曲，一定要反映本土题材，我们曾考虑过冼夫人、黄道婆等题材，最后选定了海瑞。”朱寒松说，海瑞是历史名人，有个性、有故事，非常适合琼剧来表现。这一选题也得到了文化部和中国剧协的肯定，并推荐有着创作历史题材丰富经验的郑怀兴担任编剧。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　郑怀兴是福建省文联副主席，我国戏曲界颇负盛名的剧作家。而面对《海瑞》这样的命题作文，郑怀兴感到了压力。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　在接受这个任务前，郑怀兴颇费了一番踌躇。“海瑞戏在历史上太敏感了，而且已经有珠玉在前，要想突破非常困难。”郑怀兴说。1960年代，吴晗创作的京剧《海瑞罢官》、周信芳主演的京剧《海瑞上疏》等剧目在社会上有着巨大影响。郑怀兴决定另辟蹊径，寻找新的角度来切入。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　在查阅了大量有关海瑞的故事传说后，一则海瑞在浙江淳安担任县令时和浙江总督胡宗宪的故事引起了郑怀兴的兴趣。胡宗宪是一位在历史上颇有争议的人物：一方面，他肩负抗倭重任，对保卫海疆，平息倭乱，有着不可磨灭的贡献；另一方面，他又为保证军饷，投靠时任内阁首辅的权奸严嵩，不乏贪贿的传闻。“一个是刚正不阿的清官，一个是贪腐却又能做事的官员，把这两个人物放在一起写，一定会碰撞出令人意想不到的火花。”郑怀兴最终决定以此为主线，定下了《琼州海瑞》的创作走向。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　加大冲突，凸显反思意识</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　在《海瑞》中，海瑞和胡宗宪的矛盾冲突和惺惺相惜，成为贯穿全剧的纽带。在参阅了大量史料，对海瑞和胡宗宪的人物性格有了深入了解后，郑怀兴大胆设计了海瑞与胡宗宪这对人物关系，从中挖戏，开掘新意，使得该剧超越了传统的清官戏的社会意义，展示了海瑞人性的光辉。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　郑怀兴说，海瑞和胡宗宪两人为官之道不同，他们谁也说服不了谁，但又惺惺相惜。他们之间的观点分歧，其实就是人性善与恶的争斗。为了强化这一主题，郑怀兴在剧中还设计了一场海瑞与左都御史鄢懋卿较量的戏。鄢懋卿是一个有名的贪官，海瑞因不愿行贿得罪了这个权贵，受到了降职处理，自己在淳安刚推行的新政也全被鄢懋卿否定。这让海瑞痛切地感觉到，在整个官场腐败透顶的社会里，要坚守自己的情操，举步维艰，干不成事业。于是，他对胡宗宪不得不投靠内阁首辅严嵩，不得不向上送礼以换取足够的支持，及时得到军饷与兵力，以保证抗倭的胜利，就有了深切的理解，这也使得全剧具有了一份厚重的反思意识。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　目前全国正在开展干部作风建设和党风廉政建设，这也使得《海瑞》的现实意义更加突出。郑怀兴说，当初创作的时候并没有想到这些，只是想深度挖掘人性中的善恶裂变原因。一部优秀的艺术作品，应该能让不同的人体会到不一样的感悟。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　博采众长，增强舞台气质</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　看过《海瑞》的观众除了对剧中大段的演唱印象深刻外，还感觉到戏曲味更浓郁了。这一点也一直是导演石玉昆所追求的目标。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　当今戏曲界，石玉昆称得上全能导演。出身于京剧世家的他，迄今已执导了京剧、蒙古剧、昆剧、晋剧、汉剧、越剧、秦腔、苏剧、锡剧、莆仙戏等十余种地方戏作品。“戏曲都是相通的，尤其是在形体表现上，都呈现出相互吸收借鉴的趋势。”石玉昆说，《海瑞》就大量采用了京剧的表演方式，这让全剧更加富有舞台气质。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　由于琼剧长期以来剧种特征不明显，行当不齐全，这给《海瑞》的排演带来很多困难。石玉昆说，《海瑞》中生旦净末丑行当齐全，且剧中人物性格复杂、命运多舛，对演员提出了很高要求。对此海瑞的扮演者，省琼剧院一团团长符传杰深有感触：“我本来是唱小生的，现在改唱老生，等于是重起炉灶，这对于一个成型的演员来说难度太大了。”为了演好角色，不少演员晚上下乡演出，白天坚持排练，非常辛苦。在下乡演出中，省琼剧院也有意识地安排演出《海瑞》的部分片段，在实践中提高。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　以史为鉴，体现四种精神</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　就在《海瑞》今年1月首次亮相之后，该剧就以其鲜明的反腐倡廉主题思想受到了省纪委有关领导的关注，并决定作为在全省干部中开展廉政文化宣传建设的剧目，在全省举行巡演。省纪委常委、省监察厅副厅长廖光普说，在这部剧中，体现出了海瑞的四种精神。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　一是勤勉实干的精神。海瑞一生可谓历经波折，但他始终保持一种奋发有为、兢兢业业、真抓实干的精神。他在南平县任职时，大力整顿县学的风纪；在浙江淳安任知县时，“整顿吏治，救民疾苦”；在任应天巡抚时，着力疏通河道，完工后百姓连年丰收。可谓是尽职尽责，政绩斐然。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　二是为民谋利的精神。海瑞非常关心百姓的疾苦，有浓厚的民本主义思想。他做出各种规定，严禁下属盘剥百姓，谋取私利；他坚决打击乡官权贵侵害人民利益的行为。这些与我们党全心全意为人民服务的宗旨是一致的。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　三是刚正不阿的精神。海瑞平生最重气节，对那些无骨气、随风倒、和稀泥的“乡愿”深恶痛绝。曾冒死上书皇帝，直言皇帝的种种不是。他不阿谀逢迎，不怕得罪人，敢于坚持真理、坚持原则、秉公办事、刚直不阿。</span>\r\n</p>\r\n<p>\r\n	<span style=\"font-size:16px;\">　　四是廉洁自律的精神。海瑞在淳安做县令的时候，平日穿布衣，吃粗粮，后来当上了巡抚，可他死后没什么遗物，所剩的钱连料理后事都不够。一辈子的自律，可谓是千古罕见。</span>\r\n</p>\r\n<p>\r\n	　　  <span style=\"font-size:16px;\">被省纪委列为宣传廉政文化的优秀剧目进行全省巡演，省琼剧院院长陈军称既在意料之外，又在情理之中。因为这部戏在主题思想的开掘上，不仅突破了海瑞题材传统的公正、勤政等内容，而且直指人物内心，刻画出了海瑞和胡宗宪两个分属不同政治阵营却又惺惺相惜的艺术形象，展示了廉政建设的艰巨性和复杂性。“这么有层次地开掘历史题材，在全国戏曲界也不多见。”陈军说。</span>\r\n</p>', '1460865502', '微信订票暂不收取票款，后台系统将自动为您预定座位，请您至少提前30分钟至现场凭兑票SN码及相应票款兑换演出门票。', '500', '1505395624', '海口市人民大会堂', 'http://qjywx.cn.com/Public/upload/image/20160417/20160417114122_64114.jpg', '0');
+INSERT INTO `wx_schedule` VALUES ('535', '下南洋', '<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">       《下南洋》以海南侨乡文氏家族三代人的命运遭际为线索，采用编年体的结构方式，既大开大阖，又细致入微地表现了离乡者“下南洋”和留守者“望南洋”的双向历史，是一幅可歌可泣悲壮感人的心灵画卷。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　民国初年，海南岛连年闹兵灾粮荒，民不聊生。新婚三月的文昌告别妻子琼娘，同阿龙等乡亲结伴渡海下南洋谋生。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　10年后，文昌逾期未归，琼娘只身乔装下南洋寻夫。在新加坡，琼娘与文昌相逢，始知丈夫已与当地女子星姐同居。星姐是文昌的救命恩人，也是文昌在南洋创业的合伙人。琼娘眼见文昌与星姐已经难分难解，痛苦地选择了独自返乡。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　又10年，文昌带着星姐富贵还乡，不料自己和琼娘所生的儿子海亮却拒不认父。海亮在赌场中伤人闯祸，招致追捕，琼娘不得已让文昌带海亮下南洋避祸。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　海亮目睹了文昌在异国他乡的艰难拼搏，渐渐弥合了与父亲感情的裂痕。抗战时期，海亮在一次日军对南洋华侨的大屠杀中勇敢抗争，被日军枪杀。</span>\r\n</p>\r\n<p style=\"color:#1B4367;font-family:-webkit-standard;font-size:14px;\">\r\n	<span style=\"color:#000000;font-size:16px;\">　　当文昌带着星姐和孙子文翔捧着海亮的遗像再次踏上海南故土时，已经相隔了漫长的42年。一生守望丈夫等待儿子的琼娘，怀抱着海亮年轻时的遗像无疾而终……</span>\r\n</p>', '1460866249', '', '300', '1505395550', '海口市人民大会堂', 'http://qjywx.cn.com/Public/upload/image/20160417/20160417120404_82480.jpg', '0');
 
 -- ----------------------------
 -- Table structure for `wx_text`
@@ -894,131 +477,6 @@ CREATE TABLE `wx_text` (
 
 -- ----------------------------
 -- Records of wx_text
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_users`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_users`;
-CREATE TABLE `wx_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(60) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  `email` varchar(90) DEFAULT NULL,
-  `lasttime` varchar(13) NOT NULL,
-  `status` tinyint(1) unsigned NOT NULL,
-  `login_ip` varchar(30) NOT NULL,
-  `addtime` int(10) NOT NULL COMMENT '添加时间',
-  `qqopenid` varchar(255) NOT NULL COMMENT 'qq登录openid',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_users
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_video`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_video`;
-CREATE TABLE `wx_video` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
-  `title` varchar(255) NOT NULL COMMENT '标题',
-  `content` text NOT NULL COMMENT '内容',
-  `addtime` int(11) NOT NULL COMMENT '添加时间',
-  `visited` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '浏览次数',
-  `ispublish` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未发布,1=发布',
-  `source` varchar(255) DEFAULT NULL COMMENT '来源',
-  `length` varchar(255) DEFAULT NULL COMMENT '时长',
-  `url` varchar(255) DEFAULT NULL COMMENT '视频连接',
-  `thumb` varchar(255) DEFAULT NULL COMMENT '缩略图',
-  `cate_id` int(10) NOT NULL,
-  `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`),
-  KEY `ispublish` (`ispublish`)
-) ENGINE=MyISAM AUTO_INCREMENT=547 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_video
--- ----------------------------
-INSERT INTO `wx_video` VALUES ('525', '琵琶记', '<div id=\"u52\" class=\"ax_文本\">\r\n	<div id=\"u53\" class=\"text\">\r\n		<p>\r\n			元末南戏，高明撰。写汉代书生蔡伯喈与赵五娘悲欢离合的故事。共四十二出。被誉为传奇之祖的《琵琶记》，是我国古代戏曲中一部经典名著。\r\n		</p>\r\n	</div>\r\n</div>\r\n\"\"\"\"\"\"', '1447471087', '0', '0', null, '117:53', 'http://www.helloweba.com/demo/html5audio/music.mp3', 'http://jasxun1-public.stor.sinaapp.com/upload/20151114/20151114111708_97346.png', '33', '1');
-INSERT INTO `wx_video` VALUES ('545', '梁山伯与祝英台', '\"\"\"', '1461308639', '0', '0', null, '13min', 'http://www.w3school.com.cn/i/movie.ogg', 'http://qjywx.cn.com/Public/upload/image/20160422/20160422150333_43527.jpg', '32', '1');
-INSERT INTO `wx_video` VALUES ('544', '电视视频', '\"\"\"', '1461308362', '0', '0', null, '2小时13分钟', '', 'http://qjywx.cn.com/Public/upload/image/20160422/20160422145834_54658.jpg', '32', '1');
-INSERT INTO `wx_video` VALUES ('542', '林攀桂', '\"', '1461307626', '0', '0', null, '2小时44分钟', '', 'http://qjywx.cn.com/Public/upload/image/20160422/20160422144409_44408.jpg', '32', '1');
-INSERT INTO `wx_video` VALUES ('543', '海瑞', '\"', '1461308120', '0', '0', null, '10min', '', 'http://qjywx.cn.com/Public/upload/image/20160422/20160422145516_30715.jpg', '32', '1');
-
--- ----------------------------
--- Table structure for `wx_videocate`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_videocate`;
-CREATE TABLE `wx_videocate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章分类ID',
-  `pid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '上级id',
-  `subject` varchar(50) DEFAULT NULL COMMENT '分类名称',
-  `available` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '0=停用,1=可用',
-  `sort` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '排序，降序',
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `adv` varchar(2048) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `available` (`available`),
-  KEY `pid` (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_videocate
--- ----------------------------
-INSERT INTO `wx_videocate` VALUES ('32', '0', '电视视频', '1', '0', '0', 'http://jasxun1-public.stor.sinaapp.com/upload/20151118/20151118231747_47401.jpg,http://jasxun1-public.stor.sinaapp.com/upload/20151118/20151118231748_21110.jpg');
-INSERT INTO `wx_videocate` VALUES ('33', '0', '电视录音', '1', '0', '1', '');
-INSERT INTO `wx_videocate` VALUES ('34', '0', '电影视频', '1', '0', '0', null);
-INSERT INTO `wx_videocate` VALUES ('35', '0', '教学资料', '1', '0', '0', '');
-INSERT INTO `wx_videocate` VALUES ('36', '0', '剧目档案', '1', '0', '0', '');
-INSERT INTO `wx_videocate` VALUES ('37', '0', '经典回顾', '1', '0', '0', '');
-INSERT INTO `wx_videocate` VALUES ('40', '0', '电影录音', '1', '0', '1', null);
-INSERT INTO `wx_videocate` VALUES ('41', '0', '各地长腔', '1', '0', '1', null);
-INSERT INTO `wx_videocate` VALUES ('42', '0', '名家长腔', '1', '0', '1', null);
-INSERT INTO `wx_videocate` VALUES ('43', '0', '教学曲目', '1', '0', '1', null);
-INSERT INTO `wx_videocate` VALUES ('44', '0', '曲目档案', '1', '0', '1', null);
-INSERT INTO `wx_videocate` VALUES ('45', '0', '经典唱腔', '1', '0', '1', null);
-INSERT INTO `wx_videocate` VALUES ('46', '0', '折子视频', '1', '0', '0', null);
-INSERT INTO `wx_videocate` VALUES ('47', '0', '全剧视频', '1', '0', '0', null);
-INSERT INTO `wx_videocate` VALUES ('48', '0', '琼剧纪录片', '1', '0', '0', null);
-
--- ----------------------------
--- Table structure for `wx_weather`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_weather`;
-CREATE TABLE `wx_weather` (
-  `index` int(4) NOT NULL AUTO_INCREMENT,
-  `cityCode` char(9) NOT NULL,
-  `cityName` varchar(16) NOT NULL,
-  PRIMARY KEY (`index`)
-) ENGINE=MyISAM AUTO_INCREMENT=2502 DEFAULT CHARSET=gbk;
-
--- ----------------------------
--- Records of wx_weather
--- ----------------------------
-
--- ----------------------------
--- Table structure for `wx_wheeldata`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_wheeldata`;
-CREATE TABLE `wx_wheeldata` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID号',
-  `token` varchar(100) NOT NULL DEFAULT '' COMMENT 'token',
-  `openid` varchar(255) NOT NULL DEFAULT '' COMMENT '微信openid',
-  `pid` int(10) unsigned NOT NULL COMMENT '活动id',
-  `sn` varchar(3) DEFAULT NULL,
-  `prize_level` varchar(10) NOT NULL DEFAULT '' COMMENT '奖项等级,一等奖等',
-  `prize_name` varchar(50) NOT NULL,
-  `tel` varchar(20) NOT NULL,
-  `add_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '记录的时间',
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '状态，0=尚未领取；1=已经领取；2=已作废',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `pid+sn` (`sn`,`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_wheeldata
 -- ----------------------------
 
 -- ----------------------------
@@ -1047,31 +505,3 @@ CREATE TABLE `wx_wxuser` (
 -- Records of wx_wxuser
 -- ----------------------------
 INSERT INTO `wx_wxuser` VALUES ('1', '1', '琼剧院台测试号', 'http://jasxun1-public.stor.sinaapp.com/upload/20160301/20160301220453_73629.jpg', 'gh_8fbbef2cdbc6', 'gh_8fbbef2cdbc6', '1', 'gh_86b8a7768274', 'wx1cc1929d3b6c7b11', 'ba86e7a70d64b10ad258b8d824ec6756', '', '您好，欢迎关注『海南省琼剧院』！点击菜单开始琼剧之旅吧！', '1446880612', '1');
-
--- ----------------------------
--- Table structure for `wx_zan`
--- ----------------------------
-DROP TABLE IF EXISTS `wx_zan`;
-CREATE TABLE `wx_zan` (
-  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID号',
-  `member_id` int(10) unsigned DEFAULT '0',
-  `zan_id` int(10) DEFAULT NULL,
-  `add_time` int(10) unsigned DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `member_id` (`member_id`,`zan_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of wx_zan
--- ----------------------------
-INSERT INTO `wx_zan` VALUES ('83', '4', '526', '1448382251');
-INSERT INTO `wx_zan` VALUES ('85', '5', '527', '1448382260');
-INSERT INTO `wx_zan` VALUES ('86', '5', '526', '1448382267');
-INSERT INTO `wx_zan` VALUES ('88', '4', '525', '1448382532');
-INSERT INTO `wx_zan` VALUES ('89', '5', '528', '1448383284');
-INSERT INTO `wx_zan` VALUES ('90', '4', '529', '1448385912');
-INSERT INTO `wx_zan` VALUES ('91', '4', '527', '1448408113');
-INSERT INTO `wx_zan` VALUES ('100', '5', '533', '1448499645');
-INSERT INTO `wx_zan` VALUES ('101', '4', '534', '1448673880');
-INSERT INTO `wx_zan` VALUES ('102', '4', '532', '1448677971');
-INSERT INTO `wx_zan` VALUES ('103', '5', '541', '1449034966');
