@@ -213,3 +213,12 @@ function get_wxid(){
    $wxid = M('wxuser')->getField('wxid');
     return $wxid?$wxid:false;
 } 
+function is_booking($place_id,$schedule_id){
+  $result = M('booking_detail')->where(['place_id'=>$place_id,'schedule_id'=>$schedule_id,'status'=>1])->find();
+  if($result){
+    return true;
+  }else{
+    return false;
+  }
+  
+}

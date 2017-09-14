@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2017-09-14 12:03:32
+Date: 2017-09-14 17:46:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -237,7 +237,6 @@ CREATE TABLE `wx_bill` (
   `money` decimal(12,2) NOT NULL DEFAULT '0.00' COMMENT '交易金额',
   `out_trade_no` varchar(32) NOT NULL COMMENT '商户号',
   `add_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '账单时间',
-  `pay_type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '交易类型 ，1=微信',
   `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '账单状态,0=等待确认，1=交易成功，2=交易失败，-1=已过期',
   `book_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'book表ID',
   PRIMARY KEY (`id`)
@@ -257,18 +256,21 @@ CREATE TABLE `wx_book` (
   `addtime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '预定时间',
   `use_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '使用时间',
   `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0=未使用,1=已使用',
-  `sn` varchar(255) DEFAULT NULL COMMENT '微信票号',
+  `order_no` varchar(255) DEFAULT NULL COMMENT '订单号',
   `token` varchar(255) NOT NULL COMMENT '公众号token',
   `member_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `all_num` int(10) NOT NULL DEFAULT '0',
+  `all_num` int(10) NOT NULL DEFAULT '0' COMMENT '票数',
   `all_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '总价格',
   `pay_status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0=未付款，1=已付款，2=已过期',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wx_book
 -- ----------------------------
+INSERT INTO `wx_book` VALUES ('28', '525', '1505381089', '0', '0', '2017091417094995082', 'gh_8fbbef2cdbc6', '4', '2', '40.00', '0');
+INSERT INTO `wx_book` VALUES ('29', '525', '1505381464', '0', '0', '2017091417090430049', 'gh_8fbbef2cdbc6', '4', '2', '40.00', '0');
+INSERT INTO `wx_book` VALUES ('30', '525', '1505381467', '0', '0', '2017091417090789274', 'gh_8fbbef2cdbc6', '4', '2', '40.00', '0');
 
 -- ----------------------------
 -- Table structure for `wx_booking_detail`
@@ -276,18 +278,28 @@ CREATE TABLE `wx_book` (
 DROP TABLE IF EXISTS `wx_booking_detail`;
 CREATE TABLE `wx_booking_detail` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `order_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '订单id',
+  `token` varchar(200) DEFAULT NULL,
+  `member_id` int(10) NOT NULL DEFAULT '0',
+  `schedule_id` int(10) unsigned DEFAULT '0' COMMENT '演出id',
+  `book_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '订单id',
   `place_id` int(10) NOT NULL DEFAULT '0' COMMENT '选座ID',
   `price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '价格',
-  `number` int(10) NOT NULL DEFAULT '0' COMMENT '票数',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '1=已付款。0=未付款，2=已过期',
   `addtime` int(10) unsigned NOT NULL DEFAULT '0',
   `sort` int(10) unsigned DEFAULT '0' COMMENT '排序',
+  `sn` varchar(200) DEFAULT NULL COMMENT '微信票号',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wx_booking_detail
 -- ----------------------------
+INSERT INTO `wx_booking_detail` VALUES ('15', 'gh_8fbbef2cdbc6', '4', '525', '28', '1', '20.00', '0', '1505381089', '0', '770519');
+INSERT INTO `wx_booking_detail` VALUES ('16', 'gh_8fbbef2cdbc6', '4', '525', '28', '2', '20.00', '0', '1505381089', '0', '346076');
+INSERT INTO `wx_booking_detail` VALUES ('17', 'gh_8fbbef2cdbc6', '4', '525', '29', '1', '20.00', '0', '1505381464', '0', '823512');
+INSERT INTO `wx_booking_detail` VALUES ('18', 'gh_8fbbef2cdbc6', '4', '525', '29', '2', '20.00', '0', '1505381464', '0', '113935');
+INSERT INTO `wx_booking_detail` VALUES ('19', 'gh_8fbbef2cdbc6', '4', '525', '30', '1', '20.00', '0', '1505381467', '0', '093485');
+INSERT INTO `wx_booking_detail` VALUES ('20', 'gh_8fbbef2cdbc6', '4', '525', '30', '2', '20.00', '0', '1505381467', '0', '704832');
 
 -- ----------------------------
 -- Table structure for `wx_comment`
@@ -647,20 +659,23 @@ CREATE TABLE `wx_muti` (
 DROP TABLE IF EXISTS `wx_place`;
 CREATE TABLE `wx_place` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `type` tinyint(1) DEFAULT NULL,
-  `name` varchar(100) DEFAULT NULL,
-  `row_num` int(10) NOT NULL,
-  `column_num` int(10) NOT NULL,
-  `place` varchar(200) DEFAULT NULL,
+  `type_id` tinyint(1) unsigned DEFAULT NULL COMMENT '类型ID',
+  `name` varchar(100) DEFAULT NULL COMMENT '座位名称',
+  `row_num` int(10) NOT NULL DEFAULT '0' COMMENT '第几排',
+  `column_num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '第几座',
+  `place` varchar(200) DEFAULT NULL COMMENT '位置',
   `status` tinyint(1) NOT NULL DEFAULT '1',
   `sort` int(10) NOT NULL DEFAULT '0',
   `addtime` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wx_place
 -- ----------------------------
+INSERT INTO `wx_place` VALUES ('1', '2', '第1排15号', '1', '1', '1排1座', '1', '0', '0');
+INSERT INTO `wx_place` VALUES ('2', '2', '第1排13号', '1', '2', '1排2座', '1', '0', '0');
+INSERT INTO `wx_place` VALUES ('3', '2', '第1排11号', '1', '3', '1排3座', '1', '0', '0');
 
 -- ----------------------------
 -- Table structure for `wx_place_type`
