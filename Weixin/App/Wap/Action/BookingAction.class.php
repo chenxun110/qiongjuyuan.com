@@ -19,6 +19,7 @@ class BookingAction extends BaseAction{
 	}
      //我的订单
 	public function order(){
+		
     $this->display();
 	}
     
@@ -84,7 +85,7 @@ class BookingAction extends BaseAction{
 	$book_id = $_GET['book_id'];
 	$this->assign('book_id',$book_id);	
     $this->display();
-    
+
 	}
 
     //确认订单【支付】
