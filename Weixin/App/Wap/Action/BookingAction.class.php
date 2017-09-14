@@ -1,12 +1,13 @@
 <?php
+//微信订票
 class BookingAction extends BaseAction{
-
+    //舞台大厅
 	public function index(){
 
 	$this->display();
 
 	}
-
+    //座位接口
 	public function place_api(){
 	 $schedule_id = $_GET['schedule_id'];
 	 $placeList = M('place p')->join('left join wx_place_type t on p.type_id=t.id')->field('p.id as place_id,p.name,p.type_id,p.place,t.price')->select();
@@ -16,7 +17,7 @@ class BookingAction extends BaseAction{
 	 echo json_encode($placeList);
 
 	}
-
+     //我的订单
 	public function order(){
     $this->display();
 	}
