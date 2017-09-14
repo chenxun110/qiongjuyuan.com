@@ -1,5 +1,4 @@
 <?php
-
 class BookingAction extends BaseAction{
 
 	public function index(){
@@ -35,7 +34,7 @@ class BookingAction extends BaseAction{
 		$all_price = M('place p')->join('left join wx_place_type t on p.type_id=t.id')->where(['p.id'=>['in',$placeId]])->sum('t.price');
 
 		foreach ($placeIdArr as $key => $val) {
-			$detailResult = M('booking_detail')->where(['schedule_id'=>$schedule_id,'place_id'=>$val,'status'=>1])->find();
+			$detailResult = M('booking_detail')->where(['schedule_id'=>$schedule_id,'place_id'=>$val,'pay_status'=>1])->find();
 			$place = M('place')->where(['id'=>$val])->find();
             if($detailResult){
             	echo json_encode(['status'=>1,'msg'=>$place['name']."已经被抢购,请重新选座！"]);exit();
@@ -43,7 +42,7 @@ class BookingAction extends BaseAction{
 		}
 
 		foreach ($placeIdArr as $key => $val) {
-			$detailResult = M('booking_detail')->where(['schedule_id'=>$schedule_id,'place_id'=>$val,'member_id'=>$member_id])->find();
+			$detailResult = M('booking_detail')->where(['schedule_id'=>$schedule_id,'place_id'=>$val,'member_id'=>$member_id,'pay_status'=>0])->find();
 			$place = M('place')->where(['id'=>$val])->find();
             if($detailResult){
             	echo json_encode(['status'=>1,'msg'=>$place['name']."已经选被您选过,请重新选座！"]);exit();
@@ -84,8 +83,36 @@ class BookingAction extends BaseAction{
 	}
 
     //确认订单【支付】
-  	public function weixin_pay(){
-  	 $this->display();	
+  public function weixin_pay(){
+	   ini_set('date.timezone','Asia/Shanghai');
+	   error_reporting(E_ERROR);
+	   require_once APP_PATH."Common/Wxpay/lib/WxPay.Api.php";
+	   require_once APP_PATH."Common/Wxpay/WxPay.JsApiPay.php";
+	   $bill = array('out_trade_no'=>time(),'remark'=>'订单名称','money'=>'0.01');
+	   //①、获取用户openid
+	   $tools = new \JsApiPay();
+	   //$openId = $tools->GetOpenid();
+	   $openId = "oxQLOjunGWVszGwKifWyPmDHTMjQ";
+	   $money   = $bill['money'];
+	   $body  = $bill['remark'];
+	   $out_trade_no = $bill['out_trade_no'];
+	   $total_fee = 100*$bill['money'];
+	   $notify_url = C('SITE_URL')."/wap/notify/index";
+	   $trade_type ="JSAPI";
+
+	   //②、统一下单
+	   /*$input = new \WxPayUnifiedOrder();
+	   $input->SetBody($body);
+	   $input->SetOut_trade_no($out_trade_no);
+	   $input->SetTotal_fee($total_fee);
+	   $input->SetNotify_url($notify_url);
+	   $input->SetTrade_type($trade_type);
+	   $input->SetOpenid($openId);
+	   $order = \WxPayApi::unifiedOrder($input);
+	   $jsApiParameters = $tools->GetJsApiParameters($order);
+	   $this->assign('jsApiParameters',$jsApiParameters);*/
+	   $this->assign('total_fee',$bill['money']);
+  	   $this->display();	
   	}
 
 
@@ -93,5 +120,5 @@ class BookingAction extends BaseAction{
   	public function order_detail(){
   		$this->display();
   	}
-
+  
 }
