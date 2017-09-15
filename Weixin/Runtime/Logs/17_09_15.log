@@ -1,0 +1,48 @@
+[ 2017-09-15T11:18:04+08:00 ] 127.0.0.1 /wap/Booking/place_api
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002192s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002421s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Common\common.php 第 217 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002253s ]
+NOTIC: [8] Undefined index: schedule_id D:\git\qiongjuyuan.com\Weixin\App\Wap\Action\BookingAction.class.php 第 12 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM wx_place p [ RunTime:0.000386s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'p' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM wx_place p
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT p.id as place_id,p.name,p.type_id,p.place,t.price,p.row_num,p.column_num FROM wx_place p left join wx_place_type t on p.type_id=t.id  [ RunTime:0.001392s ]
+SQL: SHOW COLUMNS FROM `wx_booking_detail` [ RunTime:0.009594s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `wx_booking_detail` WHERE ( `place_id` = 1 ) AND ( `schedule_id` = null ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000376s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `wx_booking_detail` WHERE ( `place_id` = 2 ) AND ( `schedule_id` = null ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000370s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `wx_booking_detail` WHERE ( `place_id` = 3 ) AND ( `schedule_id` = null ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000398s ]
+
+[ 2017-09-15T11:18:06+08:00 ] 127.0.0.1 /wap/Booking/place_api
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000827s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001495s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Common\common.php 第 217 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+NOTIC: [8] Undefined index: schedule_id D:\git\qiongjuyuan.com\Weixin\App\Wap\Action\BookingAction.class.php 第 12 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM wx_place p [ RunTime:0.000248s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'p' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM wx_place p
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT p.id as place_id,p.name,p.type_id,p.place,t.price,p.row_num,p.column_num FROM wx_place p left join wx_place_type t on p.type_id=t.id  [ RunTime:0.002097s ]
+SQL: SHOW COLUMNS FROM `wx_booking_detail` [ RunTime:0.008709s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `wx_booking_detail` WHERE ( `place_id` = 1 ) AND ( `schedule_id` = null ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000454s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `wx_booking_detail` WHERE ( `place_id` = 2 ) AND ( `schedule_id` = null ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000351s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\git\qiongjuyuan.com\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `wx_booking_detail` WHERE ( `place_id` = 3 ) AND ( `schedule_id` = null ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000349s ]
+
