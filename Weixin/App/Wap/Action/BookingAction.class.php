@@ -10,7 +10,7 @@ class BookingAction extends BaseAction{
     //座位接口
 	public function place_api(){
 	 $schedule_id = $_GET['schedule_id'];
-	 $placeList = M('place p')->join('left join wx_place_type t on p.type_id=t.id')->field('p.id as place_id,p.name,p.type_id,p.place,t.price')->select();
+	 $placeList = M('place p')->join('left join wx_place_type t on p.type_id=t.id')->field('p.id as place_id,p.name,p.type_id,p.place,t.price,p.row_num,p.column_num')->select();
 	 foreach ($placeList as $key => $val) {
 	 	$placeList[$key]['book'] = is_booking($val['place_id'],$schedule_id);
 	 }
