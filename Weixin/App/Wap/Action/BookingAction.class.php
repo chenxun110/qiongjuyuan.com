@@ -1,6 +1,7 @@
 <?php
 //微信订票
 class BookingAction extends BaseAction{
+	
     //舞台大厅
 	public function index(){
 
