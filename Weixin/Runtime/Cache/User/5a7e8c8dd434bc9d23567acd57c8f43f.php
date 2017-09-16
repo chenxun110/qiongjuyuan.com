@@ -145,6 +145,10 @@
           <td width="25%"><label for="title">剧目名称<font color="red">*</font></label></td>
           <td><input type="text" name="title" value="<?php echo $vo['title'];?>" id="title" class="span8"/></td>
         </tr>  
+        <tr>
+          <td width="25%"><label for="yctt">演出团体<font color="red">*</font></label></td>
+          <td><input type="text" name="yctt" value="<?php echo $vo['yctt'];?>" id="yctt" class="span8"/></td>
+        </tr> 
          <tr>
           <td><label for="title">图片<font color="red">*</font></label></td>
           <td>
@@ -169,7 +173,14 @@
           <label for="discription">订票说明</label></td>
           <td><textarea name="remark" id="remark" class="input-autosave span8" ><?php echo $vo['remark'];?></textarea>                </td>
         </tr>  
-        
+         <tr><td>
+          <label for="discription">发布</label></td>
+          <td> 
+           <input name="status" <?php if($vo['status'] == 0): ?>checked="checked"<?php endif; ?> value="0" type="radio">未发布
+          <input name="status" <?php if($vo['status'] == 1): ?>checked="checked"<?php endif; ?> value="1" type="radio">已发布
+             </td>
+        </tr> 
+
            
         <tr><td></td>
         <td><input name="id" value="<?php echo $vo['id'];?>" type="hidden">

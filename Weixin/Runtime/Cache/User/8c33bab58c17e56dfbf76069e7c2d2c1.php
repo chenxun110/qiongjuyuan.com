@@ -80,7 +80,9 @@
         <th>编号</th>
         <th>剧目名称</th>
         <th>演出日期</th>
+        <th>票数</th>
         <th>剩余票数</th>
+        <th>是否发布</th>
         <th>操作</th>
       </tr>
     </thead>
@@ -89,7 +91,13 @@
         <td><?php echo $list['id'];?></td>
         <td><?php echo $list['title'];?></td>
         <td><?php echo (date('Y-m-d H:i:s',$list['playtime'])); ?></td>
-        <td><?php echo $list['num'];?>张</td>     
+        <td><?php echo $list['num'];?>张</td>
+        <td><?php echo $list['snum'];?>张</td>
+          <td>
+
+          <?php if($list['status'] == 1): ?>已发布<?php endif; ?>
+          <?php if($list['status'] == 0): ?>未发布<?php endif; ?>
+          </td>     
         <td>
           <div class="btn-toolbar">
             <div class="btn-group">

@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>付款成功订单详情

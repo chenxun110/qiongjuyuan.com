@@ -19,10 +19,16 @@ class BookingAction extends BaseAction{
 	}
      //我的订单
 	public function order(){
-		
-    $this->display();
+		$member_id = 4;
+		$bookList = M('book b')->field('b.pay_status,b.schedule_id,b.id as book_id,b.order_no,s.title,s.yctt,s.address,s.playtime')->join('left join wx_schedule s on s.id=b.schedule_id')->where("b.member_id={$member_id}")->select();
+		foreach ($bookList as $k => $val) {
+			$detailList = M('booking_detail d')->field('p.name,p.place')->join('left join wx_place p on p.id=d.place_id')->where(['d.member_id'=>$member_id,'d.schedule_id'=>$val['schedule_id'],'d.book_id'=>$val['book_id']])->select();
+		  $bookList[$k]['detailList'] =$detailList; 	
+		}
+		$this->assign('bookList',$bookList);
+	    $this->display();
 	}
-    
+
     //选座
 	public function seat(){
 		$now =time();
@@ -30,8 +36,7 @@ class BookingAction extends BaseAction{
 		$placeIdArr = explode(',', $placeId);
 		$schedule_id = 525;
 		$member_id = 4;
-		$token = "gh_8fbbef2cdbc6";
-		$order_no = date('YmdHms').randCode(5, 1);
+		$order_no = date('YmdHms').randCode(5, 1);//微信票号
 		$all_num = count($placeIdArr);
 		$all_price = M('place p')->join('left join wx_place_type t on p.type_id=t.id')->where(['p.id'=>['in',$placeId]])->sum('t.price');
 
@@ -50,11 +55,9 @@ class BookingAction extends BaseAction{
             	echo json_encode(['status'=>1,'msg'=>$place['name']."已经选被您选过,请重新选座！"]);exit();
             }
 		}
-
 		$book = [
 			'schedule_id'=>$schedule_id,
 			'addtime'=>$now,
-			'token'=>$token,
 			'member_id'=>$member_id,
 			'all_num'=>$all_num,
 			'all_price'=>$all_price
@@ -66,7 +69,6 @@ class BookingAction extends BaseAction{
 			$bookingDetail = [
              'schedule_id' => $schedule_id,
              'addtime'     => $now,
-             'token'       => $token,
              'member_id'   => $member_id,
              'place_id'    => $val,
              'price'       => $place['price'],
@@ -81,10 +83,35 @@ class BookingAction extends BaseAction{
    
    //输入信息
 	public function input_info(){
+		$openid = "o5Wc0uNM45AQF6wdkMORZO1OgZME";
+        if(IS_POST){
+           $mobile = $_POST['mobile'];
+           $real_name = $_POST['real_name'];
+           $age = $_POST['age'];
+           $sex = $_POST['sex'];
+           $book_id = $_POST['book_id'];
+           if(!$mobile){
+           	 echo json_encode(['status'=>1,'msg'=>"请填写手机号"]);exit();
+           }
+           if(!$real_name){
+           	 echo json_encode(['status'=>1,'msg'=>"请填写姓名"]);exit();
+           }
+          M('book')->where(['id'=>$book_id])->save(['mobile'=>$mobile,'real_name'=>$real_name,'age'=>$age,'sex'=>$sex]);
+          M('member')->where(['openid'=>$openid])->save(['mobile'=>$mobile,'real_name'=>$real_name,'age'=>$age,'sex'=>$sex]);
+        }else{
+	        $book_id = 31; 
+			$member_id = 4;
+			$book = M('book b')->field('b.real_name,b.age,b.sex,b.mobile,b.pay_status,b.schedule_id,b.id as book_id,b.order_no,s.title,s.yctt,s.address,s.playtime')->join('left join wx_schedule s on s.id=b.schedule_id')->where("b.member_id={$member_id}")->find();
 
-	$book_id = $_GET['book_id'];
-	$this->assign('book_id',$book_id);	
-    $this->display();
+			$detailList = M('booking_detail d')->field('p.name,p.place')->join('left join wx_place p on p.id=d.place_id')->where(['d.member_id'=>$member_id,'d.schedule_id'=>$book['schedule_id'],'d.book_id'=>$book_id])->select();
+		    //var_dump($detailList);
+		    //var_dump($book);
+			$this->assign('detailList',$detailList);
+			$this->assign('book',$book);
+			$this->assign('book_id',$book_id);	
+		    $this->display();
+	        }
+
 
 	}
 
@@ -94,8 +121,16 @@ class BookingAction extends BaseAction{
 	   error_reporting(E_ERROR);
 	   require_once APP_PATH."Common/Wxpay/lib/WxPay.Api.php";
 	   require_once APP_PATH."Common/Wxpay/WxPay.JsApiPay.php";
-	   $book_id = $_GET['book_id'];
-	   $book =  M('book')->where(['id'=>$book_id])->find();
+	    $book_id = 31;
+		$member_id = 4;
+		$book = M('book b')->field('b.all_price,b.schedule_id,b.id as book_id,b.order_no,s.title,s.yctt,s.address,s.playtime')->join('left join wx_schedule s on s.id=b.schedule_id')->where("b.member_id={$member_id}")->find();
+
+		$detailList = M('booking_detail d')->field('p.name,p.place')->join('left join wx_place p on p.id=d.place_id')->where(['d.member_id'=>$member_id,'d.schedule_id'=>$book['schedule_id'],'d.book_id'=>$book_id])->select();
+       //var_dump($detailList);
+      // var_dump($book);
+	   $this->assign('detailList',$detailList);
+	   $this->assign('book',$book);
+
 	   $now = time();
 	   $out_trade_no = $now . randCode(6, 1);    //商户侧订单号
 	   $bill = [
@@ -136,7 +171,32 @@ class BookingAction extends BaseAction{
 
     //订单详情
   	public function order_detail(){
+  		$book_id = 31; 
+		$member_id = 4;
+		$book = M('book b')->field('b.pay_status,b.schedule_id,b.id as book_id,b.order_no,s.title,s.yctt,s.address,s.playtime')->join('left join wx_schedule s on s.id=b.schedule_id')->where("b.member_id={$member_id}")->find();
+
+		$detailList = M('booking_detail d')->field('p.name,p.place')->join('left join wx_place p on p.id=d.place_id')->where(['d.member_id'=>$member_id,'d.schedule_id'=>$book['schedule_id'],'d.book_id'=>$book_id])->select();
+        //var_dump($detailList);
+        //var_dump($book);
+		$this->assign('detailList',$detailList);
+		$this->assign('book',$book);
   		$this->display();
+  	}
+    
+    //剧目列表
+  	public function schedule(){
+	  	$list = M('schedule')->where(['status'=>1])->select();
+	  	//var_dump($list);
+	  	$this->assign('list',$list);
+	    $this->display();
+  	}
+  	//剧目详情
+  	public function schedule_detail(){
+  		$schedule_id = 525;
+	  	$schedule = M('schedule')->where(['status'=>1,'id'=>$schedule_id])->find();
+	  	//var_dump($schedule);
+	  	$this->assign('schedule',$schedule);
+	    $this->display();
   	}
   
 }

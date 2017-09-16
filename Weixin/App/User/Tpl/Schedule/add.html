@@ -77,6 +77,10 @@
         <tr>
           <td width="25%"><label for="title">剧目名称<font color="red">*</font></label></td>
           <td><input type="text" name="title" value="" id="title" class="span8"/></td>
+        </tr> 
+        <tr>
+          <td width="25%"><label for="yctt">演出团体<font color="red">*</font></label></td>
+          <td><input type="text" name="yctt" value="" id="yctt" class="span8"/></td>
         </tr>  
          <tr>
           <td><label for="title">图片<font color="red">*</font></label></td>
@@ -100,7 +104,15 @@
           <label for="discription">订票说明</label></td>
           <td><textarea name="rule" id="rule" class="input-autosave span8" ></textarea>                </td>
         </tr> 
-  
+
+         <tr><td>
+          <label for="discription">发布</label></td>
+          <td> 
+              <input name="status"  value="0" type="radio">未发布
+              <input name="status" value="1" type="radio" checked="checked">已发布
+             </td>
+        </tr> 
+
            <tr><td></td>
                      <td><input id="xmzb_upload" name="xmzb_upload" class="file_upload" type="file" multiple="true"></td>
              <td>
