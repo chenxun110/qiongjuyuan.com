@@ -1,42 +1,105 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
-    <title>微信支付</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>确认订单</title>
+    <link rel="stylesheet" href="/Public/Wap/seat/lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="/Public/Wap/seat/lib/weui/weui.min.css">
+    <link rel="stylesheet" href="/Public/Wap/seat/lib/weui/jquery-weui.min.css">
+    <link rel="stylesheet" href="/Public/Wap/seat/css/seat.css" />
     <script type="text/javascript">
-	//调用微信JS api 支付
-	function jsApiCall()
-	{
-		WeixinJSBridge.invoke(
-			'getBrandWCPayRequest',
-			<?php echo $jsApiParameters; ?>,
-			function(res){
-				WeixinJSBridge.log(res.err_msg);
-				alert(res.err_code+res.err_desc+res.err_msg);
-			}
-		);
-	}
+        //调用微信JS api 支付
+        function jsApiCall()
+        {
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+            <?php echo $jsApiParameters; ?>,
+            function(res){
+                WeixinJSBridge.log(res.err_msg);
+                alert(res.err_code+res.err_desc+res.err_msg);
+            }
+        );
+        }
 
-	function callpay()
-	{
-		if (typeof WeixinJSBridge == "undefined"){
-		    if( document.addEventListener ){
-		        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
-		    }else if (document.attachEvent){
-		        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
-		        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
-		    }
-		}else{
-		    jsApiCall();
-		}
-	}
-	</script>
+        function callpay()
+        {
+            alert('点击了')
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            }else{
+                jsApiCall();
+            }
+        }
+    </script>
 </head>
 <body>
-    <br/>
-    <font color="#9ACD32"><b>该笔订单支付金额为<span style="color:#f00;font-size:50px">{jasxun$total_fee}</span>元</b></font><br/><br/>
-	<div align="center">
-		<button style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;" type="button" onclick="callpay()" >立即支付</button>
-	</div>
+<div class="app">
+    <div class="book-step">
+        <span>1.拍下座位</span>
+        <span class="cur">2.确认订单</span>
+        <span>3.支付订单</span>
+        <span>4.确认售票</span>
+    </div>
+    <div class="book-info-mod">
+        <h4>订票信息</h4>
+        <div class="book-ticket-info">
+            <div class="ticket-about">
+                <h3>《麻醉师》</h3>
+                <div class="date">演出时间：2017-10-23 20:00</div>
+            </div>
+            <ul class="ticket-lists">
+                <li>
+                    <div class="weui-flex">
+                        <div class="weui-flex__item">6排9座</div>
+                        <div class="price">&yen;40</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="weui-flex">
+                        <div class="weui-flex__item">6排9座</div>
+                        <div class="price">&yen;40</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="book-total">
+                金额总计：<b>{jasxun$total_fee}</b>元
+            </div>
+        </div>
+        <div class="weui-cells__title">支付方式</div>
+        <div class="weui-cells weui-cells_checkbox">
+            <label class="weui-cell weui-check__label" for="s11">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="paytype" id="s11" checked="checked">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>微信支付</p>
+                </div>
+            </label>
+        </div>
+        <div class="weui-flex">
+            <div class="weui-flex__item">
+                <div class="placeholder">
+                    <a href="javascript:;" class="weui-btn weui-btn_default">上一步</a>
+                </div>
+            </div>
+            <div class="weui-flex__item">
+                <div class="placeholder">
+                    <a href="javascript:void(0);" class="weui-btn weui-btn_primary" onclick="callpay()">确认支付</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/Public/Wap/seat/lib/jquery-1.9.1.min.js"></script>
+<script src="/Public/Wap/seat/lib/weui/jquery-weui.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: none;
+  max-width: 100%; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.4rem; }
+
+.book-input {
+  border: 1px solid #ddd; }
+  .book-input .weui-cells {
+    margin-top: 0; }
+    .book-input .weui-cells:after {
+      border-bottom: none; }
+    .book-input .weui-cells:before {
+      left: 15px; }
+
+.placeholder {
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  color: #cfcfcf; }
+
+.book-seat {
+  padding: 20px; }
+  .book-seat .content {
+    height: 100px; }
+  .book-seat .seatCharts-row {
+    font-size: 12px;
+    overflow: hidden; }
+    .book-seat .seatCharts-row > .seatCharts-cell:first-child {
+      width: 18px;
+      font-size: 12px;
+      padding: 1px 0;
+      margin: 0 10px -2px 0;
+      color: #fff;
+      background: #c1a8a8;
+      border-radius: 0; }
+  .book-seat .seatCharts-cell {
+    float: left;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    margin: 0 2px 2px;
+    border-radius: 3px; }
+  .book-seat .seatCharts-header {
+    display: none; }
+
+.seatCharts-seat {
+  cursor: pointer;
+  color: #fff;
+  background: #76B474; }
+  .seatCharts-seat.selected {
+    background: #f0ad4e; }
+  .seatCharts-seat.unvailable {
+    background: #bbb;
+    cursor: not-allowed; }
+    .seatCharts-seat.unvailable.searve-seat {
+      background: #337ab7;
+      text-indent: -99999px; }
+
+.sec-seat {
+  background: #d9534f; }
+
+.thrid-seat {
+  background: #d68ca4; }
+
+.searve-seat {
+  background: #337ab7;
+  text-indent: -99999px;
+  overflow: hidden; }
+
+.seat-wrap {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  margin: 0 -10px;
+  overflow: auto;
+  font-size: 12px;
+  background: #f2f3f4; }
+  .seat-wrap .seatCharts-container {
+    width: 720px;
+    margin: 0 auto; }
+
+.seatCharts-legendList {
+  margin: 20px 0;
+  overflow: hidden; }
+  .seatCharts-legendList li {
+    float: left;
+    width: 50%;
+    margin-bottom: 5px;
+    list-style: none; }
+    .seatCharts-legendList li .seatCharts-cell {
+      width: 18px;
+      height: 18px;
+      font-size: 12px; }
+
+.seat-btn {
+  width: 100%;
+  height: 36px;
+  color: #fff;
+  background: #d9534f;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+  .seat-btn.disabled {
+    background: #ecd2db;
+    cursor: not-allowed; }
+
+.seat-face {
+  width: 100px;
+  height: 20px;
+  margin: 0 auto 30px;
+  line-height: 20px;
+  text-align: center;
+  background: #ddd; }
+
+.book-info-mod {
+  padding: 0 1rem;
+  margin-top: 2rem; }
+  .book-info-mod:last-child {
+    margin-bottom: 1rem; }
+  .book-info-mod h4 {
+    font-size: 1.4rem; }
+
+.ticket-lists li {
+  list-style: none;
+  margin-bottom: 10px; }
+  .ticket-lists li .weui-flex .weui-flex__item {
+    margin-left: 10px; }
+
+.price {
+  color: #f60; }
+
+.book-ticket-info {
+  padding: 5px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+  .book-ticket-info p {
+    font-weight: bold;
+    margin-bottom: 20px; }
+
+.book-step {
+  margin: 1rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #d68ca4; }
+  .book-step span {
+    float: left;
+    display: block;
+    width: 25%;
+    line-height: 3.5rem;
+    text-align: center; }
+    .book-step span.cur {
+      font-weight: bold;
+      background: #960064; }
+
+.weui-cells {
+  font-size: 1.6rem; }
+
+.book-total {
+  padding: 1rem 0;
+  text-align: right;
+  color: #f60;
+  border-top: 1px solid #ddd; }
+  .book-total b {
+    font-size: 1.6rem; }
+
+.book-success {
+  padding: 2rem;
+  text-align: center;
+  color: #09bb07; }
+  .book-success .weui-icon_msg {
+    font-size: 4rem; }
+  .book-success .icon-box__desc {
+    color: #999; }
+
+.ticket-about {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd; }
+  .ticket-about .date {
+    font-size: 1.2rem;
+    color: #999; }
+  .ticket-about .ticket-type {
+    color: #09bb07; }
+
+.ticket-tips {
+  color: #09bb07; }
+
+.weui-btn {
+  font-size: 1.6rem; }
+
+.wkq_text-align {
+  text-align: center; }
+
+/*# sourceMappingURL=seat.css.map */
